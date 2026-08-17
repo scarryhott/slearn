@@ -93,3 +93,32 @@ C=\operatorname{TC}_F
 \]
 
 only when `C` satisfies both local conservativity and returned sufficiency over every admitted view of `F`. It makes the frame’s translations and recenterings legible to the runtime without selecting a privileged initial view or resolving dual and obstructed positions without evidence.
+
+## Closed episode and reopened continuation
+
+The natural-rhythm layer gives the shape of an admitted translation. The
+episode layer in [`CLOSED_TOPOLOGICAL_TRANSLATION.md`](CLOSED_TOPOLOGICAL_TRANSLATION.md)
+states when an interaction may honestly be rendered as a closure that opens a
+new continuation.
+
+It models an unprioritized reciprocal pair, two interacting paths, and an
+orientation swap. A return recovers a caller-selected base relation; it does
+not assert literal equality with the origin. A residue is admitted only when
+another successful return at the same base has a different caller-selected
+residue coordinate. `CLOSED_TO_NEW_OPENING` additionally requires that the
+successor’s continuation field differ from the origin’s.
+
+This keeps the triangle’s recurrence exact:
+
+\[
+\text{OPEN interaction}
+\rightarrow
+\text{returned relation}
+\rightarrow
+\text{distinguishing residue}
+\rightarrow
+\text{inherited opening}.
+\]
+
+It is still not a theorem about physical curvature, consciousness, or a
+privileged natural choice.
