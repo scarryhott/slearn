@@ -182,21 +182,21 @@ A compatible family of all finite prefixes: the elementary inverse-limit
 object for the refinement tower.
 -/
 structure PrefixInverseLimit where
-  prefix : ∀ n, Fin n → Bool
+  component : (n : Nat) → Fin n → Bool
   compatible :
     ∀ {n m} (h : n ≤ m) (i : Fin n),
-      prefix m (liftFin h i) = prefix n i
+      component m (liftFin h i) = component n i
 
 /-- Every complete transcript determines a compatible prefix family. -/
 def transcriptToLimit (x : Transcript) : PrefixInverseLimit where
-  prefix := fun n => finitePrefix n x
+  component := fun n => finitePrefix n x
   compatible := by
     intro n m h i
     rfl
 
 /-- Every compatible prefix family determines a complete transcript. -/
 def PrefixInverseLimit.toTranscript (C : PrefixInverseLimit) : Transcript :=
-  fun i => C.prefix (i + 1) ⟨i, Nat.lt_succ_self i⟩
+  fun i => C.component (i + 1) ⟨i, Nat.lt_succ_self i⟩
 
 /-- Reconstructing a transcript from its prefix family returns it exactly. -/
 theorem transcript_limit_return (x : Transcript) :
@@ -206,7 +206,7 @@ theorem transcript_limit_return (x : Transcript) :
 
 /-- Reconstructing from a compatible family returns every one of its prefixes. -/
 theorem limit_prefix_return (C : PrefixInverseLimit) (n : Nat) :
-    finitePrefix n C.toTranscript = C.prefix n := by
+    finitePrefix n C.toTranscript = C.component n := by
   funext i
   let j : Fin (i.val + 1) := ⟨i.val, Nat.lt_succ_self i.val⟩
   have hle : i.val + 1 ≤ n := Nat.succ_le_of_lt i.isLt
@@ -214,7 +214,7 @@ theorem limit_prefix_return (C : PrefixInverseLimit) (n : Nat) :
     apply Fin.ext
     rfl
   have hc := C.compatible hle j
-  change C.prefix (i.val + 1) j = C.prefix n i
+  change C.component (i.val + 1) j = C.component n i
   rw [← hlift]
   exact hc.symm
 
@@ -222,7 +222,7 @@ theorem limit_prefix_return (C : PrefixInverseLimit) (n : Nat) :
 theorem inverseLimit_extensional
     (C D : PrefixInverseLimit)
     (h : C.toTranscript = D.toTranscript) :
-    ∀ n, C.prefix n = D.prefix n := by
+    ∀ n, C.component n = D.component n := by
   intro n
   rw [← limit_prefix_return C n, ← limit_prefix_return D n, h]
 
