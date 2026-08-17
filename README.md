@@ -127,6 +127,54 @@ for every $S$. Consequently any two universally relatively admissible closure op
 
 This is not the claim that all mathematical uses of the word *closure* are one operator, or that no other topology can be defined. It is a uniqueness theorem relative to the stated universal-relative admissibility contract. A purported closure that adds an unwitnessed external completion, privileges one local chart, or refuses a globally compatible returned point is not admissible under that contract.
 
+## Interactive translational open foundation
+
+The axioms are treated as relative definitions and language qualities. A definition is local to a view; a language is global only over the translations and returns admitted by its frame.
+
+For an interaction transcript $x:\mathbb N\to\mathrm{Bool}$, stage $n$ sees only the finite projection $\pi_n(x)$. No verifier whose input is only that projection can decide the global property
+
+$$
+\operatorname{Sound}(x)\iff\forall i,\;x(i)=\mathrm{false},
+$$
+
+because a defect can first occur immediately beyond the visible prefix. Yet passing every finite stage is equivalent to soundness, and the new Lean module proves
+
+$$
+\boxed{
+\operatorname{ContinuousCompletion}(x)
+\iff
+x\in\operatorname{TC}_{\mathrm{prefix}}(\operatorname{Sound}).
+}
+$$
+
+Thus interactive proof is locally open at every finite stage while continuous completion is the returned topological closure.
+
+The same module formalizes an inverse-limit tower of compatible prefixes. A complete transcript is recovered from all of its finite views, and every compatible family returns each of its local projections. Apparent global fixity is therefore represented as the returned identity of compatible perspectival choices.
+
+It also introduces a **relative Topos–Turing translation interface**. Turing and Topos are asymmetric presentation types connected through encoding and evaluation maps. They are not required to be inverse on the nose. Their composites return the same closure witness:
+
+$$
+E(T(t))\sim_{\mathcal C}t,
+\qquad
+T(E(p))\sim_{\mathcal C}p.
+$$
+
+This is relative witness equality, not a claim that an arbitrary topos is literally a Turing machine.
+
+Translation choices remain open. They can close or obstruct local gluing. The repository now contains two concrete functions on overlapping intervals: one native pair glues and one does not; a stated translation relatively glues the unglued pair, while another stated translation produces an obstruction for the glued pair. The comparison language is always part of the receipt.
+
+The resulting distinction is:
+
+$$
+\boxed{
+\text{unique admissible completion operator under the contract}
+\neq
+\text{unique translation map or privileged initial choice}.
+}
+$$
+
+Naturality is therefore not forced circularly as an initial axiom. It appears as compatibility of interactive choices under translation and return, equivalently as an inverse-limit closure condition.
+
 ## Relevant information without loss of closure
 
 Speed learning should not upload everything. It should select a closure-sufficient family of relevant views.
@@ -171,8 +219,10 @@ The interface should render these movements from the same runtime relation. Visu
 
 ## Repository contents
 
-- [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md) gives the full axiometry, uniqueness result, relevance theorem, interactive-verification model, and Slearn runtime contract.
+- [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md) gives the universal-relative completion axiometry, uniqueness result, relevance theorem, and Slearn runtime contract.
+- [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md) gives the interactive-proof unification, relative definitions and language qualities, inverse-limit interpretation, relative Topos–Turing return, concrete gluing/obstruction examples, institutional reading, and scope boundaries.
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) formalizes the abstract closure laws, universal-relative uniqueness theorem, and cofinal relevant-view theorem in Lean 4.
+- [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) formalizes finite-stage incompleteness, continuous completion as translational closure, the finite-prefix inverse limit, returned Topos–Turing witness equality, and translated gluing/obstruction.
 - GitHub Actions builds the Lean project and rejects `sorry` or `admit` placeholders.
 
-The implementation criterion is not merely that a screen can display goals and perspectives. The runtime must make each zoom a real translation of the current opening and issue a completion receipt only when the required return relation is preserved.
+The implementation criterion is not merely that a screen can display goals and perspectives. The runtime must make each zoom a real translation of the current opening, preserve the comparison language and obstruction evidence, and issue a completion receipt only when the required return relation is preserved.
