@@ -70,6 +70,9 @@ inductive MapNode (Value : Type u) (Occurrence : Type v)
   | core
   | brain
   | value (v : Value)
+  | belief (v : Value)
+  | why (o : Occurrence)
+  | goal (o : Occurrence)
   | lesson (o : Occurrence)
   | project (o : Occurrence)
   | impact
@@ -85,7 +88,10 @@ occurrence/depth carrier.
 inductive MapLink (Value : Type u) (Occurrence : Type v)
   | coreBrain
   | brainValue (v : Value)
-  | valueLesson (o : Occurrence)
+  | valueBelief (v : Value)
+  | beliefWhy (o : Occurrence)
+  | whyGoal (o : Occurrence)
+  | goalLesson (o : Occurrence)
   | lessonAscent (o : Occurrence)
   | lessonProjectTurn (o : Occurrence)
   | projectDescent (o : Occurrence)
@@ -123,29 +129,29 @@ variable (K : WitnessedKernel Value Occurrence)
 /-- The intended map before witness/attempt gating, restricted to current bounds. -/
 def canonicalNode : MapNode Value Occurrence → Prop
   | .core | .brain | .impact | .balance | .slearn | .dream => True
-  | .value v => K.admittedValue v
-  | .lesson o | .project o => K.inBounds o
+  | .value v | .belief v => K.admittedValue v
+  | .why o | .goal o | .lesson o | .project o => K.inBounds o
 
 /-- The kernel-generated node relation. -/
 def genNode : MapNode Value Occurrence → Prop
   | .core | .brain | .impact | .balance | .slearn | .dream => True
-  | .value v => K.admittedValue v
-  | .lesson o => K.inBounds o ∧ K.hasWhy o
+  | .value v | .belief v => K.admittedValue v
+  | .why o | .goal o | .lesson o => K.inBounds o ∧ K.hasWhy o
   | .project o => K.inBounds o ∧ K.attempt o
 
 /-- The canonical link relation, restricted to the current occurrence bounds. -/
 def canonicalLink : MapLink Value Occurrence → Prop
   | .coreBrain | .impactBalance | .balanceSlearn | .slearnDream => True
-  | .brainValue v => K.admittedValue v
-  | .valueLesson o | .lessonAscent o | .lessonProjectTurn o
+  | .brainValue v | .valueBelief v => K.admittedValue v
+  | .beliefWhy o | .whyGoal o | .goalLesson o | .lessonAscent o | .lessonProjectTurn o
     | .projectDescent o | .projectImpact o | .equalDepthRung o | .whyLink o =>
       K.inBounds o
 
 /-- The generated link relation.  It never inserts an unwitnessed lesson or unattempted step. -/
 def genLink : MapLink Value Occurrence → Prop
   | .coreBrain | .impactBalance | .balanceSlearn | .slearnDream => True
-  | .brainValue v => K.admittedValue v
-  | .valueLesson o | .lessonAscent o | .whyLink o =>
+  | .brainValue v | .valueBelief v => K.admittedValue v
+  | .beliefWhy o | .whyGoal o | .goalLesson o | .lessonAscent o | .whyLink o =>
       K.inBounds o ∧ K.hasWhy o
   | .lessonProjectTurn o | .equalDepthRung o =>
       K.inBounds o ∧ K.hasWhy o ∧ K.attempt o
@@ -172,8 +178,8 @@ theorem saturated_genNode (h : K.Saturated) :
   intro n
   cases n with
   | core | brain | impact | balance | slearn | dream => simp [genNode, canonicalNode]
-  | value v => simp [genNode, canonicalNode]
-  | lesson o =>
+  | value v | belief v => simp [genNode, canonicalNode]
+  | why o | goal o | lesson o =>
       constructor
       · intro hn
         exact hn.1
@@ -193,8 +199,8 @@ theorem saturated_genLink (h : K.Saturated) :
   cases l with
   | coreBrain | impactBalance | balanceSlearn | slearnDream =>
       simp [genLink, canonicalLink]
-  | brainValue v => simp [genLink, canonicalLink]
-  | valueLesson o | lessonAscent o | whyLink o =>
+  | brainValue v | valueBelief v => simp [genLink, canonicalLink]
+  | beliefWhy o | whyGoal o | goalLesson o | lessonAscent o | whyLink o =>
       constructor
       · intro hl
         exact hl.1
@@ -228,6 +234,20 @@ theorem saturated_generatedMap (h : K.Saturated) :
 theorem no_unwitnessed_lesson
     {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
     ¬ K.genNode (.lesson o) := by
+  intro hn
+  exact hwhy hn.2
+
+/-- An unresolved WHY cannot silently draw a reason node. -/
+theorem no_unwitnessed_why
+    {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
+    ¬ K.genNode (.why o) := by
+  intro hn
+  exact hwhy hn.2
+
+/-- A goal is a returned orientation of the three WHY witnesses, not a free map decoration. -/
+theorem no_unwitnessed_goal
+    {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
+    ¬ K.genNode (.goal o) := by
   intro hn
   exact hwhy hn.2
 
@@ -448,6 +468,8 @@ end Slearn
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.receipt_requires_attempt
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.saturated_generatedMap
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_lesson
+#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_why
+#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_goal
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unattempted_project
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.same_generatedNodes_sameWhy
 #print axioms Slearn.UIHairOfClosure.WitnessedKernel.same_generatedNodes_sameAttempt
