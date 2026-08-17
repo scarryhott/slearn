@@ -50,17 +50,19 @@ It contains no colour, mesh, card, screen position, chart, or drawing.
 The source-derived canonical map names:
 
 ```text
-core → brain → values → lessons → projects → impact → balance → Slearn → dream
+core → brain/current perspective → value → belief → WHY/reason → goal
+  → lesson → project → impact → balance → Slearn → world/dream
 ```
 
-and includes lesson ascent, the lesson/project 90-degree turn, project descent,
-equal-depth rungs, and WHY links. `GenNode` and `GenLink` admit only the parts
+and includes the perspective-to-goal ascent, the lesson/project 90-degree turn,
+project descent, equal-depth rungs, and WHY links. `GenNode` and `GenLink` admit only the parts
 licensed by the kernel:
 
 | Map element | Required kernel evidence |
 | --- | --- |
 | Value | Admitted value |
-| Lesson / lesson ascent / WHY link | All three WHY witnesses |
+| Belief | The same admitted value in the belief reading |
+| WHY/reason, goal, lesson / lesson ascent / WHY link | All three WHY witnesses |
 | Project / project descent / project impact | Attempt |
 | Lesson–project turn and equal-depth rung | WHY witnesses and attempt |
 | Returned experience reading | Return receipt |
@@ -77,9 +79,11 @@ assumptions. It proves the precise direction needed to reject arbitrary UI:
 \text{the specified Slearn map}.
 \]
 
-Conversely, unwitnessed lessons and unattempted projects have no generated
-node. Two kernels with the same bounds and generated nodes agree on the visible
-WHY witnesses and attempts inside those bounds.
+Conversely, unwitnessed reasons, goals, lessons, and unattempted projects have
+no generated node. Two kernels with the same bounds and generated nodes agree
+on the visible WHY witnesses and attempts inside those bounds. A spatial
+runtime may lay the admitted topology out as the specified triangle and turn,
+but may not independently add a node, edge, control, or runtime state.
 
 ## 2. Experience, zoom, and hair
 
