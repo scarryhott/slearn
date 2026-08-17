@@ -1,4 +1,6 @@
 import Slearn.UniversalRelativeTranslationalCompletion
 import Slearn.NaturalRhythmClosure
 import Slearn.ClosedTopologicalTranslation
+import Slearn.NRRF651SlearnUIHairOfClosureGeneratedMap
+import Slearn.ChaitinKakeyaTokenResuperposition
 import Slearn.InteractiveTranslationalOpenFoundation

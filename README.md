@@ -4,6 +4,11 @@ Slearn is a speed-learning interface organized around **returned translation**. 
 
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
+The visible map is not a decorative coordinate layer. It is generated from the
+witnessed learner kernel: a lesson requires all three WHY witnesses, a project
+requires an attempt, and an experience reading requires a return receipt.
+Unwitnessed or unattempted material is `OPEN`, not an admissible mechanic.
+
 ## Core geometry
 
 For an admitted translation, local and global are inverse orientations of the same path:
@@ -72,7 +77,7 @@ Every interaction works on one persisted closure state:
 
 ```text
 frame → active opening → translation path → comparison language
-      → perspective / belief / WHY / goal / lesson / project / world projection
+      → witnessed kernel → generated perspective / belief / WHY / goal / lesson / project / world map
       → return witness or obstruction → residue comparison → inherited opening → receipt
 ```
 
@@ -83,6 +88,8 @@ Thus a zoom from perspective to belief, WHY to goal, lesson to project, or proje
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
 - [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
+- [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
+- [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
 - [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
 
 The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
@@ -93,6 +100,7 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.
+- [`docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md): source-generated map/hair admission and directional token resuperposition boundaries.
 - [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
 
 Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.

@@ -937,7 +937,7 @@ The following statuses rely on reported clean builds and theorem summaries; the 
 
 ### 9.3 The remaining representation theorem
 
-The central missing bridge remains:
+The full presentation-invariance bridge remains:
 
 \[
 \boxed{
@@ -948,6 +948,15 @@ The central missing bridge remains:
 \]
 
 under assumptions that do not simply encode the desired tree.
+
+The current repository now has a narrower, machine-checked one-way bridge in
+`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`: a bounded learner kernel with
+three WHY witnesses and attempts generates the specified canonical
+core/value/lesson/project/rung/impact/balance/Slearn/dream relation; saturation
+of those witnesses and attempts yields equality with that bounded canonical
+map. This does not establish the displayed equivalence, map uniqueness,
+empirical return independence, or invariance under all admissible presentation
+changes. See [`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
 
 It should derive:
 
