@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root { --ink: #e9f0ea; --muted: #8fa299; --lime: #d7ff65; --blue: #8de7ff; --line: #648679; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at 50% 50%, #1e4438, #0d211a 48%, #07110e); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.closure { min-height: 100vh; display: grid; place-items: center; overflow: hidden; padding: 24px; position: relative; }
+.runtime-mark { position: absolute; top: 24px; left: 28px; color: var(--lime); letter-spacing: .15em; font-size: 10px; }
+.field { width: min(84vw, 820px); height: min(84vw, 720px); min-height: 560px; position: relative; transition: transform .6s ease; }
+.ball { position: absolute; left: 50%; top: 52%; translate: -50% -50%; width: 180px; height: 180px; border-radius: 50%; border: 1px solid #dfffb466; background: radial-gradient(circle at 35% 30%, #f3ffd2 0 7%, #d7ff65 8% 22%, #769d63 23% 43%, #15372b 44%); color: #14230e; cursor: pointer; box-shadow: 0 0 0 18px #23483a66, 0 0 90px #d7ff6566; z-index: 3; transition: .45s; }
+.ball:hover { scale: 1.06; }
+.ball-title, .ball-subtitle { display: block; }
+.ball-title { font-size: 15px; font-weight: 800; letter-spacing: .1em; }
+.ball-subtitle { font-size: 9px; margin-top: 7px; opacity: .8; }
+.hair { position: absolute; border: 0; background: transparent; color: var(--ink); cursor: pointer; padding: 0; display: flex; align-items: center; gap: 0; transform-origin: right center; }
+.hair .thread { height: 1px; width: clamp(130px, 20vw, 230px); background: linear-gradient(90deg, transparent, var(--line), var(--lime)); display: block; }
+.hair-node { width: 145px; padding: 12px; border: 1px solid #5e7e70; border-radius: 14px; background: #17342ad9; text-align: left; box-shadow: 0 8px 24px #02070455; transition: .2s; }
+.hair:hover .hair-node { background: #285244; translate: 5px 0; }
+.hair-node b, .hair-node small, .hair-node i { display: block; }
+.hair-node b { color: var(--lime); font-size: 12px; letter-spacing: .1em; }
+.hair-node small { color: var(--muted); font-size: 10px; margin-top: 5px; }
+.hair-node i { color: var(--blue); font-size: 8px; font-style: normal; margin-top: 8px; letter-spacing: .08em; }
+.north { left: 50%; top: 4%; transform: translateX(-50%) rotate(90deg); }.north .hair-node { transform: rotate(-90deg); }
+.southwest { left: 0; bottom: 7%; transform: rotate(-28deg); }.southwest .hair-node { transform: rotate(28deg); }
+.southeast { right: 0; bottom: 7%; transform: rotate(28deg); }.southeast .hair-node { transform: rotate(-28deg); }
+.goal-oriented .field { transform: rotate(180deg); }.goal-oriented .ball, .goal-oriented .hair-node, .goal-oriented .receipt { transform: rotate(180deg); }
+.goal-oriented .north .hair-node { transform: rotate(90deg); }.goal-oriented .southwest .hair-node { transform: rotate(208deg); }.goal-oriented .southeast .hair-node { transform: rotate(152deg); }
+.receipt { position: absolute; left: 50%; bottom: 20%; translate: -50%; width: min(330px, 82%); padding: 12px 15px; border: 1px solid #678277; background: #10271fe8; border-radius: 12px; text-align: center; font-size: 10px; z-index: 4; }
+.receipt > * { display: block; margin: 4px; }.receipt b { color: var(--lime); font-size: 13px; }.receipt span { color: var(--muted); }.receipt em { color: var(--blue); font-style: normal; letter-spacing: .08em; }
+.closure-note { position: absolute; bottom: 22px; max-width: 660px; text-align: center; color: var(--muted); font-size: 11px; line-height: 1.5; }
+@media (max-width: 650px) { .field { width: 100%; min-height: 520px; }.ball { width: 145px; height: 145px; }.hair .thread { width: 90px; }.hair-node { width: 116px; padding: 9px; }.hair-node small { font-size: 8px; }.southwest { left: -8%; bottom: 9%; }.southeast { right: -8%; bottom: 9%; }.runtime-mark { left: 20px; }.closure-note { bottom: 16px; padding: 0 20px; } }
