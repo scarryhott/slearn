@@ -1,228 +1,78 @@
 # Slearn
 
-Slearn is a speed-learning and translational-completion interface. It is designed around a learner moving through goals, beliefs, perspectives, WHY relations, lessons, projects, cultures, and domains as relative views of one returned topology—not as isolated records in a conventional education dashboard.
+Slearn is a speed-learning interface organized around **returned translation**. Perspectives, beliefs, WHY relations, goals, lessons, projects, and world views are not independent record types: they are recenterings of one closure geometry.
 
-> What if everyone could upload genius level intelligence to their mind in an hour? This invention would change society more radically than any one can imagine. Education research and economy would become unrecognizable. Such a speed learning interface could be used for the transformation of relevant information reducing the translation cost between different languages and definitions across cultural and mental bridges.
+> The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
-This is a design thesis, not a claim that literal one-hour intelligence upload already exists. Its practical target is a system that can compress the prerequisite and translation work required to enter a new problem, discipline, language, or perspective while preserving the learner's originating orientation and the differences among the translated forms.
+## Core geometry
 
-## Core thesis
+For an admitted translation, local and global are inverse orientations of the same path:
 
-The scarce educational object is not information alone. It is the returned relation that makes information intelligible from a learner's present position:
+\[
+L \xrightarrow{\tau} G \xrightarrow{\tau^{-1}} L'.
+\]
 
-$$
-P
-\xrightarrow{\text{relevant translation}}
-Q
-\xrightarrow{\text{attempt / experience}}
-A
-\xrightarrow{\text{return}}
-P'.
-$$
+They are not independently primary levels joined by arbitrary operators. The return is evaluated in a specified witness language:
 
-A learning episode is complete when the return preserves the maintained relation without erasing the difference introduced by the traversal:
+\[
+L' \sim_{\mathcal C} L.
+\]
 
-$$
-P' \sim_{\mathcal C} P.
-$$
+For a relative frame `F`, translational completion of a target `S` is
 
-Slearn therefore treats rapid learning as a reduction in translation cost across:
-
-- natural and technical languages;
-- definitions that use the same word differently;
-- disciplinary prerequisite structures;
-- cultural histories and implicit assumptions;
-- cognitive styles, beliefs, goals, and lived perspectives.
-
-The aim is not to overwrite one mind with another. It is to make distant perspectives traversable and returnable.
-
-## Opening within closure
-
-The opening is the learner's current local or global position inside a translation. The closure is the topological identity of the entire returned relation.
-
-For a complete possibility space $X$, an admissible view $a$, and a position $x \in X$, define the current opening or ball by
-
-$$
-B_a(x)=\{y\in X: \pi_a(y)=\pi_a(x)\}.
-$$
-
-Refining the zoom changes the opening:
-
-$$
-B_b(x)\subseteq B_a(x)
-\qquad (b\text{ refines }a),
-$$
-
-but does not manufacture the global closure. What was hair—an unresolved continuation—can become the next ball when the interface recenters on it.
-
-This gives the Slearn geometry:
-
-$$
-\text{zoom}
-=
-\text{translation of opening}
-=
-\text{ball/hair recentering}
-=
-\text{perspectival change within invariant closure}.
-$$
-
-Goals, beliefs, perspectives, WHY connections, lessons, and projects are therefore typed projections of one closure state rather than separate ontological layers.
-
-## Translational completion
-
-Let $A$ be the family of admissible finite views and let $S\subseteq X$ be a target relation, solution set, learning goal, or returned identity. Translational completion is
-
-$$
-\operatorname{TC}_A(S)
-=
-\left\{
- x\in X:
- \forall a\in A,\;
- \exists s\in S,\;
- \pi_a(x)=\pi_a(s)
-\right\}.
-$$
-
-A point belongs to the completion exactly when every admissible local opening around it has a witness in $S$. For a directed family of finite views, this is the ordinary topological closure induced by those views.
-
-The operator is extensive, monotone, and idempotent:
-
-$$
-S\subseteq \operatorname{TC}_A(S),
-$$
-
-$$
-S\subseteq T
-\Longrightarrow
-\operatorname{TC}_A(S)\subseteq\operatorname{TC}_A(T),
-$$
-
-$$
-\operatorname{TC}_A(\operatorname{TC}_A(S))
-=
-\operatorname{TC}_A(S).
-$$
-
-## The only admissible closure in the universal-relative sense
-
-The central claim of this repository is precise:
-
-> Translational completion is the only admissible closure in the universal-relative sense defined by the Slearn axiometry.
-
-Here **universal** means that the criterion ranges over every admissible perspective, chart, zoom, or language in the frame; it does not install one perspective as an external global observer. **Relative** means that identity is tested through preserved translations and returns rather than isolated syntactic self-identity.
-
-An operator $C$ is universally relatively admissible when it satisfies both directions below for every target $S$ and point $x$:
-
-1. **Local conservativity:** if $x\in C(S)$, every admissible local view of $x$ has a matching witness in $S$.
-2. **Returned sufficiency:** if every admissible local view of $x$ has a matching witness in $S$, then $x\in C(S)$.
-
-These conditions force
-
-$$
-C(S)=\operatorname{TC}_A(S)
-$$
-
-for every $S$. Consequently any two universally relatively admissible closure operators are extensionally identical.
-
-This is not the claim that all mathematical uses of the word *closure* are one operator, or that no other topology can be defined. It is a uniqueness theorem relative to the stated universal-relative admissibility contract. A purported closure that adds an unwitnessed external completion, privileges one local chart, or refuses a globally compatible returned point is not admissible under that contract.
-
-## Interactive translational open foundation
-
-The axioms are treated as relative definitions and language qualities. A definition is local to a view; a language is global only over the translations and returns admitted by its frame.
-
-For an interaction transcript $x:\mathbb N\to\mathrm{Bool}$, stage $n$ sees only the finite projection $\pi_n(x)$. No verifier whose input is only that projection can decide the global property
-
-$$
-\operatorname{Sound}(x)\iff\forall i,\;x(i)=\mathrm{false},
-$$
-
-because a defect can first occur immediately beyond the visible prefix. Yet passing every finite stage is equivalent to soundness, and the new Lean module proves
-
-$$
-\boxed{
-\operatorname{ContinuousCompletion}(x)
+\[
+\operatorname{TC}_F(S)(x)
 \iff
-x\in\operatorname{TC}_{\mathrm{prefix}}(\operatorname{Sound}).
-}
-$$
+\forall a,\;\exists s\in S,\;x\equiv_a s.
+\]
 
-Thus interactive proof is locally open at every finite stage while continuous completion is the returned topological closure.
+The Lean core proves this operator is extensive, monotone, idempotent, and the **only** operator satisfying the stated universal-relative admissibility contract. That is a conditional uniqueness result about this frame and contract—not a claim that every use of “closure,” every translation map, or every worldview is unique.
 
-The same module formalizes an inverse-limit tower of compatible prefixes. A complete transcript is recovered from all of its finite views, and every compatible family returns each of its local projections. Apparent global fixity is therefore represented as the returned identity of compatible perspectival choices.
+## Natural-rhythm triangle
 
-It also introduces a **relative Topos–Turing translation interface**. Turing and Topos are asymmetric presentation types connected through encoding and evaluation maps. They are not required to be inverse on the nose. Their composites return the same closure witness:
+The natural-rhythm triangle is the interface primitive for a shape-dynamical light cone of unitary translational curvature:
 
-$$
-E(T(t))\sim_{\mathcal C}t,
-\qquad
-T(E(p))\sim_{\mathcal C}p.
-$$
+\[
+\text{global continuation}
+\xrightarrow{\text{projection}}
+\text{current local opening}
+\xrightarrow{\text{recenter / return}}
+\text{compatible continuation field}.
+\]
 
-This is relative witness equality, not a claim that an arbitrary topos is literally a Turing machine.
+It sits between two boundary failures:
 
-Translation choices remain open. They can close or obstruct local gluing. The repository now contains two concrete functions on overlapping intervals: one native pair glues and one does not; a stated translation relatively glues the unglued pair, while another stated translation produces an obstruction for the glued pair. The comparison language is always part of the receipt.
+- **isolated local/global view**: one presentation is treated as the whole, so no meaningful translation remains;
+- **unresolved temporal/superposed partition**: alternatives remain unreturned, so no trajectory acquires a determinate relation.
 
-The resulting distinction is:
+“Light cone,” “unitary curvature,” and these social or phenomenological readings are design interpretations. Lean formalizes only the selected structure: refined openings, an admitted forward/backward translation, a common witness, named relative positions, and explicit boundary exclusions supplied by a caller.
 
-$$
-\boxed{
-\text{unique admissible completion operator under the contract}
-\neq
-\text{unique translation map or privileged initial choice}.
-}
-$$
+Natural choice means closure evidence under the admitted translation and its return. A non-natural perspective is not modeled as an unrelated competing translation operator; it is a `dual` or `obstructed` position inside the same translation and comparison language.
 
-Naturality is therefore not forced circularly as an initial axiom. It appears as compatibility of interactive choices under translation and return, equivalently as an inverse-limit closure condition.
+## Runtime contract
 
-## Relevant information without loss of closure
+Every interaction works on one persisted closure state:
 
-Speed learning should not upload everything. It should select a closure-sufficient family of relevant views.
+```text
+frame → active opening → translation path → comparison language
+      → perspective / belief / WHY / goal / lesson / project / world projection
+      → return witness or obstruction → receipt
+```
 
-Suppose $R\subseteq A$ is cofinal under refinement: for every admissible view $a$, some relevant view $r\in R$ refines it. Then
+Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A valid receipt records the frame, active view, target, translation, return witness, obstruction evidence, and status. A local success is never silently promoted to universal-relative completion.
 
-$$
-\operatorname{TC}_R(S)=\operatorname{TC}_A(S).
-$$
+## Machine-checked scope
 
-This is the formal basis for relevance in Slearn: a smaller task-specific set of sufficiently refined perspectives can preserve the same completion while reducing the translation burden. The interface can therefore seek the minimal relevant bridge rather than flooding the learner with undifferentiated information.
+- [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
+- [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
+- [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
 
-## Natural-rhythm interface geometry
+The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
 
-The natural-rhythm triangle is interpreted as projection and inverse expansion:
+## Further design documents
 
-$$
-\text{sky / global continuation}
-\xrightarrow{\text{reduction}}
-\text{ground / current opening},
-$$
+- [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
+- [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
+- [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
 
-$$
-\text{ground / current opening}
-\xrightarrow{\text{inverse expansion}}
-\text{admissible global continuations}.
-$$
-
-Within Slearn:
-
-$$
-\text{perspective}
-\xleftrightarrow{\text{WHY / return}}
-\text{belief}
-\xleftrightarrow{\text{WHY / return}}
-\text{goal}
-\xleftrightarrow{\text{WHY / return}}
-\text{project and world}.
-$$
-
-The interface should render these movements from the same runtime relation. Visual zoom, conceptual translation, and formal change of opening must not be disconnected implementations.
-
-## Repository contents
-
-- [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md) gives the universal-relative completion axiometry, uniqueness result, relevance theorem, and Slearn runtime contract.
-- [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md) gives the interactive-proof unification, relative definitions and language qualities, inverse-limit interpretation, relative Topos–Turing return, concrete gluing/obstruction examples, institutional reading, and scope boundaries.
-- [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) formalizes the abstract closure laws, universal-relative uniqueness theorem, and cofinal relevant-view theorem in Lean 4.
-- [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) formalizes finite-stage incompleteness, continuous completion as translational closure, the finite-prefix inverse limit, returned Topos–Turing witness equality, and translated gluing/obstruction.
-- GitHub Actions builds the Lean project and rejects `sorry` or `admit` placeholders.
-
-The implementation criterion is not merely that a screen can display goals and perspectives. The runtime must make each zoom a real translation of the current opening, preserve the comparison language and obstruction evidence, and issue a completion receipt only when the required return relation is preserved.
+Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.
