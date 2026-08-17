@@ -83,6 +83,19 @@ frame → active opening → translation path → comparison language
 
 Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A valid receipt records the frame, active view, target, translation, return witness, obstruction evidence, and status. A local success is never silently promoted to universal-relative completion.
 
+Every admitted recentering executes the common operation:
+
+\[
+\Gamma \xrightarrow{Ch} Ch(\Gamma) \xrightarrow{Ka} Ka(Ch(\Gamma))
+\xrightarrow{\mathrm{Diff}} \Omega.
+\]
+
+`Ch` is semantic contraction (zoom out), `Ka` is reciprocal reopening (zoom
+in), and `Ω` is the retained closure-relative difference. Relational recovery
+does not require literal endpoint identity; a zero readout at one level does
+not exhaust local route distinction. This operation is the runtime law, not a
+decorative display transition.
+
 ## Machine-checked scope
 
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
@@ -90,6 +103,7 @@ Thus a zoom from perspective to belief, WHY to goal, lesson to project, or proje
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
 - [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
+- [`Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean`](Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean) supplies the shared `Ch → Ka → Ω` operator, four-way verdict classification, finite-resolution/readout contract, ordered route residue, and Slearn semantic-zoom binding.
 - [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
 
 The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
@@ -101,6 +115,7 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.
 - [`docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md): source-generated map/hair admission and directional token resuperposition boundaries.
+- [`docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md`](docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md): the common `Ch → Ka → Ω` operation, runtime verdicts, and scope limits.
 - [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
 
 Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.
