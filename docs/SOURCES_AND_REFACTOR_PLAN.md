@@ -34,6 +34,22 @@ identify the idea as an **authored design interpretation**, a **modeled runtime
 requirement**, or a **formal theorem target**. It must not label a chat note as
 machine-checked merely because it motivated a Lean definition.
 
+## Recovered primary interface sources
+
+The original visual/runtime specification is available in the project owner's
+Google Drive and is more authoritative for interface geometry than a later
+chat-summary reconstruction.
+
+| Source | Provenance | Durable contribution to Slearn |
+| --- | --- | --- |
+| [Slearn universe-perspective path (2024)](https://docs.google.com/document/d/14NIKWn5tKkPD86Nasz6wVwBySTno2_VEiE0EtUdHSlk/edit?usp=drivesdk) | Primary authored interface source | Brain/perspective viewport; values and beliefs; prospective goals; lesson paths; transformed experience nodes; semantic zoom; 90° lesson-to-project plane; equal-depth rungs; 2D local paths; persistent input; calendar, collaboration, and project/world surfaces. |
+| [Slearn source-disciplined synthesis (2026)](https://docs.google.com/document/d/12vL3JfYMtZMW8QuFU7XSoTL4kQ0EtvihRgI7wXRkgrI/edit?usp=drivesdk) | Authored/project synthesis | Translation closure, the three WHY relations, passage/wall/OPEN readings, witness-backed experience, and the machine-checked versus interpretive boundary. |
+| [Translational-completion manuscript (2026)](https://docs.google.com/document/d/1_6C2V7XG-RbMmw5d1LL8zCTbeAtM7qS-ZuZaGTfI9C4/edit?usp=drivesdk) | Authored/project synthesis | Closure-derived state model, semantic zoom as fibre/quotient, episode transaction, and explicit runtime non-goals. |
+
+The direct 2024 document is a product/design source, not a Lean theorem. The
+2026 sources interpret and constrain it through closure; they do not erase its
+brain/value/goal/lesson/project/world geometry.
+
 ## Source of truth: current Slearn formal surface
 
 | Repository source | What it establishes | What it does not establish |
@@ -42,6 +58,7 @@ machine-checked merely because it motivated a Lean definition.
 | `Slearn/InteractiveTranslationalOpenFoundation.lean` | Finite-prefix locality obstruction; continuous completion in the transcript model; inverse-limit reconstruction; witness-return interface; relative gluing and obstruction examples. | A result about arbitrary interactive-proof systems, arbitrary topoi/Turing machines, or empirical institutions. |
 | `Slearn/NaturalRhythmClosure.lean` | Forward/backward orientations of an admitted translation, common-witness closure, natural/dual/obstructed positions, and local-opening containment under refinement. | A physical light cone, curvature tensor, consciousness, natural law, or an originless pre-language foundation. |
 | `Slearn/ContinualInversionClosure.lean` | Perspective–WHY–goal reduction and inverse expansion, involutive language-definition presentation flips, and closure-backed receipts in either orientation. | Literal endpoint identity, learned ASI behavior, global uniqueness of an inverse contribution, or the wider metaphysical reading of continual inversion. |
+| `Slearn/ClosureDerivedSlearn.lean` | Witness-coherent perspective → belief → goal, WHY → lesson → project → world extensions; lesson/project and project/world rungs; receipt-gated returned occurrences. | Generation of a maze or UI, independently grounded returns, a general topology, or empirical project/world outcomes. |
 
 The root module `Slearn.lean` imports all three. CI runs `lake build` and rejects Lean `sorry` and `admit` placeholders.
 

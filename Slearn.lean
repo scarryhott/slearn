@@ -1,4 +1,5 @@
 import Slearn.UniversalRelativeTranslationalCompletion
 import Slearn.NaturalRhythmClosure
 import Slearn.ContinualInversionClosure
+import Slearn.ClosureDerivedSlearn
 import Slearn.InteractiveTranslationalOpenFoundation

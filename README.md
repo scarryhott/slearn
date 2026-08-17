@@ -68,6 +68,7 @@ The formal `ContinualInversion` core makes the perspective–WHY–goal triangle
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
 - [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
 - [`Slearn/ContinualInversionClosure.lean`](Slearn/ContinualInversionClosure.lean) formalizes perspective–WHY–goal reduction, inverse expansion, presentation flips, and closure-backed return receipts.
+- [`Slearn/ClosureDerivedSlearn.lean`](Slearn/ClosureDerivedSlearn.lean) formalizes a typed witness-coherent bridge from the original perspective/belief/goal/lesson/project/world map to the continual-inversion core.
 - [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
 
 The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
@@ -78,5 +79,6 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
 - [`docs/SOURCES_AND_REFACTOR_PLAN.md`](docs/SOURCES_AND_REFACTOR_PLAN.md): source inventory, claim boundary, adjacent runtimes, and staged refactor criteria.
+- [`docs/CLOSURE_DERIVED_SLEARN_MODEL.md`](docs/CLOSURE_DERIVED_SLEARN_MODEL.md): the recovered original map geometry, its natural-rhythm closure dynamics, and the resulting runtime model.
 
 Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.
