@@ -1,0 +1,6 @@
+name = "slearn"
+version = "0.1.0"
+defaultTargets = ["Slearn"]
+
+[[lean_lib]]
+name = "Slearn"
