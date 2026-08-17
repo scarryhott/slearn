@@ -61,10 +61,13 @@ frame → active opening → translation path → comparison language
 
 Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A valid receipt records the frame, active view, target, translation, return witness, obstruction evidence, and status. A local success is never silently promoted to universal-relative completion.
 
+The formal `ContinualInversion` core makes the perspective–WHY–goal triangle explicit. It carries selected reduction and inverse expansion, an involutive language-definition flip, and a witness-relative return in each direction. The flip can look absolute at the interface boundary, while the proved endpoint relation remains closure through the specified witness—not literal identity of the endpoint presentations.
+
 ## Machine-checked scope
 
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
 - [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
+- [`Slearn/ContinualInversionClosure.lean`](Slearn/ContinualInversionClosure.lean) formalizes perspective–WHY–goal reduction, inverse expansion, presentation flips, and closure-backed return receipts.
 - [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
 
 The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
@@ -74,5 +77,6 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
+- [`docs/SOURCES_AND_REFACTOR_PLAN.md`](docs/SOURCES_AND_REFACTOR_PLAN.md): source inventory, claim boundary, adjacent runtimes, and staged refactor criteria.
 
 Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.

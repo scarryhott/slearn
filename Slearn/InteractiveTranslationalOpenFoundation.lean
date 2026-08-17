@@ -1,4 +1,4 @@
-import Slearn.UniversalRelativeTranslationalCompletion
+import Slearn.ContinualInversionClosure
 
 /-
 Interactive translational openness for Slearn.
@@ -248,6 +248,18 @@ namespace RelativeToposTuring
 variable {Turing : Type u} {Topos : Type v} {Witness : Type w}
 variable (R : RelativeToposTuring Turing Topos Witness)
 
+/--
+The named Topos–Turing presentation is one instance of the shared admitted
+translation vocabulary used by natural-rhythm and continual-inversion modules.
+-/
+def admittedTranslation : AdmittedTranslation Turing Topos Witness where
+  forward := R.encode
+  backward := R.evaluate
+  localWitness := R.turingWitness
+  globalWitness := R.toposWitness
+  forward_coherent := R.encode_coherent
+  backward_coherent := R.evaluate_coherent
+
 /-- Relative equality inside the Turing presentation. -/
 def turingEq (x y : Turing) : Prop :=
   R.turingWitness x = R.turingWitness y
@@ -259,6 +271,10 @@ def toposEq (x y : Topos) : Prop :=
 /-- Cross-language equality through the common returned witness. -/
 def crossEq (t : Turing) (p : Topos) : Prop :=
   R.turingWitness t = R.toposWitness p
+
+/-- The prior cross-language equality is definitionally the shared closure test. -/
+theorem admittedTranslation_closes_iff (t : Turing) (p : Topos) :
+    R.admittedTranslation.closes t p ↔ R.crossEq t p := Iff.rfl
 
 /-- Turing encoded through Topos and evaluated back returns in closure. -/
 theorem turing_return (t : Turing) :
@@ -449,5 +465,6 @@ end Slearn
 #print axioms Slearn.InteractiveOpenFoundation.limit_prefix_return
 #print axioms Slearn.RelativeToposTuring.turing_return
 #print axioms Slearn.RelativeToposTuring.topos_return
+#print axioms Slearn.RelativeToposTuring.admittedTranslation_closes_iff
 #print axioms Slearn.RelativeGluing.shifted_pair_relatively_glues
 #print axioms Slearn.RelativeGluing.line_pair_has_relative_obstruction

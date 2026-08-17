@@ -84,6 +84,19 @@ completion status + receipt provenance
 
 `OPEN_LOCAL`, `LOCALLY_COMPATIBLE`, `DUAL_POSITION`, `OBSTRUCTION_WITNESSED`, `RETURNED_COMPLETE`, and `OUTSIDE_FRAME` are distinct states. In particular, local compatibility must never be presented as universal-relative completion.
 
+## Continual inversion of the WHY triangle
+
+`Slearn/ContinualInversionClosure.lean` makes the source zoom relation explicit. A `ContinualInversion` supplies:
+
+- a perspective → WHY → goal expansion;
+- a goal → WHY → perspective reduction;
+- an involutive flip of the active language-definition presentation;
+- a closure receipt for each direction through one admitted translation.
+
+The visual boundary can therefore render a complete flip between perspective and goal. The Lean result is deliberately more precise than an absolute identity: for a perspective `p`, its expanded goal closes with `p` in the translation witness language; for a goal `g`, its reduced perspective closes with `g`. Neither theorem states that reduction and expansion are literal identity functions.
+
+This is the formal seed of the learned translational continuation described in the chat-note sources. “Learned ASI closure,” universal uniqueness of the selected contribution, and any metaphysical claim remain future models or interpretations, not theorems in this repository.
+
 ## Relation to the completion theorem
 
 This layer does not alter the theorem:
