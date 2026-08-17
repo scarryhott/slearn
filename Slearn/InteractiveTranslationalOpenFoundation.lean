@@ -215,8 +215,7 @@ theorem limit_prefix_return (C : PrefixInverseLimit) (n : Nat) :
     rfl
   have hc := C.compatible hle j
   change C.component (i.val + 1) j = C.component n i
-  rw [← hlift]
-  exact hc.symm
+  exact hc.symm.trans (congrArg (C.component n) hlift)
 
 /-- A compatible prefix family is determined by its reconstructed transcript. -/
 theorem inverseLimit_extensional
