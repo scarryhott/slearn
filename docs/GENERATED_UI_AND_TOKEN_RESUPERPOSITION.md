@@ -45,9 +45,19 @@ successor presentation
 relative position
 ```
 
-The browser holds this same kind of record. It derives its points, lines, and
-their force-field positions from the currently admitted records. It stores no
-canonical graph or hand-positioned diagram.
+The browser holds this same kind of record. Its closure machine deterministically
+emits the complete scene from it: points, connections, physical coordinates,
+editable open-trace seeds, operation labels, enabled/disabled operations, and
+visual tokens. The browser page is only a generic interpreter of that emitted
+scene. It contains no Slearn topology, labels, coordinate rules, transition
+rules, or status-to-appearance choices.
+
+The formal counterpart is `ClosureMachineScene`. Its points are exactly
+`SpatialClosure` occurrences; its connections require two such occurrences;
+its operations are exactly `LensTransition`s; and its editable inputs are
+exhausted by `ClosureSeed`, the declared axes of an open trace. The theorems
+`point_iff_spatialClosure`, `connection_requires_closure`, and
+`operation_is_lens_transition` state these three boundaries.
 
 The generated field has four possible visible roles:
 
@@ -60,8 +70,9 @@ The generated field has four possible visible roles:
 
 `SpatialClosure` is a predicate over these occurrences, not an object holding
 screen coordinates. `SpatialOccurrence` retains the source trace for every
-role. This is the checked boundary that prevents a rendered node from becoming
-an unrelated UI object.
+role. The runtime's deterministic force projection gives those occurrences
+coordinates only after the closure scene is formed. This is the checked
+boundary that prevents a rendered node from becoming an unrelated UI object.
 
 ## 2. Zoom, topic selection, and definition changes
 
