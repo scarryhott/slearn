@@ -93,3 +93,55 @@ C=\operatorname{TC}_F
 \]
 
 only when `C` satisfies both local conservativity and returned sufficiency over every admitted view of `F`. It makes the frame’s translations and recenterings legible to the runtime without selecting a privileged initial view or resolving dual and obstructed positions without evidence.
+
+## Closed episode and reopened continuation
+
+The natural-rhythm layer gives the shape of an admitted translation. The
+episode layer in [`CLOSED_TOPOLOGICAL_TRANSLATION.md`](CLOSED_TOPOLOGICAL_TRANSLATION.md)
+states when an interaction may honestly be rendered as a closure that opens a
+new continuation.
+
+It models an unprioritized reciprocal pair, two interacting paths, and an
+orientation swap. A return recovers a caller-selected base relation; it does
+not assert literal equality with the origin. A residue is admitted only when
+another successful return at the same base has a different caller-selected
+residue coordinate. `CLOSED_TO_NEW_OPENING` additionally requires that the
+successor’s continuation field differ from the origin’s.
+
+This keeps the triangle’s recurrence exact:
+
+\[
+\text{OPEN interaction}
+\rightarrow
+\text{returned relation}
+\rightarrow
+\text{distinguishing residue}
+\rightarrow
+\text{inherited opening}.
+\]
+
+## Generated map and hair admission
+
+The recentered interface is now constrained in the one-way direction
+
+\[
+\text{witnessed learner kernel}
+\Longrightarrow
+\text{generated Slearn map}
+\Longrightarrow
+\text{local hair/view atlas}.
+\]
+
+The bounded formal model in
+[`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](../Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean)
+therefore admits a lesson only with all three WHY witnesses, a project only
+with an attempt, and a returned experience reading only with a return receipt.
+Its saturation theorem identifies the resulting bounded relation with the
+specified core/brain/value/lesson/project/impact/balance/Slearn/dream map.
+Unwitnessed or unattempted content remains `OPEN`; a generic screen, card, or
+mechanic is not an independent source of map structure. The later
+token-resuperposition layer is documented with the same boundary in
+[`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
+
+It is still not a theorem about physical curvature, consciousness, or a
+privileged natural choice.
