@@ -11,6 +11,8 @@ This document is the formal design contract for Slearn. It joins four claims tha
 
 The last statement is a conditional uniqueness theorem. It does **not** say that every topology, closure space, deductive system, or use of the word *closure* is identical. It says that once admissibility is required to be both locally conservative and globally return-sufficient over all admissible relative views, there is exactly one possible operator.
 
+The natural-rhythm terminology is consolidated in [`NATURAL_RHYTHM_CLOSURE.md`](NATURAL_RHYTHM_CLOSURE.md). In this contract, “local” and “global” are orientations of an admitted translation and its return, not two independently absolute domains. The present Lean module proves the closure result below; it does not prove claims about physical curvature, consciousness, or social institutions.
+
 ---
 
 ## 1. Relative view frame
@@ -472,7 +474,7 @@ The bridge must preserve the maintained relation, not force every chart into one
 
 ---
 
-## 10. Slearn interface projections
+## 10. Slearn interface projections and recentering
 
 Let $\mathcal C$ be the current translational closure state. The interface renders typed projections:
 
@@ -490,7 +492,25 @@ $$
 \Pi_{\mathrm{project}}(\mathcal C).
 $$
 
-These are not separate databases whose relationships are added later. They are views of the same returned topology.
+These are not separate databases whose relationships are added later. They are views of the same returned topology. The complete projection chain is
+
+$$
+\text{perspective}
+\leftrightarrow
+\text{belief}
+\leftrightarrow
+\text{WHY}
+\leftrightarrow
+\text{goal}
+\leftrightarrow
+\text{lesson}
+\leftrightarrow
+\text{project}
+\leftrightarrow
+\text{world}.
+$$
+
+Each move is a recentering of the active opening inside one persisted closure state. A WHY edge must name the translation and return relation used by the recentering.
 
 ### Zoom
 
@@ -532,7 +552,7 @@ $$
 B_a(x)\subseteq X.
 $$
 
-The natural-rhythm triangle is therefore the visible orientation of projection, refinement, expansion, and return.
+The natural-rhythm triangle is therefore the visible orientation of projection, refinement, expansion, and return. It is positioned operationally between an isolated view (where translation has been erased) and an unresolved partition (where alternatives have no return receipt); these are runtime boundaries, not additional theorems of this module.
 
 ---
 

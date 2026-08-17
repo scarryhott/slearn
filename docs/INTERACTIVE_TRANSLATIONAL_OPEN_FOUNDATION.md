@@ -14,6 +14,8 @@ The central claim is not that one globally fixed language, topos, machine, geome
 
 “Unique” is relative to the explicit admissibility contract. Translation maps and local presentations remain open choices; the closure operator is forced only after the frame, its admissible views, and both directions of the return criterion are fixed.
 
+For the consolidated local/global orientation, natural-rhythm triangle, and runtime status vocabulary, see [`NATURAL_RHYTHM_CLOSURE.md`](NATURAL_RHYTHM_CLOSURE.md). Its new Lean layer is intentionally structural: it does not certify the document's metaphysical or institutional readings.
+
 ---
 
 ## 1. Foundational openness
@@ -286,6 +288,8 @@ A local choice can be:
 - **internal**, generated from one presentation;
 - **external**, generated from the translated presentation;
 - **returned**, supplied with evidence that the two presentations close in the common witness language.
+
+A non-natural outcome is not thereby a different translation operator. In the consolidated vocabulary it is a relative `dual` or `obstructed` position within the same admitted comparison language; proposing a new map is a separately recorded translation choice.
 
 The Lean structure `TranslatedChoice` records this evidence. `internalChoice` and `externalChoice` show that either orientation can generate a closed pair when the translation coherences hold.
 

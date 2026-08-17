@@ -1,2 +1,3 @@
 import Slearn.UniversalRelativeTranslationalCompletion
+import Slearn.NaturalRhythmClosure
 import Slearn.InteractiveTranslationalOpenFoundation
