@@ -122,25 +122,25 @@ This keeps the triangle’s recurrence exact:
 
 ## Generated map and hair admission
 
-The recentered interface is now constrained in the one-way direction
+The recentered interface is constrained in the relation-generated direction
 
 \[
-\text{witnessed learner kernel}
+\text{interaction field}
 \Longrightarrow
-\text{generated Slearn map}
+\text{spatial closure projection}
 \Longrightarrow
-\text{local hair/view atlas}.
+\text{bridged contraction / reopening / return}.
 \]
 
 The bounded formal model in
 [`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](../Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean)
-therefore admits a lesson only with all three WHY witnesses, a project only
-with an attempt, and a returned experience reading only with a return receipt.
-Its saturation theorem identifies the resulting bounded relation with the
-specified core/brain/value/lesson/project/impact/balance/Slearn/dream map.
-Unwitnessed or unattempted content remains `OPEN`; a generic screen, card, or
-mechanic is not an independent source of map structure. The later
-token-resuperposition layer is documented with the same boundary in
+does not start from a specified core/brain/value/lesson/project/dream map. A
+visible presentation, WHY translation, closure, or successor is generated only
+from an admitted interaction trace. A contraction or re-opening requires an
+explicit relative re-reading and preserved bridge; a successor also requires an
+attempt and return receipt. Missing bridge or return support is `OPEN`. This
+makes topic selection and zoom closure transitions rather than independent UI
+mechanics. The separate token layer follows the same evidence boundary in
 [`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
 
 It is still not a theorem about physical curvature, consciousness, or a

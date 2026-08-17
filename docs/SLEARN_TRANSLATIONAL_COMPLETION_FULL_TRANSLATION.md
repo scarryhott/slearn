@@ -949,14 +949,16 @@ The full presentation-invariance bridge remains:
 
 under assumptions that do not simply encode the desired tree.
 
-The current repository now has a narrower, machine-checked one-way bridge in
-`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`: a bounded learner kernel with
-three WHY witnesses and attempts generates the specified canonical
-core/value/lesson/project/rung/impact/balance/Slearn/dream relation; saturation
-of those witnesses and attempts yields equality with that bounded canonical
-map. This does not establish the displayed equivalence, map uniqueness,
-empirical return independence, or invariance under all admissible presentation
-changes. See [`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
+The current repository now has a narrower, machine-checked relation bridge in
+`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`: an admitted interaction trace
+generates only its local presentation, WHY translation, target closure, and —
+with return evidence — successor presentation. A relative re-reading together
+with a preserved bridge is required before a relation may contract or reopen;
+an attempt and receipt are additionally required for return. There is no
+specified canonical core/value/lesson/project/dream graph and no theorem of
+map uniqueness, empirical return independence, or invariance under all
+presentation changes. See
+[`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
 
 It should derive:
 
