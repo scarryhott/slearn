@@ -24,6 +24,7 @@ jobs:
         run: |
           node scripts/validate-framework.mjs
           node scripts/run-source-closure.mjs
+          node scripts/project-closure-hull.mjs --summary
 
       - name: Reject proof placeholders
         shell: bash

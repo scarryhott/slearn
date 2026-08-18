@@ -97,6 +97,7 @@ used to change the runtime or documentation.
 | --- | --- | --- |
 | Local/global are inverse orientations of one admitted translation | `NaturalRhythmClosure.lean`, `NRRF654IntegratedFrameworkClosure.lean` | The application-specific witness still has to be supplied |
 | Source-defined curvature and nonterminal admission | `PerspectivalCurvatureClosurePrimitives.lean`, `framework/source-closure-primitives.json`, `scripts/run-source-closure.mjs` | The primitive source packet reaches `PATH`; no source text is treated as a reviewed attempt, return, or truth admission |
+| Ledger-derived Slearn maze | `DerivedPerspectivalClosureHull.lean`, `framework/closure-ledger.json`, `scripts/project-closure-hull.mjs` | A PATH contributes only a prospective branch and OPEN remainder; experience fibres, successor updates, and returned-basis merges require a continued admission |
 | Relation-relative return with residue and a next opening | `ClosedTopologicalTranslation.lean`, `NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean`, `NRRF655ExecutablePerspectivalClosureEpisode.lean` | The theorem does not decide whether a human receipt is adequate |
 | Source-derived Slearn roles and trace-gated map | `NRRF651SlearnUIHairOfClosureGeneratedMap.lean` | It proves a modeled bounded generator, not the historic notes or browser equality |
 | Continuous completion versus a finite interaction | `InteractiveTranslationalOpenFoundation.lean` | A finite browser session cannot certify a global completion |

@@ -18,7 +18,12 @@
       "resources": [
         "docs/SLEARN_EDUCATION_MODEL.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
-        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
+        "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
+        "Slearn/DerivedPerspectivalClosureHull.lean",
+        "framework/closure-ledger.json",
+        "scripts/closure-packet-kernel.mjs",
+        "scripts/project-closure-hull.mjs"
       ]
     },
     {
@@ -87,8 +92,13 @@
         "Slearn/UniversalRelativeTranslationalCompletion.lean",
         "Slearn/InteractiveTranslationalOpenFoundation.lean",
         "Slearn/PerspectivalCurvatureClosurePrimitives.lean",
+        "Slearn/DerivedPerspectivalClosureHull.lean",
+        "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "framework/source-closure-primitives.json",
-        "scripts/run-source-closure.mjs"
+        "framework/closure-ledger.json",
+        "scripts/run-source-closure.mjs",
+        "scripts/closure-packet-kernel.mjs",
+        "scripts/project-closure-hull.mjs"
       ]
     },
     {
@@ -97,6 +107,7 @@
       "resources": [
         "Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean",
         "Slearn/NRRF654IntegratedFrameworkClosure.lean",
+        "Slearn/DerivedPerspectivalClosureHull.lean",
         "Slearn.lean",
         "docs/FRAMEWORK_CLOSURE_INTEGRATION.md",
         "docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md",
@@ -104,7 +115,10 @@
         "ui/app/closureSources.ts",
         "ui/app/closureRuntime.ts",
         "ui/app/page.tsx",
-        "ui/tests/closureRuntime.test.ts"
+        "ui/tests/closureRuntime.test.ts",
+        "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
+        "framework/closure-ledger.json",
+        "scripts/project-closure-hull.mjs"
       ]
     }
   ],

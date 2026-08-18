@@ -61,6 +61,7 @@ Slearn/ClosedTopologicalTranslation.lean→ INTERACTION / RETURN episode structu
 Slearn/Interactive…lean                 → INTERACTION / VERIFICATION finite-limit boundary
 Slearn/NRRF654…lean                     → frame integration adapter
 Slearn/NRRF655…lean                     → RETURN predecessor-typed continuation
+Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-derived closure hull
 
 ui/                                    → optional PROJECTION only
 ```
@@ -105,6 +106,10 @@ Start at the frame that matches the work, not at the UI:
 - New runtime or visualization: register it as a projection of specific packet
   fields; it may not introduce independent navigation, content, or completion
   state.
+- New map branch: add a packet to `framework/closure-ledger.json` and run the
+  hull projector. A prospective branch may appear from a `PATH`; an experience,
+  successor, or merged returned basis may appear only from a recorded continued
+  admission.
 
 The central open problem is not “make more screens” or “assert one theory.” It
 is to organize real source-grounded episodes whose translations, counter-
