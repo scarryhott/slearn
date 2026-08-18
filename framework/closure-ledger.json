@@ -1,0 +1,15 @@
+{
+  "id": "SLEARN-SOURCE-CLOSURE-LEDGER",
+  "packets": [
+    "source-closure-primitives.json"
+  ],
+  "expected": {
+    "packetCount": 1,
+    "statusCounts": {
+      "PATH": 1
+    },
+    "prospectiveBranches": 1,
+    "experienceFibres": 0,
+    "openRegions": 1
+  }
+}

@@ -733,7 +733,7 @@ P\xrightarrow{w}Q
 \xrightarrow{\rho}P.
 \]
 
-Here \(Q\) is the question/WHY state, \(A\) the attempt/artifact state, and \(\rho\) the independently grounded return into the perspective type. Their composite is
+Here \(Q\) is the question/WHY state, \(A\) the attempt/artifact state, and \(\rho\) the **proposed independently grounded** return into the perspective type. Their composite is
 
 \[
 \boxed{
@@ -743,7 +743,8 @@ f_e=\rho\circ a\circ w:P\to P.
 
 This is the decisive move reported for NRRF638: the user does not supply “the translation” as a separate arbitrary map; the episode generates it from WHY, attempt, and return.
 
-The claim still has a boundary. The three arrows must be proposed and frozen; the formal composite does not infer their educational content or prove that \(\rho\) is empirically independent. Runtime design must supply provenance, branch history, rubrics, world response, or other return evidence appropriate to the goal.
+The claim still has a boundary. The three arrows must be proposed and frozen; the formal composite does not infer their educational content or prove that \(\rho\) is empirically independent. Runtime design must record provenance, the source claim, material examined, counter-reading, comparison method, review, branch history, rubrics, world response, or other return evidence appropriate to the goal. The current packet protocol is
+[`SLEARN_CLOSURE_RESEARCH_LEDGER.md`](SLEARN_CLOSURE_RESEARCH_LEDGER.md).
 
 ### 8.4 Maze traversal, circle, and holonomy
 
@@ -949,14 +950,18 @@ The full presentation-invariance bridge remains:
 
 under assumptions that do not simply encode the desired tree.
 
-The current repository now has a narrower, machine-checked one-way bridge in
-`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`: a bounded learner kernel with
-three WHY witnesses and attempts generates the specified canonical
-core/value/lesson/project/rung/impact/balance/Slearn/dream relation; saturation
-of those witnesses and attempts yields equality with that bounded canonical
-map. This does not establish the displayed equivalence, map uniqueness,
-empirical return independence, or invariance under all admissible presentation
-changes. See [`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
+The current repository now has a narrower, machine-checked relation bridge in
+`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`: an admitted interaction trace
+generates only its local presentation, WHY translation, target closure, and —
+with return evidence — successor presentation. A relative re-reading together
+with a preserved bridge is required before a relation may contract or reopen.
+The runtime now additionally requires a source anchor/claim, material
+examined, attempt, counter-reading, comparison method, review, receipt, and
+changed successor before it records a return. There is no
+specified canonical core/value/lesson/project/dream graph and no theorem of
+map uniqueness, empirical return independence, or invariance under all
+presentation changes. See
+[`GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md).
 
 It should derive:
 

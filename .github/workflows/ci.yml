@@ -16,6 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate framed closure resources
+        run: |
+          node scripts/validate-framework.mjs
+          node scripts/run-source-closure.mjs
+          node scripts/project-closure-hull.mjs --summary
+          node scripts/run-changing-axiometry-protocol.mjs
+
       - name: Reject proof placeholders
         shell: bash
         run: |

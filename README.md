@@ -1,13 +1,24 @@
 # Slearn
 
-Slearn is a speed-learning interface organized around **returned translation**. Perspectives, beliefs, WHY relations, goals, lessons, projects, and world views are not independent record types: they are recenterings of one closure geometry.
+Slearn is a **framed repository for perspectival curvature and closure**. It
+is not centered on a website or on one finite model. Perspectives, beliefs,
+WHY relations, goals, lessons, projects, world views, formal modules, and
+runtime projections are all located within one source-grounded
+perspectival-curvature closure packet.
+
+Start with [`FRAMEWORK.md`](FRAMEWORK.md). It defines the repository’s nine
+frames—`OPEN`, `PERSPECTIVE`, `CURVATURE`, `TRANSLATION`, `INTERACTION`,
+`VERIFICATION`, `ADMISSION`, `RETURN`, and `PROJECTION`—and their admission
+rules. The optional `ui/` directory is in the final projection frame; it has
+no authority to create sources, verify returns, or define Slearn.
 
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
-The visible map is not a decorative coordinate layer. It is generated from the
-witnessed learner kernel: a lesson requires all three WHY witnesses, a project
-requires an attempt, and an experience reading requires a return receipt.
-Unwitnessed or unattempted material is `OPEN`, not an admissible mechanic.
+Any visible map is a projection, not the framework. It must be generated from
+the witnessed learner kernel: a lesson requires all three WHY witnesses, a
+project requires an attempt, and a recorded return requires source material,
+a counter-reading, comparison, review, and a successor. Unwitnessed or
+unattempted material is `OPEN`, not an admissible mechanic.
 
 ## Core geometry
 
@@ -71,9 +82,9 @@ It sits between two boundary failures:
 
 Natural choice means closure evidence under the admitted translation and its return. A non-natural perspective is not modeled as an unrelated competing translation operator; it is a `dual` or `obstructed` position inside the same translation and comparison language.
 
-## Runtime contract
+## Projection contract
 
-Every interaction works on one persisted closure state:
+Every projection works from one persisted closure state:
 
 ```text
 frame → active opening → translation path → comparison language
@@ -81,7 +92,7 @@ frame → active opening → translation path → comparison language
       → return witness or obstruction → residue comparison → inherited opening → receipt
 ```
 
-Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A valid receipt records the frame, active view, target, translation, return witness, obstruction evidence, and status. A local success is never silently promoted to universal-relative completion.
+Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A recorded return requires a source anchor and claim, material examined, attempt, counter-reading, comparison method, review, receipt, and changed successor. It is a reviewable evidence record, not an automatic truth verdict. A local success is never silently promoted to universal-relative completion.
 
 Every admitted recentering executes the common operation:
 
@@ -93,13 +104,16 @@ Every admitted recentering executes the common operation:
 `Ch` is semantic contraction (zoom out), `Ka` is reciprocal reopening (zoom
 in), and `Ω` is the retained closure-relative difference. Relational recovery
 does not require literal endpoint identity; a zero readout at one level does
-not exhaust local route distinction. This operation is the runtime law, not a
-decorative display transition.
+not exhaust local route distinction. This operation is the projection law, not
+a decorative display transition.
 
 ## Machine-checked scope
 
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
 - [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
+- [`Slearn/PerspectivalCurvatureClosurePrimitives.lean`](Slearn/PerspectivalCurvatureClosurePrimitives.lean) makes the source-defined perspective, belief/goal limits, WHY, paired explanation/definition, counter-path, reviewed interaction, and nonterminal admission conditions explicit before a return can be recorded.
+- [`Slearn/DerivedPerspectivalClosureHull.lean`](Slearn/DerivedPerspectivalClosureHull.lean) derives prospective branches, reciprocal zoom readings, OPEN regions, experience fibres, returned-basis merges, and successor updates from closure packets rather than from an authored map.
+- [`Slearn/AuditableChangingAxiometryProtocol.lean`](Slearn/AuditableChangingAxiometryProtocol.lean) defines a bounded auditable changing-axiometry run: relative axiom–geometry closure truth, residue-derived next axiometry and verifier, held-out capability separation, and a prediction-before-outcome record.
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
 - [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
@@ -110,7 +124,13 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 
 ## Further design documents
 
+- [`FRAMEWORK.md`](FRAMEWORK.md): canonical repository frames, admission rules, and the separation of sources, relations, verification, return, and projections.
+- [`framework/registry.json`](framework/registry.json): machine-readable map of every registered repository resource and its closure frame; `node scripts/validate-framework.mjs` validates it.
 - [`docs/SLEARN_SOURCE_PROVENANCE.md`](docs/SLEARN_SOURCE_PROVENANCE.md): privacy-preserving historical record of the original/raw Slearn notes, later synthesis boundary, and the WHY-first → returned-experience design continuity.
+- [`docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md): the source-grounded packet protocol that keeps questions, counter-readings, comparison records, runtime traces, formal claims, and open remainders distinct.
+- [`docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md`](docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md): the primitive source contract and its deterministic `PATH` run; `node scripts/run-source-closure.mjs` checks that the direct source is not promoted to an unearned return.
+- [`docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md`](docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md): the source-packet ledger to dynamic-map projection; `node scripts/project-closure-hull.mjs --summary` runs the current closure hull without invoking the optional UI.
+- [`docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md`](docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md): the bounded grant experiment and its falsifiable stage requirements; `node scripts/run-changing-axiometry-protocol.mjs` confirms that the current protocol is only design-ready.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.

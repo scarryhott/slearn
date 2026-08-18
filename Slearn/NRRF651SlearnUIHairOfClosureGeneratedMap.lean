@@ -1,21 +1,17 @@
 import Slearn.ClosedTopologicalTranslation
 
 /-
-Witness-generated Slearn UI map and hair contract.
+Closure-generated Slearn spatial field.
 
-This is a reconstruction of the interface contract described in the primary
-Slearn source material and in the supplied NRRF651 summary.  The separately
-claimed NRRF651 source file was not available in this checkout, so this module
-does not claim to reproduce or audit that unavailable implementation.
+This module replaces the earlier reconstruction that gated a predeclared UI
+topology.  There is no canonical core/brain/value/belief/WHY/goal graph here.
+The only formal input is an interaction field.  A spatial presentation is
+admitted exactly as a projection of that field, and a change of zoom is
+admitted only through a re-reading with a preserved bridge.
 
-The proved direction is deliberately one-way:
-
-    witnessed learner kernel -> generated map.
-
-It does not prove a unique UI, empirical independence of returns, or a
-physical reading of the hair transport.  It makes the UI admission boundary
-explicit: lessons require all three WHY witnesses, project steps require
-attempts, and returned experience requires receipts.
+The result is deliberately structural.  It does not prove a particular browser
+layout, physical law, empirical learning result, independence of a receipt, or
+uniqueness of an educational UI.
 -/
 
 universe u v w x
@@ -24,344 +20,433 @@ namespace Slearn
 
 namespace UIHairOfClosure
 
-/--
-The learner-side kernel.  It contains relations, witnesses, attempts, and
-receipts; it contains no screen position, colour, mesh, card, or drawing.
--/
-structure WitnessedKernel (Value : Type u) (Occurrence : Type v) where
-  admittedValue : Value → Prop
-  inBounds : Occurrence → Prop
-  valueOf : Occurrence → Value
-  depth : Occurrence → Nat
-  domainWhy : Occurrence → Prop
-  perspectiveWhy : Occurrence → Prop
-  goalWhy : Occurrence → Prop
-  attempt : Occurrence → Prop
-  returnReceipt : Occurrence → Prop
-  bounded_value_admitted : ∀ {o}, inBounds o → admittedValue (valueOf o)
-  return_requires_attempt : ∀ {o}, returnReceipt o → attempt o
-  attempt_requires_threeWhy : ∀ {o}, attempt o →
-    domainWhy o ∧ perspectiveWhy o ∧ goalWhy o
+/-- A relative position is a reading of one relation, not a new translation operator. -/
+inductive RelativePosition
+  | natural
+  | dual
+  | obstructed
+  deriving DecidableEq, Repr
 
-namespace WitnessedKernel
-
-variable {Value : Type u} {Occurrence : Type v}
-
-/-- A lesson has a WHY only when all three witness roles are present. -/
-def hasWhy (K : WitnessedKernel Value Occurrence) (o : Occurrence) : Prop :=
-  K.domainWhy o ∧ K.perspectiveWhy o ∧ K.goalWhy o
-
-/-- No attempt is admitted without all three WHY witnesses. -/
-theorem attempt_requires_why
-    (K : WitnessedKernel Value Occurrence) {o : Occurrence}
-    (h : K.attempt o) : K.hasWhy o :=
-  K.attempt_requires_threeWhy h
-
-/-- No returned experience is admitted without a prior attempt. -/
-theorem receipt_requires_attempt
-    (K : WitnessedKernel Value Occurrence) {o : Occurrence}
-    (h : K.returnReceipt o) : K.attempt o :=
-  K.return_requires_attempt h
-
-end WitnessedKernel
-
-/-- The source-derived canonical node family, before any visual coordinates. -/
-inductive MapNode (Value : Type u) (Occurrence : Type v)
-  | core
-  | brain
-  | value (v : Value)
-  | belief (v : Value)
-  | why (o : Occurrence)
-  | goal (o : Occurrence)
-  | lesson (o : Occurrence)
-  | project (o : Occurrence)
-  | impact
-  | balance
-  | slearn
-  | dream
-
-/--
-The source-derived link family.  `lessonProjectTurn` is the 90-degree turn;
-`equalDepthRung` connects a lesson and project only through their common
-occurrence/depth carrier.
--/
-inductive MapLink (Value : Type u) (Occurrence : Type v)
-  | coreBrain
-  | brainValue (v : Value)
-  | valueBelief (v : Value)
-  | beliefWhy (o : Occurrence)
-  | whyGoal (o : Occurrence)
-  | goalLesson (o : Occurrence)
-  | lessonAscent (o : Occurrence)
-  | lessonProjectTurn (o : Occurrence)
-  | projectDescent (o : Occurrence)
-  | projectImpact (o : Occurrence)
-  | impactBalance
-  | balanceSlearn
-  | slearnDream
-  | equalDepthRung (o : Occurrence)
-  | whyLink (o : Occurrence)
-
-/-- A generated map is only a relation over source-derived nodes and links. -/
-structure MapRelation (Value : Type u) (Occurrence : Type v) where
-  node : MapNode Value Occurrence → Prop
-  link : MapLink Value Occurrence → Prop
-
-namespace MapRelation
-
-variable {Value : Type u} {Occurrence : Type v}
-
-@[ext] theorem ext {M N : MapRelation Value Occurrence}
-    (hNode : M.node = N.node) (hLink : M.link = N.link) : M = N := by
-  cases M
-  cases N
-  cases hNode
-  cases hLink
-  rfl
-
-end MapRelation
-
-namespace WitnessedKernel
-
-variable {Value : Type u} {Occurrence : Type v}
-variable (K : WitnessedKernel Value Occurrence)
-
-/-- The intended map before witness/attempt gating, restricted to current bounds. -/
-def canonicalNode : MapNode Value Occurrence → Prop
-  | .core | .brain | .impact | .balance | .slearn | .dream => True
-  | .value v | .belief v => K.admittedValue v
-  | .why o | .goal o | .lesson o | .project o => K.inBounds o
-
-/-- The kernel-generated node relation. -/
-def genNode : MapNode Value Occurrence → Prop
-  | .core | .brain | .impact | .balance | .slearn | .dream => True
-  | .value v | .belief v => K.admittedValue v
-  | .why o | .goal o | .lesson o => K.inBounds o ∧ K.hasWhy o
-  | .project o => K.inBounds o ∧ K.attempt o
-
-/-- The canonical link relation, restricted to the current occurrence bounds. -/
-def canonicalLink : MapLink Value Occurrence → Prop
-  | .coreBrain | .impactBalance | .balanceSlearn | .slearnDream => True
-  | .brainValue v | .valueBelief v => K.admittedValue v
-  | .beliefWhy o | .whyGoal o | .goalLesson o | .lessonAscent o | .lessonProjectTurn o
-    | .projectDescent o | .projectImpact o | .equalDepthRung o | .whyLink o =>
-      K.inBounds o
-
-/-- The generated link relation.  It never inserts an unwitnessed lesson or unattempted step. -/
-def genLink : MapLink Value Occurrence → Prop
-  | .coreBrain | .impactBalance | .balanceSlearn | .slearnDream => True
-  | .brainValue v | .valueBelief v => K.admittedValue v
-  | .beliefWhy o | .whyGoal o | .goalLesson o | .lessonAscent o | .whyLink o =>
-      K.inBounds o ∧ K.hasWhy o
-  | .lessonProjectTurn o | .equalDepthRung o =>
-      K.inBounds o ∧ K.hasWhy o ∧ K.attempt o
-  | .projectDescent o | .projectImpact o =>
-      K.inBounds o ∧ K.attempt o
-
-/-- The visible relation generated from the learner-side kernel. -/
-def generatedMap : MapRelation Value Occurrence where
-  node := K.genNode
-  link := K.genLink
-
-/-- The complete source-derived relation at the current bounds. -/
-def canonicalMap : MapRelation Value Occurrence where
-  node := K.canonicalNode
-  link := K.canonicalLink
-
-/-- Every bounded occurrence has its full WHY and an attempt. -/
-def Saturated : Prop :=
-  ∀ o, K.inBounds o → K.hasWhy o ∧ K.attempt o
-
-/-- Under saturation, every canonical node is generated and no other node appears. -/
-theorem saturated_genNode (h : K.Saturated) :
-    ∀ n, K.genNode n ↔ K.canonicalNode n := by
-  intro n
-  cases n with
-  | core | brain | impact | balance | slearn | dream => simp [genNode, canonicalNode]
-  | value v | belief v => simp [genNode, canonicalNode]
-  | why o | goal o | lesson o =>
-      constructor
-      · intro hn
-        exact hn.1
-      · intro hc
-        exact ⟨hc, (h o hc).1⟩
-  | project o =>
-      constructor
-      · intro hn
-        exact hn.1
-      · intro hc
-        exact ⟨hc, (h o hc).2⟩
-
-/-- Under saturation, every canonical link is generated and no other link appears. -/
-theorem saturated_genLink (h : K.Saturated) :
-    ∀ l, K.genLink l ↔ K.canonicalLink l := by
-  intro l
-  cases l with
-  | coreBrain | impactBalance | balanceSlearn | slearnDream =>
-      simp [genLink, canonicalLink]
-  | brainValue v | valueBelief v => simp [genLink, canonicalLink]
-  | beliefWhy o | whyGoal o | goalLesson o | lessonAscent o | whyLink o =>
-      constructor
-      · intro hl
-        exact hl.1
-      · intro hc
-        exact ⟨hc, (h o hc).1⟩
-  | lessonProjectTurn o | equalDepthRung o =>
-      constructor
-      · intro hl
-        exact hl.1
-      · intro hc
-        exact ⟨hc, (h o hc).1, (h o hc).2⟩
-  | projectDescent o | projectImpact o =>
-      constructor
-      · intro hl
-        exact hl.1
-      · intro hc
-        exact ⟨hc, (h o hc).2⟩
-
-/-- A saturated kernel generates exactly the canonical bounded map. -/
-theorem saturated_generatedMap (h : K.Saturated) :
-    K.generatedMap = K.canonicalMap := by
-  apply MapRelation.ext
-  · funext n
-    apply propext
-    exact K.saturated_genNode h n
-  · funext l
-    apply propext
-    exact K.saturated_genLink h l
-
-/-- An unopened kernel cannot draw an unwitnessed lesson node. -/
-theorem no_unwitnessed_lesson
-    {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
-    ¬ K.genNode (.lesson o) := by
-  intro hn
-  exact hwhy hn.2
-
-/-- An unresolved WHY cannot silently draw a reason node. -/
-theorem no_unwitnessed_why
-    {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
-    ¬ K.genNode (.why o) := by
-  intro hn
-  exact hwhy hn.2
-
-/-- A goal is a returned orientation of the three WHY witnesses, not a free map decoration. -/
-theorem no_unwitnessed_goal
-    {o : Occurrence} (_h : K.inBounds o) (hwhy : ¬ K.hasWhy o) :
-    ¬ K.genNode (.goal o) := by
-  intro hn
-  exact hwhy hn.2
-
-/-- An unopened kernel cannot draw an unattempted project node. -/
-theorem no_unattempted_project
-    {o : Occurrence} (_h : K.inBounds o) (hattempt : ¬ K.attempt o) :
-    ¬ K.genNode (.project o) := by
-  intro hn
-  exact hattempt hn.2
-
-/-- Under the same bounds, generated lesson nodes reveal their WHY witnesses. -/
-theorem same_generatedNodes_sameWhy
-    (L : WitnessedKernel Value Occurrence)
-    (hBounds : ∀ o, K.inBounds o ↔ L.inBounds o)
-    (hNodes : ∀ n, K.genNode n ↔ L.genNode n) :
-    ∀ o, K.inBounds o → (K.hasWhy o ↔ L.hasWhy o) := by
-  intro o hKo
-  constructor
-  · intro hWhy
-    have hL : L.genNode (.lesson o) :=
-      (hNodes (.lesson o)).1 ⟨hKo, hWhy⟩
-    exact hL.2
-  · intro hWhy
-    have hLo : L.inBounds o := (hBounds o).1 hKo
-    have hK : K.genNode (.lesson o) :=
-      (hNodes (.lesson o)).2 ⟨hLo, hWhy⟩
-    exact hK.2
-
-/-- Under the same bounds, generated project nodes reveal their attempts. -/
-theorem same_generatedNodes_sameAttempt
-    (L : WitnessedKernel Value Occurrence)
-    (hBounds : ∀ o, K.inBounds o ↔ L.inBounds o)
-    (hNodes : ∀ n, K.genNode n ↔ L.genNode n) :
-    ∀ o, K.inBounds o → (K.attempt o ↔ L.attempt o) := by
-  intro o hKo
-  constructor
-  · intro hAttempt
-    have hL : L.genNode (.project o) :=
-      (hNodes (.project o)).1 ⟨hKo, hAttempt⟩
-    exact hL.2
-  · intro hAttempt
-    have hLo : L.inBounds o := (hBounds o).1 hKo
-    have hK : K.genNode (.project o) :=
-      (hNodes (.project o)).2 ⟨hLo, hAttempt⟩
-    exact hK.2
-
-/-- A lesson is prospective until a return receipt changes its reading. -/
-inductive OccurrenceReading
-  | prospective
+/-- The presentation selected by a closure operation. -/
+inductive Lens
+  | expanded
+  | contracted
   | returned
   deriving DecidableEq, Repr
 
-/-- The receipt changes reading, not the generated lesson/project topology. -/
-noncomputable def reading (K : WitnessedKernel Value Occurrence)
-    (o : Occurrence) : OccurrenceReading := by
-  classical
-  exact if K.returnReceipt o then .returned else .prospective
+/-- The only visible roles generated by a closure relation. -/
+inductive SpatialRole
+  | presentation
+  | context
+  | translation
+  | closure
+  | world
+  | residue
+  | successor
+  deriving DecidableEq, Repr
 
-/-- With no receipts, every occurrence remains prospective. -/
-theorem no_receipts_all_prospective
-    (h : ∀ o, ¬ K.returnReceipt o) :
-    ∀ o, reading K o = OccurrenceReading.prospective := by
-  intro o
-  simp [reading, h o]
+/-- OPEN is a positive result when an interaction lacks a bridge or return. -/
+inductive MapVerdict
+  | open
+  | path
+  | returned
+  | dual
+  | obstruction
+  deriving DecidableEq, Repr
 
-/-- A receipt upgrades its own occurrence. -/
-theorem receipt_upgrades_reading {o : Occurrence}
-    (h : K.returnReceipt o) : reading K o = OccurrenceReading.returned := by
-  simp [reading, h]
+/--
+The learner-side relation field.  `Trace` is deliberately neutral: one trace
+can be read as a WHY path, a topic re-reading, a definition/language change,
+or a lesson/project path.  None of those readings is separately hard-coded as
+a UI layer.
+-/
+structure InteractionField (Presentation : Type u) (Trace : Type v)
+    (Receipt : Type w) where
+  source : Trace → Presentation
+  context : Trace → Presentation
+  target : Trace → Presentation
+  world : Trace → Presentation
+  translated : Trace → Prop
+  hasContext : Trace → Prop
+  hasWorld : Trace → Prop
+  redefined : Trace → Prop
+  preserved : Trace → Prop
+  attempted : Trace → Prop
+  returnReceipt : Trace → Receipt → Prop
+  residue : Receipt → Presentation
+  successor : Receipt → Presentation
+  position : Trace → RelativePosition
 
-/-- If one receipt is the only one admitted, it upgrades exactly that reading. -/
-theorem unique_receipt_upgrades_exactly
-    {o : Occurrence} (ho : K.returnReceipt o)
-  (hOnly : ∀ o', o' ≠ o → ¬ K.returnReceipt o') :
-    reading K o = OccurrenceReading.returned ∧
-      ∀ o', o' ≠ o → reading K o' = OccurrenceReading.prospective := by
-  constructor
-  · exact receipt_upgrades_reading (K := K) ho
-  · intro o' hne
-    simp [reading, hOnly o' hne]
+namespace InteractionField
 
-/-- Lesson and project sides of a rung share exactly the same generated depth. -/
-def nodeDepth : MapNode Value Occurrence → Option Nat
-  | .lesson o | .project o => some (K.depth o)
-  | _ => none
+variable {Presentation : Type u} {Trace : Type v} {Receipt : Type w}
 
-/-- The 90-degree turn preserves depth even though it changes map orientation. -/
-theorem rung_is_level_preserving (o : Occurrence) :
-    K.nodeDepth (.lesson o) = K.nodeDepth (.project o) := by
+/-- A relation exists before it can appear in any spatial presentation. -/
+def Admitted (F : InteractionField Presentation Trace Receipt) (t : Trace) : Prop :=
+  F.translated t
+
+/--
+A bridge is the explicit continuation data missing from a frozen level: the
+relation is re-read and a relation that persists through that re-reading is
+recorded.  Its words are not enough; both predicates belong to the trace.
+-/
+def Bridge (F : InteractionField Presentation Trace Receipt) (t : Trace) : Prop :=
+  F.Admitted t ∧ F.redefined t ∧ F.preserved t
+
+/-- A return additionally requires an attempted trace and a supplied receipt. -/
+def Returned (F : InteractionField Presentation Trace Receipt) (t : Trace) : Prop :=
+  F.Bridge t ∧ F.attempted t ∧ ∃ r, F.returnReceipt t r
+
+/-- A generated spatial occurrence always retains its source trace. -/
+structure SpatialOccurrence (F : InteractionField Presentation Trace Receipt) where
+  role : SpatialRole
+  trace : Trace
+  admissible : F.Admitted trace
+  visible : Presentation
+  presents :
+    match role with
+    | .presentation => visible = F.source trace
+    | .context => visible = F.context trace
+    | .translation => visible = F.target trace
+    | .closure => visible = F.target trace
+    | .world => visible = F.world trace
+    | .residue => ∃ r, F.returnReceipt trace r ∧ visible = F.residue r
+    | .successor => ∃ r, F.returnReceipt trace r ∧ visible = F.successor r
+
+/-- The spatial field is a predicate, not a stored list of nodes or coordinates. -/
+def SpatialClosure (F : InteractionField Presentation Trace Receipt)
+    (lens : Lens) : SpatialOccurrence F → Prop
+  | occurrence =>
+      match lens, occurrence.role with
+      | .expanded, .presentation => True
+      | .expanded, .context => F.hasContext occurrence.trace
+      | .expanded, .translation => True
+      | .expanded, .closure => True
+      | .expanded, .world => F.Bridge occurrence.trace ∧ F.hasWorld occurrence.trace
+      | .contracted, .closure => F.Bridge occurrence.trace
+      | .returned, .presentation => True
+      | .returned, .context => F.hasContext occurrence.trace
+      | .returned, .translation => True
+      | .returned, .closure => True
+      | .returned, .world => F.Bridge occurrence.trace ∧ F.hasWorld occurrence.trace
+      | .returned, .residue => F.Returned occurrence.trace
+      | .returned, .successor => F.Returned occurrence.trace
+      | _, _ => False
+
+/-- The closure transitions admitted by a selected trace. -/
+inductive LensTransition (F : InteractionField Presentation Trace Receipt)
+    (t : Trace) : Lens → Lens → Prop
+  | contract (h : F.Bridge t) : LensTransition F t .expanded .contracted
+  | reopen (h : F.Bridge t) : LensTransition F t .contracted .expanded
+  | returned (h : F.Returned t) : LensTransition F t .expanded .returned
+
+/--
+The only editable axes of an open Slearn trace.  These are closure data
+requirements, not an independently chosen collection of form fields.
+-/
+inductive ClosureSeed
+  | perspective
+  | context
+  | whyRelation
+  | direction
+  | reReading
+  | preservedBridge
+  | relativePosition
+  | world
+  | source
+  | lesson
+  | attempt
+  | receipt
+  | successor
+  deriving DecidableEq, Repr
+
+/-- Learning material is attached to an admitted trace, never a free sidebar. -/
+inductive LearningRole
+  | source
+  | lesson
+  | project
+  deriving DecidableEq, Repr
+
+/-- A source, lesson, or project in the generated learning field. -/
+structure LearningOccurrence (F : InteractionField Presentation Trace Receipt)
+    (Material : Type x) where
+  role : LearningRole
+  trace : Trace
+  admissible : F.Admitted trace
+  material : Material
+
+namespace LearningOccurrence
+
+variable {F : InteractionField Presentation Trace Receipt} {Material : Type x}
+
+/-- Projects require a recorded attempt; sources and lessons require the trace. -/
+def visible (L : LearningOccurrence F Material) : Prop :=
+  match L.role with
+  | .source | .lesson => True
+  | .project => F.attempted L.trace
+
+/-- Every visible learning material retains an admitted closure trace. -/
+theorem visible_has_admitted_trace (L : LearningOccurrence F Material)
+    (_h : L.visible) : F.Admitted L.trace :=
+  L.admissible
+
+/-- A visible project cannot be manufactured without an attempt. -/
+theorem visible_project_requires_attempt (L : LearningOccurrence F Material)
+    (hrole : L.role = .project) (hvisible : L.visible) : F.attempted L.trace := by
+  cases L with
+  | mk role trace admissible material =>
+      cases role <;> simp at hrole
+      simpa [visible] using hvisible
+
+end LearningOccurrence
+
+/--
+The complete formal scene contract.  A renderer may choose a physical medium,
+but it receives no independent points, connections, or actions: points are
+exactly spatial closure occurrences and actions are exactly lens transitions.
+-/
+structure ClosureMachineScene (F : InteractionField Presentation Trace Receipt)
+    (lens : Lens) where
+  point : SpatialOccurrence F → Prop
+  connection : SpatialOccurrence F → SpatialOccurrence F → Prop
+  learning : ∀ {Material : Type x}, LearningOccurrence F Material → Prop
+  operation : Trace → Lens → Lens → Prop
+  seed : ClosureSeed → Prop
+
+/-- The unique scene contract directly generated by the closure field. -/
+def generatedScene (F : InteractionField Presentation Trace Receipt)
+    (lens : Lens) : ClosureMachineScene F lens where
+  point := F.SpatialClosure lens
+  connection := fun left right => F.SpatialClosure lens left ∧ F.SpatialClosure lens right
+  learning := fun learning => learning.visible
+  operation := LensTransition F
+  seed := fun _ => True
+
+namespace ClosureMachineScene
+
+variable (F : InteractionField Presentation Trace Receipt) (lens : Lens)
+
+/-- The generated scene contains every and only closure-admitted points. -/
+theorem point_iff_spatialClosure (o : SpatialOccurrence F) :
+    (F.generatedScene lens).point o ↔
+      F.SpatialClosure lens o := by
   rfl
 
-end WitnessedKernel
+/-- A rendered connection cannot smuggle in a non-closure endpoint. -/
+theorem connection_requires_closure
+    {left right : SpatialOccurrence F}
+    (h : (F.generatedScene lens).connection left right) :
+    F.SpatialClosure lens left ∧ F.SpatialClosure lens right :=
+  h
 
-/-- A Galois reading of one maintained translation at two semantic zooms. -/
-structure ZoomReading (Fine : Type u) (Coarse : Type v) where
-  fineLe : Fine → Fine → Prop
-  coarseLe : Coarse → Coarse → Prop
-  zoomOut : Fine → Coarse
-  zoomIn : Coarse → Fine
-  adjoint : ∀ f c, coarseLe (zoomOut f) c ↔ fineLe f (zoomIn c)
+/-- A visible source, lesson, or project is also closure-derived. -/
+theorem learning_requires_admitted_trace
+    {Material : Type x} {learning : LearningOccurrence F Material}
+    (h : (F.generatedScene lens).learning learning) : F.Admitted learning.trace :=
+  learning.visible_has_admitted_trace h
 
-namespace ZoomReading
+/-- A rendered operation is a closure transition, not a camera action. -/
+theorem operation_is_lens_transition
+    {t : Trace} {origin target : Lens}
+    (h : (F.generatedScene lens).operation t origin target) :
+    LensTransition F t origin target :=
+  h
 
-variable {Fine : Type u} {Coarse : Type v}
+/-- Editable seeds are exhausted by the declared closure axes. -/
+theorem no_independent_seed (s : ClosureSeed) :
+    (F.generatedScene lens).seed s :=
+  True.intro
 
-/-- The inward reading is the translation selected by this zoom contract. -/
-def translation (Z : ZoomReading Fine Coarse) : Coarse → Fine :=
-  Z.zoomIn
+end ClosureMachineScene
 
-/-- The selected inward reading determines the recorded translation by definition. -/
-theorem inward_determines_translation (Z : ZoomReading Fine Coarse) :
-    Z.translation = Z.zoomIn := rfl
+/-- An expanded presentation has no independently admitted spatial role. -/
+theorem expanded_role_is_relation
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .expanded o) :
+    o.role = .presentation ∨ o.role = .context ∨ o.role = .translation ∨
+      o.role = .closure ∨ o.role = .world := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp [SpatialClosure] at h ⊢
 
-end ZoomReading
+/-- A context/value presentation is visible only when the trace supplies it. -/
+theorem context_requires_context
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .expanded o)
+    (hrole : o.role = .context) : F.hasContext o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp at hrole
+      simpa [SpatialClosure] using h
+
+/-- A world/universe orientation is a bridged global continuation, never free scenery. -/
+theorem world_requires_bridge_and_global_relation
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .expanded o)
+    (hrole : o.role = .world) : F.Bridge o.trace ∧ F.hasWorld o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp at hrole
+      simpa [SpatialClosure] using h
+
+/-- A contracted occurrence cannot be shown without the trace's bridge. -/
+theorem contracted_requires_bridge
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .contracted o) : F.Bridge o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp [SpatialClosure] at h
+      exact h
+
+/-- No unbridged trace is silently available in a contracted projection. -/
+theorem no_bridge_no_contracted_occurrence
+    (F : InteractionField Presentation Trace Receipt) {t : Trace}
+    (h : ¬ F.Bridge t) :
+    ∀ {o : SpatialOccurrence F}, o.trace = t → ¬ F.SpatialClosure .contracted o := by
+  intro o htrace hshown
+  apply h
+  rw [← htrace]
+  exact F.contracted_requires_bridge hshown
+
+/-- A successor presentation can be displayed only from a returned trace. -/
+theorem successor_requires_return
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .returned o)
+    (hrole : o.role = .successor) : F.Returned o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp at hrole
+      simpa [SpatialClosure] using h
+
+/-- A retained residue is shown only after an explicit attempted return. -/
+theorem residue_requires_return
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .returned o)
+    (hrole : o.role = .residue) : F.Returned o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp at hrole
+      simpa [SpatialClosure] using h
+
+/-- A return is a continuation, not literal identity of source and successor. -/
+structure ReturnContinuation (F : InteractionField Presentation Trace Receipt)
+    (t : Trace) where
+  receipt : Receipt
+  hasReceipt : F.returnReceipt t receipt
+  successorChanged : F.successor receipt ≠ F.source t
+
+/-- A continuation with changed successor never asserts literal return. -/
+theorem continuation_not_literal_return
+    {F : InteractionField Presentation Trace Receipt} {t : Trace}
+    (C : ReturnContinuation F t) : F.successor C.receipt ≠ F.source t :=
+  C.successorChanged
+
+/-- A topic re-reading can contract only through its explicit bridge. -/
+theorem transition_to_contracted_requires_bridge
+    {F : InteractionField Presentation Trace Receipt} {t : Trace}
+    {origin : Lens} (h : LensTransition F t origin .contracted) : F.Bridge t := by
+  cases h with
+  | contract hb => exact hb
+
+/-- A return projection is unavailable until bridge, attempt, and receipt exist. -/
+theorem transition_to_returned_requires_return
+    {F : InteractionField Presentation Trace Receipt} {t : Trace}
+    {origin : Lens} (h : LensTransition F t origin .returned) : F.Returned t := by
+  cases h with
+  | returned hr => exact hr
+
+/-- The visible verdict is derived from one selected trace. -/
+noncomputable def verdict (F : InteractionField Presentation Trace Receipt) (t : Trace) : MapVerdict := by
+  classical
+  exact match F.position t with
+    | .dual => .dual
+    | .obstructed => .obstruction
+    | .natural => if F.Returned t then .returned else if F.Bridge t then .path else .open
+
+/-- A trace without a bridge remains OPEN in its natural position. -/
+theorem no_bridge_is_open
+    (F : InteractionField Presentation Trace Receipt) {t : Trace}
+    (hposition : F.position t = .natural) (hbridge : ¬ F.Bridge t) :
+    F.verdict t = .open := by
+  classical
+  have hreturned : ¬ F.Returned t := by
+    intro hr
+    exact hbridge hr.1
+  simp [verdict, hposition, hreturned, hbridge]
+
+/-- A dual trace remains one relation in a dual reading rather than another operator. -/
+theorem dual_is_relative_position
+    (F : InteractionField Presentation Trace Receipt) {t : Trace}
+    (hposition : F.position t = .dual) : F.verdict t = .dual := by
+  classical
+  simp [verdict, hposition]
+
+/-- An obstruction is recorded rather than replaced by a manufactured path. -/
+theorem obstruction_is_recorded
+    (F : InteractionField Presentation Trace Receipt) {t : Trace}
+    (hposition : F.position t = .obstructed) : F.verdict t = .obstruction := by
+  classical
+  simp [verdict, hposition]
+
+/--
+A bridge between presentation levels is injective and relation-reflecting.
+This is the minimal extra certificate required to distinguish a translation
+chain from a succession of frozen local assertions.
+-/
+structure LevelBridge (Earlier : Type u) (Later : Type v)
+    (earlierRelated : Earlier → Earlier → Prop)
+    (laterRelated : Later → Later → Prop) where
+  forward : Earlier → Later
+  injective : Function.Injective forward
+  reflects : ∀ {a b}, laterRelated (forward a) (forward b) → earlierRelated a b
+
+namespace LevelBridge
+
+variable {Earlier : Type u} {Later : Type v} {Final : Type w}
+variable {earlierRelated : Earlier → Earlier → Prop}
+  {laterRelated : Later → Later → Prop} {finalRelated : Final → Final → Prop}
+
+/-- Two level bridges compose, retaining both injectivity and reflection. -/
+def compose
+    (B : LevelBridge Earlier Later earlierRelated laterRelated)
+    (C : LevelBridge Later Final laterRelated finalRelated) :
+    LevelBridge Earlier Final earlierRelated finalRelated where
+  forward := C.forward ∘ B.forward
+  injective := by
+    intro a b hab
+    apply B.injective
+    apply C.injective
+    exact hab
+  reflects := by
+    intro a b hab
+    exact B.reflects (C.reflects hab)
+
+end LevelBridge
+
+/-- A round step is frozen only when no presentation is genuinely moved. -/
+def Frozen {State : Type u} (round : State → State) : Prop :=
+  ∀ state, round state = state
+
+/-- Translation requires relational return and at least one actual movement. -/
+def Translating {State : Type u} (related : State → State → Prop)
+    (round : State → State) : Prop :=
+  (∀ state, related (round state) state) ∧ ∃ state, round state ≠ state
+
+/-- Frozen and translating are exclusive. -/
+theorem frozen_not_translating
+    {State : Type u} {related : State → State → Prop} {round : State → State}
+    (hfrozen : Frozen round) : ¬ Translating related round := by
+  intro htranslating
+  obtain ⟨state, hmoved⟩ := htranslating.2
+  exact hmoved (hfrozen state)
+
+end InteractionField
 
 /-- A small abstract fibre used only to state the non-global-hair obstruction. -/
 inductive HairDirection
@@ -385,12 +470,6 @@ theorem quarterTurn_fixed_is_zero {d : HairDirection}
     (h : quarterTurn d = d) : d = .zero := by
   cases d <;> simp [quarterTurn] at h ⊢
 
-/-- Local viewports may carry nonzero directions and explicit transition data. -/
-structure HairAtlas (Chart : Type u) where
-  localDirection : Chart → HairDirection
-  local_nonzero : ∀ chart, localDirection chart ≠ .zero
-  transition : Chart → Chart → HairDirection → HairDirection
-
 /-- A globally coherent hair is a direction fixed by the supplied return transport. -/
 def GloballyCoherentHair (d : HairDirection) : Prop :=
   quarterTurn d = d
@@ -400,80 +479,22 @@ theorem globallyCoherentHair_is_zero {d : HairDirection}
     (h : GloballyCoherentHair d) : d = .zero :=
   quarterTurn_fixed_is_zero h
 
-/-- The visible maze verdicts; OPEN is a positive runtime state. -/
-inductive MapVerdict
-  | path
-  | obstruction
-  | open
-  deriving DecidableEq, Repr
-
-/-- No representational support means OPEN, regardless of candidate mechanics. -/
-def verdict (hasRepresentation hasPath hasObstruction : Bool) : MapVerdict :=
-  if hasRepresentation && hasPath then .path
-  else if hasRepresentation && hasObstruction then .obstruction
-  else .open
-
-/-- Unsupported material can never be rendered as PATH. -/
-theorem unsupported_is_open (hasPath hasObstruction : Bool) :
-    verdict false hasPath hasObstruction = .open := by
-  simp [verdict]
-
-/-- The natural-rhythm triangle is one downward/upward episode map. -/
-structure TriangleEpisode (State : Type u) where
-  downward : State → State
-  upward : State → State
-
-namespace TriangleEpisode
-
-variable {State : Type u}
-
-/-- Downward prospective and upward returned passes are composed, not separate widgets. -/
-def episodeMap (E : TriangleEpisode State) : State → State :=
-  E.upward ∘ E.downward
-
-end TriangleEpisode
-
-/--
-A learning holonomy can return to the same visible perspective-position while
-retaining a changed learner record.  This is a structural state distinction,
-not an empirical claim that a specific learner has changed.
--/
-structure LearningHolonomy (State : Type u) (Visible : Type v) (Record : Type w)
-    (visibleOf : State → Visible) (recordOf : State → Record) where
-  start : State
-  finish : State
-  sameVisible : visibleOf finish = visibleOf start
-  changedRecord : recordOf finish ≠ recordOf start
-
-namespace LearningHolonomy
-
-variable {State : Type u} {Visible : Type v} {Record : Type w}
-variable {visibleOf : State → Visible} {recordOf : State → Record}
-
-/-- A changed record prevents literal state repetition. -/
-theorem not_literal_return
-    (H : LearningHolonomy State Visible Record visibleOf recordOf) :
-    H.finish ≠ H.start := by
-  intro h
-  apply H.changedRecord
-  simp [h]
-
-end LearningHolonomy
-
 end UIHairOfClosure
 
 end Slearn
 
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.attempt_requires_why
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.receipt_requires_attempt
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.saturated_generatedMap
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_lesson
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_why
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unwitnessed_goal
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.no_unattempted_project
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.same_generatedNodes_sameWhy
-#print axioms Slearn.UIHairOfClosure.WitnessedKernel.same_generatedNodes_sameAttempt
+#print axioms Slearn.UIHairOfClosure.InteractionField.contracted_requires_bridge
+#print axioms Slearn.UIHairOfClosure.InteractionField.no_bridge_no_contracted_occurrence
+#print axioms Slearn.UIHairOfClosure.InteractionField.context_requires_context
+#print axioms Slearn.UIHairOfClosure.InteractionField.world_requires_bridge_and_global_relation
+#print axioms Slearn.UIHairOfClosure.InteractionField.successor_requires_return
+#print axioms Slearn.UIHairOfClosure.InteractionField.residue_requires_return
+#print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.point_iff_spatialClosure
+#print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.connection_requires_closure
+#print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.learning_requires_admitted_trace
+#print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.operation_is_lens_transition
+#print axioms Slearn.UIHairOfClosure.InteractionField.transition_to_contracted_requires_bridge
+#print axioms Slearn.UIHairOfClosure.InteractionField.transition_to_returned_requires_return
+#print axioms Slearn.UIHairOfClosure.InteractionField.frozen_not_translating
 #print axioms Slearn.UIHairOfClosure.quarterTurn_fixed_is_zero
 #print axioms Slearn.UIHairOfClosure.globallyCoherentHair_is_zero
-#print axioms Slearn.UIHairOfClosure.unsupported_is_open
-#print axioms Slearn.UIHairOfClosure.LearningHolonomy.not_literal_return
