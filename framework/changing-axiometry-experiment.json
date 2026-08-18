@@ -1,0 +1,36 @@
+{
+  "id": "SRC-2026-AUDITABLE-CHANGING-AXIOMETRY",
+  "sourceAnchor": "SRC-2026-AUDITABLE-AXIOMETRY",
+  "question": "Can a completed reciprocal axiom–geometry relation generate a changed, still-auditable mathematical frame and verifier on held-out relations?",
+  "stages": {
+    "frameGeneration": "Generate and freeze a frame in its own terms before searching for a translation.",
+    "nativeTranslation": "Discover a translation after the freeze rather than normalize the frame into a privileged origin language.",
+    "identityIndependentValidation": "Validate the translation in a declared comparison relation that does not privilege the source language.",
+    "independentReturn": "Record a return independently of the initial translation proposal.",
+    "closureTruth": "Establish axiom–geometry equality in the declared witness relation while retaining their nonliteral residue.",
+    "nextAxiometry": "Derive the next axiometry from the completed relation and residue, and reject a frozen replay.",
+    "nextVerifier": "Derive the next verifier from the same completion and reject a frozen replay.",
+    "heldOutTransfer": "Use the derived verifier on a relation excluded from frame, translation, and verifier construction where the old verifier cannot evaluate it.",
+    "externalConsequence": "Register a prediction before an independently supplied outcome and compare them afterward."
+  },
+  "execution": {
+    "frameGenerated": "",
+    "frameFrozen": "",
+    "nativeTranslation": "",
+    "identityIndependentValidation": "",
+    "independentReturn": "",
+    "closureTruth": "",
+    "residue": "",
+    "nextAxiometry": "",
+    "nextAxiometryChanged": "",
+    "nextVerifier": "",
+    "nextVerifierChanged": "",
+    "heldOutRelation": "",
+    "oldCannotEvaluate": "",
+    "newCanEvaluate": "",
+    "predictionPrecedesOutcome": "",
+    "externalEvidence": "",
+    "outcomeMatchesPrediction": ""
+  },
+  "expectedStatus": "DESIGN_READY"
+}

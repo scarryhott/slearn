@@ -69,7 +69,11 @@
       "resources": [
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
         "docs/SLEARN_TRANSLATIONAL_COMPLETION_FULL_TRANSLATION.md",
-        "Slearn/InteractiveTranslationalOpenFoundation.lean"
+        "Slearn/InteractiveTranslationalOpenFoundation.lean",
+        "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
+        "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "framework/changing-axiometry-experiment.json",
+        "scripts/run-changing-axiometry-protocol.mjs"
       ]
     },
     {
@@ -98,7 +102,11 @@
         "framework/closure-ledger.json",
         "scripts/run-source-closure.mjs",
         "scripts/closure-packet-kernel.mjs",
-        "scripts/project-closure-hull.mjs"
+        "scripts/project-closure-hull.mjs",
+        "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
+        "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "framework/changing-axiometry-experiment.json",
+        "scripts/run-changing-axiometry-protocol.mjs"
       ]
     },
     {
