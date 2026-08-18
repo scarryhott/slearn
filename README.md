@@ -1,13 +1,23 @@
 # Slearn
 
-Slearn is a speed-learning interface organized around **returned translation**. Perspectives, beliefs, WHY relations, goals, lessons, projects, and world views are not independent record types: they are recenterings of one closure geometry.
+Slearn is a **framed repository for perspectival closure**. It is not centered
+on a website or on one finite model. Perspectives, beliefs, WHY relations,
+goals, lessons, projects, world views, formal modules, and runtime projections
+are all located within one source-grounded closure packet.
+
+Start with [`FRAMEWORK.md`](FRAMEWORK.md). It defines the repository’s seven
+frames—`OPEN`, `PERSPECTIVE`, `TRANSLATION`, `INTERACTION`, `VERIFICATION`,
+`RETURN`, and `PROJECTION`—and their admission rules. The optional `ui/`
+directory is in the final projection frame; it has no authority to create
+sources, verify returns, or define Slearn.
 
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
-The visible map is not a decorative coordinate layer. It is generated from the
-witnessed learner kernel: a lesson requires all three WHY witnesses, a project
-requires an attempt, and an experience reading requires a return receipt.
-Unwitnessed or unattempted material is `OPEN`, not an admissible mechanic.
+Any visible map is a projection, not the framework. It must be generated from
+the witnessed learner kernel: a lesson requires all three WHY witnesses, a
+project requires an attempt, and a recorded return requires source material,
+a counter-reading, comparison, review, and a successor. Unwitnessed or
+unattempted material is `OPEN`, not an admissible mechanic.
 
 ## Core geometry
 
@@ -71,9 +81,9 @@ It sits between two boundary failures:
 
 Natural choice means closure evidence under the admitted translation and its return. A non-natural perspective is not modeled as an unrelated competing translation operator; it is a `dual` or `obstructed` position inside the same translation and comparison language.
 
-## Runtime contract
+## Projection contract
 
-Every interaction works on one persisted closure state:
+Every projection works from one persisted closure state:
 
 ```text
 frame → active opening → translation path → comparison language
@@ -93,8 +103,8 @@ Every admitted recentering executes the common operation:
 `Ch` is semantic contraction (zoom out), `Ka` is reciprocal reopening (zoom
 in), and `Ω` is the retained closure-relative difference. Relational recovery
 does not require literal endpoint identity; a zero readout at one level does
-not exhaust local route distinction. This operation is the runtime law, not a
-decorative display transition.
+not exhaust local route distinction. This operation is the projection law, not
+a decorative display transition.
 
 ## Machine-checked scope
 
@@ -110,6 +120,8 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 
 ## Further design documents
 
+- [`FRAMEWORK.md`](FRAMEWORK.md): canonical repository frames, admission rules, and the separation of sources, relations, verification, return, and projections.
+- [`framework/registry.json`](framework/registry.json): machine-readable map of every registered repository resource and its closure frame; `node scripts/validate-framework.mjs` validates it.
 - [`docs/SLEARN_SOURCE_PROVENANCE.md`](docs/SLEARN_SOURCE_PROVENANCE.md): privacy-preserving historical record of the original/raw Slearn notes, later synthesis boundary, and the WHY-first → returned-experience design continuity.
 - [`docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md): the source-grounded packet protocol that keeps questions, counter-readings, comparison records, runtime traces, formal claims, and open remainders distinct.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.

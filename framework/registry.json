@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "repository": "Slearn",
+  "unit": "source-grounded closure packet",
+  "frames": [
+    {
+      "id": "OPEN",
+      "purpose": "Provenance, observations, questions, and explicit unresolved remainders.",
+      "resources": [
+        "docs/SLEARN_SOURCE_PROVENANCE.md",
+        "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+      ]
+    },
+    {
+      "id": "PERSPECTIVE",
+      "purpose": "Perspective, belief/value, WHY, goal, lesson/project/world grammar.",
+      "resources": [
+        "docs/SLEARN_EDUCATION_MODEL.md",
+        "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+      ]
+    },
+    {
+      "id": "TRANSLATION",
+      "purpose": "Admitted local/global orientations, bridge, closure contract, and scope of uniqueness.",
+      "resources": [
+        "Slearn/UniversalRelativeTranslationalCompletion.lean",
+        "Slearn/NaturalRhythmClosure.lean",
+        "docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md",
+        "docs/NATURAL_RHYTHM_CLOSURE.md"
+      ]
+    },
+    {
+      "id": "INTERACTION",
+      "purpose": "Reciprocal paths, attempted episodes, finite interaction, and obstruction.",
+      "resources": [
+        "Slearn/ClosedTopologicalTranslation.lean",
+        "Slearn/InteractiveTranslationalOpenFoundation.lean",
+        "Slearn/ChaitinKakeyaTokenResuperposition.lean",
+        "Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean",
+        "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
+        "docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md",
+        "docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md"
+      ]
+    },
+    {
+      "id": "VERIFICATION",
+      "purpose": "Source material, counter-reading, comparison method, review, finite-limit distinction, and proof boundary.",
+      "resources": [
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
+        "docs/SLEARN_TRANSLATIONAL_COMPLETION_FULL_TRANSLATION.md",
+        "Slearn/InteractiveTranslationalOpenFoundation.lean"
+      ]
+    },
+    {
+      "id": "RETURN",
+      "purpose": "Relation-relative recovery, residue, successor, and inherited next opening.",
+      "resources": [
+        "Slearn/ClosedTopologicalTranslation.lean",
+        "Slearn/NRRF655ExecutablePerspectivalClosureEpisode.lean",
+        "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
+        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md"
+      ]
+    },
+    {
+      "id": "PROJECTION",
+      "purpose": "Integrated formal adapters, documentation, runtime, and optional interface projections.",
+      "resources": [
+        "Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean",
+        "Slearn/NRRF654IntegratedFrameworkClosure.lean",
+        "Slearn.lean",
+        "docs/FRAMEWORK_CLOSURE_INTEGRATION.md",
+        "docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md",
+        "ui/README.md",
+        "ui/app/closureSources.ts",
+        "ui/app/closureRuntime.ts",
+        "ui/app/page.tsx",
+        "ui/tests/closureRuntime.test.ts"
+      ]
+    }
+  ],
+  "routes": [
+    ["OPEN", "PERSPECTIVE"],
+    ["PERSPECTIVE", "TRANSLATION"],
+    ["TRANSLATION", "INTERACTION"],
+    ["INTERACTION", "VERIFICATION"],
+    ["VERIFICATION", "RETURN"],
+    ["RETURN", "OPEN"],
+    ["OPEN", "PROJECTION"],
+    ["PERSPECTIVE", "PROJECTION"],
+    ["TRANSLATION", "PROJECTION"],
+    ["INTERACTION", "PROJECTION"],
+    ["VERIFICATION", "PROJECTION"],
+    ["RETURN", "PROJECTION"]
+  ],
+  "rules": {
+    "source_is_not_proof": true,
+    "projection_is_not_authority": true,
+    "return_requires_counter_reading": true,
+    "finite_interaction_is_not_global_completion": true,
+    "unresolved_remainder_is_preserved": true
+  }
+}

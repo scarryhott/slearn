@@ -1,5 +1,11 @@
 # Slearn Closure Research Ledger
 
+> This is the `OPEN` / `PERSPECTIVE` / `VERIFICATION` / `RETURN` ledger inside
+> the canonical repository frame. Start with
+> [`../FRAMEWORK.md`](../FRAMEWORK.md) for the frame contract and
+> [`../framework/registry.json`](../framework/registry.json) for the resource
+> map. It is not a substitute for the raw private source materials.
+
 ## Why this exists
 
 Slearn cannot be organized as a set of finished answers, a generic graph, or a

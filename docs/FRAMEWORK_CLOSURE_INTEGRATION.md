@@ -1,5 +1,12 @@
 # Framework closure integration
 
+> This is the `TRANSLATION` / `INTERACTION` / `PROJECTION` integration note,
+> not the repository’s top-level architecture. The canonical frame contract is
+> [`../FRAMEWORK.md`](../FRAMEWORK.md), and the resource assignments are in
+> [`../framework/registry.json`](../framework/registry.json). In particular,
+> `ui/` is an optional projection; it does not define Slearn or certify a
+> source, verification, or return.
+
 ## Purpose
 
 This is the bounded, repository-wide closure pass for Slearn. It identifies
