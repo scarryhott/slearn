@@ -1,3 +1,5 @@
+import { closureSources, sourceById, type ClosureSourceId } from "./closureSources";
+
 /**
  * Slearn closure machine.
  *
@@ -20,6 +22,11 @@ export type ClosurePhase = "open" | "contracted" | "reopened" | "returned";
 export type ClosureResidue = {
   id: string;
   inheritedFrom: string | null;
+  sourceRef: ClosureSourceId;
+  sourceClaim: string;
+  counterReading: string;
+  verificationMethod: string;
+  review: string;
   bridge: string;
   attempt: string;
   receipt: string;
@@ -36,6 +43,8 @@ export type ClosureMachine = {
 
 export type Interaction = {
   id: string;
+  sourceRef: ClosureSourceId;
+  sourceClaim: string;
   perspective: string;
   belief: string;
   why: string;
@@ -46,6 +55,9 @@ export type Interaction = {
   source: string;
   lesson: string;
   attempt: string;
+  counterReading: string;
+  verificationMethod: string;
+  review: string;
   receipt: string;
   returnedPerspective: string;
   position: RelativePosition;
@@ -99,7 +111,8 @@ export type InputSeed = {
   y: number;
   tone: SurfaceTone;
   appearance: ClosureAppearance;
-  kind: "text" | "position";
+  kind: "text" | "position" | "source";
+  options?: ReadonlyArray<{ value: string; label: string }>;
 };
 
 export type ClosureOperation = {
@@ -126,45 +139,37 @@ export type ClosureScene = {
 
 const seedRelation: Interaction = {
   id: "r1",
-  perspective: "A learner's place and time",
-  belief: "Curiosity",
-  why: "A connective question can change what is relevant",
-  goal: "A chosen learning direction",
-  redefinition: "Treat the same question as a project relation",
-  bridge: "The question still connects the learner's place to the chosen direction",
-  world: "A world relation where curiosity can be practiced with others",
-  source: "A source, conversation, or observation worth returning to",
-  lesson: "Two explanations and questions to think through",
-  attempt: "Practice the relation in a project",
-  receipt: "The attempted path changes the next reading",
-  returnedPerspective: "A revised perspective",
+  sourceRef: "SRC-2024-MAP",
+  sourceClaim: "The map must relate current perspective, beliefs/values, goals, lessons, projects, world, and return.",
+  perspective: "A learner's current perspective",
+  belief: "A value or belief under examination",
+  why: "Why does this perspective make the chosen direction relevant?",
+  goal: "A learner-chosen direction",
+  redefinition: "Read the direction again as a local learning relation",
+  bridge: "The same WHY relation still connects perspective and direction",
+  world: "A shareable practical continuation",
+  source: "",
+  lesson: "A question and two possible explanations to test",
+  attempt: "",
+  counterReading: "",
+  verificationMethod: "",
+  review: "",
+  receipt: "",
+  returnedPerspective: "",
   position: "natural",
   machine: {
-    phase: "returned",
-    contracted: {
-      goal: "A chosen learning direction",
-      why: "A connective question can change what is relevant",
-      bridge: "The question still connects the learner's place to the chosen direction",
-    },
-    reopened: {
-      perspective: "A learner's place and time",
-      redefinition: "Treat the same question as a project relation",
-      bridge: "The question still connects the learner's place to the chosen direction",
-    },
-    residue: {
-      id: "Ω:r1",
-      inheritedFrom: null,
-      bridge: "The question still connects the learner's place to the chosen direction",
-      attempt: "Practice the relation in a project",
-      receipt: "The attempted path changes the next reading",
-      changedPerspective: "A revised perspective",
-    },
+    phase: "open",
+    contracted: null,
+    reopened: null,
+    residue: null,
     inheritedResidue: null,
   },
 };
 
 export function emptyInteraction(): OpenInteraction {
   return {
+    sourceRef: "OBSERVED-INTERACTION",
+    sourceClaim: "",
     perspective: "",
     belief: "",
     why: "",
@@ -175,6 +180,9 @@ export function emptyInteraction(): OpenInteraction {
     source: "",
     lesson: "",
     attempt: "",
+    counterReading: "",
+    verificationMethod: "",
+    review: "",
     receipt: "",
     returnedPerspective: "",
     position: "natural",
@@ -195,15 +203,23 @@ const present = (value: string) => clean(value).length > 0;
 const key = (value: string) => clean(value).toLocaleLowerCase();
 
 export function isAdmitted(interaction: OpenInteraction | Interaction) {
-  return present(interaction.perspective) && present(interaction.why) && present(interaction.goal);
+  return present(interaction.sourceRef) && present(interaction.sourceClaim) && present(interaction.perspective) && present(interaction.why) && present(interaction.goal);
 }
 
 export function hasBridge(interaction: OpenInteraction | Interaction) {
   return isAdmitted(interaction) && present(interaction.redefinition) && present(interaction.bridge);
 }
 
-export function hasReturn(interaction: OpenInteraction | Interaction) {
-  return hasBridge(interaction) && present(interaction.attempt) && present(interaction.receipt) && present(interaction.returnedPerspective);
+/** A return is only recorded after an interaction has been compared and reviewed. */
+export function hasReviewedReturn(interaction: OpenInteraction | Interaction) {
+  return hasBridge(interaction)
+    && present(interaction.source)
+    && present(interaction.attempt)
+    && present(interaction.counterReading)
+    && present(interaction.verificationMethod)
+    && present(interaction.review)
+    && present(interaction.receipt)
+    && present(interaction.returnedPerspective);
 }
 
 /** A world/universe view is a bridged global continuation, not decoration. */
@@ -301,9 +317,10 @@ function projectedTopology(field: ClosureField) {
         add(world, trace, "world", clean(trace.world), "A bridged global continuation of this goal; it is not independent scenery.", "world");
         links.push({ id: `world:${trace.id}`, from: target, to: world, tone: "world", appearance: appearanceFor("world"), traceIds: [trace.id] });
       }
-      if (present(trace.source)) {
+      if (present(trace.sourceRef)) {
         const material = `source:${trace.id}`;
-        add(material, trace, "source", clean(trace.source), "A source, observation, or conversation positioned through this relation.", "source");
+        const anchor = sourceById(trace.sourceRef);
+        add(material, trace, "source", anchor?.label ?? trace.sourceRef, `${anchor?.contribution ?? "Unregistered source anchor."} Claim: ${clean(trace.sourceClaim)}`, "source");
         links.push({ id: `source:${trace.id}`, from: material, to: relation, tone: "source", appearance: appearanceFor("source"), traceIds: [trace.id] });
       }
       if (present(trace.lesson)) {
@@ -320,8 +337,8 @@ function projectedTopology(field: ClosureField) {
         const residue = trace.machine.residue!;
         const residuePoint = `residue:${trace.id}`;
         const successor = idFor("successor", trace.returnedPerspective);
-        add(residuePoint, trace, "residue", `Ω ${clean(residue.receipt)}`, `Retained difference from the executed return: ${clean(residue.attempt)}.`, "residue");
-        add(successor, trace, "successor", clean(trace.returnedPerspective), `Returned through: ${clean(trace.receipt)}`, "returned");
+        add(residuePoint, trace, "residue", `Ω ${clean(residue.receipt)}`, `Recorded after counter-reading “${clean(residue.counterReading)}” using ${clean(residue.verificationMethod)}. Review: ${clean(residue.review)}.`, "residue");
+        add(successor, trace, "successor", clean(trace.returnedPerspective), `Recorded return through: ${clean(residue.receipt)}. This is a reviewable relation, not an automatically verified truth.`, "returned");
         links.push({ id: `return-residue:${trace.id}`, from: `project:${trace.id}`, to: residuePoint, tone: "residue", appearance: appearanceFor("residue"), traceIds: [trace.id] });
         links.push({ id: `residue-successor:${trace.id}`, from: residuePoint, to: successor, tone: "returned", appearance: appearanceFor("returned"), traceIds: [trace.id] });
       }
@@ -360,6 +377,8 @@ function arrange(rawPoints: RawPoint[], selected: string | null): ScenePoint[] {
 }
 
 const seedSchema: Array<Pick<InputSeed, "key" | "label" | "placeholder" | "detail" | "required" | "kind">> = [
+  { key: "sourceRef", label: "source anchor", placeholder: "", detail: "Every admitted relation names its note, observation, or external source. The anchor is provenance, not proof.", required: true, kind: "source" },
+  { key: "sourceClaim", label: "source claim / observation", placeholder: "what this source puts into question", detail: "The claim, observation, or proposed relation under examination. It is not silently accepted as true.", required: true, kind: "text" },
   { key: "perspective", label: "perspective", placeholder: "a local place and time", detail: "The local presentation of a possible relation.", required: true, kind: "text" },
   { key: "belief", label: "belief / context", placeholder: "what currently matters", detail: "Context carried by the relation, not an independent map object.", required: false, kind: "text" },
   { key: "why", label: "WHY relation", placeholder: "why this changes what is relevant", detail: "Translation from the local reading toward a direction.", required: true, kind: "text" },
@@ -371,9 +390,12 @@ const seedSchema: Array<Pick<InputSeed, "key" | "label" | "placeholder" | "detai
 ];
 
 const returnSchema: Array<Pick<InputSeed, "key" | "label" | "placeholder" | "detail" | "required" | "kind">> = [
-  { key: "source", label: "source / observation", placeholder: "a source, conversation, or observation", detail: "Material becomes part of a path only through this selected relation.", required: false, kind: "text" },
+  { key: "source", label: "material examined", placeholder: "a passage, artifact, observation, or conversation", detail: "The concrete material examined during this episode; it must be supplied before a return can be recorded.", required: false, kind: "text" },
   { key: "lesson", label: "lesson / question", placeholder: "a traversable learning relation", detail: "A local lesson reading of the selected trace.", required: false, kind: "text" },
   { key: "attempt", label: "attempt", placeholder: "what was actually tried", detail: "An attempted trace is required for return.", required: false, kind: "text" },
+  { key: "counterReading", label: "counter-reading / obstruction", placeholder: "a different, dual, or failed reading", detail: "A closure record must preserve what could resist or redirect the first reading.", required: false, kind: "text" },
+  { key: "verificationMethod", label: "comparison method", placeholder: "how the material and counter-reading were compared", detail: "State the method—practice, source comparison, dialogue, test, or formal check. The runtime does not validate it.", required: false, kind: "text" },
+  { key: "review", label: "review of relation", placeholder: "what held, failed, or remains open", detail: "A review records the evaluation; it may retain a duality or obstruction rather than close it.", required: false, kind: "text" },
   { key: "receipt", label: "return receipt", placeholder: "what was returned or compared", detail: "The stated grounding evidence for return.", required: false, kind: "text" },
   { key: "returnedPerspective", label: "successor perspective", placeholder: "the next reading", detail: "A successor is a continuation, not literal repetition.", required: false, kind: "text" },
 ];
@@ -392,8 +414,9 @@ function inputSeeds(target: "proposal" | "selected", value: OpenInteraction | In
     id: `${target}:${field.key}`,
     target,
     value: value[field.key] as string,
-    tone: target === "proposal" ? "open" : hasReturn(value) ? "returned" : hasBridge(value) ? "path" : "open",
-    appearance: appearanceFor(target === "proposal" ? "open" : hasReturn(value) ? "returned" : hasBridge(value) ? "path" : "open"),
+    options: field.kind === "source" ? closureSources.map((source) => ({ value: source.id, label: source.label })) : undefined,
+    tone: target === "proposal" ? "open" : hasReviewedReturn(value) ? "returned" : hasBridge(value) ? "path" : "open",
+    appearance: appearanceFor(target === "proposal" ? "open" : hasReviewedReturn(value) ? "returned" : hasBridge(value) ? "path" : "open"),
     ...seedGeometry(index, schema.length, target),
   }));
 }
@@ -401,12 +424,12 @@ function inputSeeds(target: "proposal" | "selected", value: OpenInteraction | In
 function operations(field: ClosureField, selected: Interaction | null): ClosureOperation[] {
   const contractable = Boolean(selected && hasBridge(selected) && selected.machine.phase === "open");
   const reopenable = Boolean(selected && hasContracted(selected) && selected.machine.phase === "contracted");
-  const returnable = Boolean(selected && hasReturn(selected) && hasReopened(selected) && selected.machine.phase === "reopened");
+  const returnable = Boolean(selected && hasReviewedReturn(selected) && hasReopened(selected) && selected.machine.phase === "reopened");
   const continuable = Boolean(selected && hasExecutedReturn(selected));
   return [
     { id: "contract", type: "CONTRACT", label: "contract", detail: "Execute the forward perspective → goal translation through the recorded bridge.", enabled: contractable, tone: contractable ? "path" : "open", appearance: appearanceFor(contractable ? "path" : "open") },
     { id: "reopen", type: "REOPEN", label: "reopen", detail: "Execute the reciprocal goal → perspective re-reading after a forward contraction.", enabled: reopenable, tone: reopenable ? "path" : "open", appearance: appearanceFor(reopenable ? "path" : "open") },
-    { id: "return", type: "RETURN", label: "return", detail: "Commit the attempted receipt as a residue and create the successor perspective after reopening.", enabled: returnable, tone: returnable ? "returned" : "open", appearance: appearanceFor(returnable ? "returned" : "open") },
+    { id: "return", type: "RETURN", label: "record reviewed return", detail: "Record the compared attempt, counter-reading, method, review, and receipt as a residue after reopening. This is not an automatic truth verdict.", enabled: returnable, tone: returnable ? "returned" : "open", appearance: appearanceFor(returnable ? "returned" : "open") },
     { id: "continue", type: "CONTINUE", label: "continue", detail: "Use the returned perspective and retained residue as the local opening of the next closure episode.", enabled: continuable, tone: continuable ? "residue" : "open", appearance: appearanceFor(continuable ? "residue" : "open") },
     { id: "admit", type: "ADMIT_PROPOSAL", label: "admit open trace", detail: "Make the proposal a spatial relation only when perspective, WHY, and direction are present.", enabled: isAdmitted(field.proposal), tone: isAdmitted(field.proposal) ? "path" : "open", appearance: appearanceFor(isAdmitted(field.proposal) ? "path" : "open") },
     { id: "clear", type: "CLEAR", label: "clear field", detail: "Remove the current traces and leave an OPEN proposal field.", enabled: field.interactions.length > 0, tone: "open", appearance: appearanceFor("open") },
@@ -427,7 +450,7 @@ export function closureScene(field: ClosureField): ClosureScene {
       : selectedStatus === "PATH" && selected.machine.phase === "open" ? "PATH: bridge recorded; the forward perspective → goal translation is now admissible but has not yet been executed."
       : selectedStatus === "PATH" && selected.machine.phase === "contracted" ? "CONTRACTED: the forward translation has executed; reciprocal reopening is the only next closure operation."
       : selectedStatus === "PATH" && selected.machine.phase === "reopened" ? "REOPENED: the goal has been returned as a re-read local perspective; an attempted receipt may now close the episode."
-      : selectedStatus === "RETURNED" ? "RETURNED: the runtime created a retained residue and successor perspective from the executed attempt and receipt."
+      : selectedStatus === "RETURNED" ? "RETURNED (RECORDED): source material, attempt, counter-reading, comparison method, review, receipt, and successor are preserved. This is not an automatically verified truth."
       : selectedStatus === "DUAL" ? "DUAL: the selected trace remains a relative dual reading."
       : "OBSTRUCTION: the selected trace records an unresolved relative obstruction."
     : "OPEN: no interaction has been admitted; only an open candidate trace is available.";
@@ -456,9 +479,9 @@ function lensFor(phase: ClosurePhase): Lens {
 }
 
 function machineAfterEdit(interaction: Interaction, key: InteractionFieldKey): ClosureMachine {
-  const translationKey = key === "perspective" || key === "belief" || key === "why" || key === "goal" || key === "redefinition" || key === "bridge" || key === "world" || key === "position";
+  const translationKey = key === "sourceRef" || key === "sourceClaim" || key === "perspective" || key === "belief" || key === "why" || key === "goal" || key === "redefinition" || key === "bridge" || key === "world" || key === "position";
   if (translationKey) return freshMachine(interaction.machine.inheritedResidue);
-  const returnKey = key === "attempt" || key === "receipt" || key === "returnedPerspective";
+  const returnKey = key === "source" || key === "attempt" || key === "counterReading" || key === "verificationMethod" || key === "review" || key === "receipt" || key === "returnedPerspective";
   if (returnKey && interaction.machine.phase === "returned") {
     return { ...interaction.machine, phase: "reopened", residue: null };
   }
@@ -512,10 +535,15 @@ export function transition(field: ClosureField, event: ClosureEvent): ClosureFie
     return { ...field, lens: "expanded", interactions: field.interactions.map((interaction) => interaction.id === selected.id ? next : interaction) };
   }
   if (event.type === "RETURN") {
-    if (!selected || selected.machine.phase !== "reopened" || !hasReturn(selected)) return field;
+    if (!selected || selected.machine.phase !== "reopened" || !hasReviewedReturn(selected)) return field;
     const residue: ClosureResidue = {
       id: `Ω:${selected.id}:${field.nextId}`,
       inheritedFrom: selected.machine.inheritedResidue?.id ?? null,
+      sourceRef: selected.sourceRef,
+      sourceClaim: selected.sourceClaim,
+      counterReading: selected.counterReading,
+      verificationMethod: selected.verificationMethod,
+      review: selected.review,
       bridge: selected.bridge,
       attempt: selected.attempt,
       receipt: selected.receipt,

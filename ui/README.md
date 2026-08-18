@@ -19,9 +19,11 @@ The map has exactly the admission gates declared by
 
 - `WHY × 3` is required before a reason, goal, or lesson is witnessed.
 - An attempt is required before a project is admitted.
-- A grounded return receipt `ρ` is possible only after an attempt.
+- A recorded return receipt `ρ` is possible only after a source anchor and
+  claim, concrete material, attempt, counter-reading, comparison method,
+  review, and a changed successor are present.
 - The receipt, rather than a visual transition alone, changes the episode from
-  `OPEN RETURN` to `RETURNED COMPLETE`; dual and obstructed positions stay
+  `OPEN RETURN` to `RETURNED (RECORDED)`; dual and obstructed positions stay
   visible as such.
 
 Perspective → goal and goal → perspective are inverse orientations of the
@@ -33,10 +35,12 @@ translation.
 ## Scope
 
 The UI is an executable, spatial educational projection of the checked finite
-forms. It does not run Lean proofs in the browser, infer an independent
+forms and the source-grounded closure packet. It does not run Lean proofs in
+the browser, retrieve or validate external sources, infer an independent
 empirical return, or make a physical, cosmological, consciousness, or
 halting-probability claim. Those boundaries are deliberate and visible in the
-product.
+product. The current source map and review protocol are documented in
+[`../docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](../docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md).
 
 ## Run
 

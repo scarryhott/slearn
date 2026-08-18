@@ -72,6 +72,10 @@ function GenericSeed({ input, dispatch }: { input: InputSeed; dispatch: (event: 
           <option value="dual">relative dual</option>
           <option value="obstructed">relative obstruction</option>
         </select>
+      ) : input.kind === "source" ? (
+        <select value={input.value} onChange={(event) => dispatch({ type: "SET", target: input.target, key: input.key, value: event.target.value })}>
+          {input.options?.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+        </select>
       ) : (
         <textarea rows={2} value={input.value} placeholder={input.placeholder} onChange={(event) => dispatch({ type: "SET", target: input.target, key: input.key, value: event.target.value })} />
       )}

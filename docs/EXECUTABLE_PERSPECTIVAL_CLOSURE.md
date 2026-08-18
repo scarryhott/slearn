@@ -11,14 +11,15 @@ transition:
 P (local perspective)
   -- contract through WHY/bridge --> G (global goal reading)
   -- reopen through the same bridge --> P~ (re-read local perspective)
-  -- return after attempt + receipt --> Ω + P' (residue and successor)
+  -- record reviewed return after comparison --> Ω + P' (residue and successor)
   -- continue --> next open perspective, carrying Ω
 ```
 
 `P~` is not asserted to be literally `P`, and `P'` is explicitly recorded as
 changed. `Ω` is not a score or a decorative value. It is the persisted record
-of the bridge, attempt, receipt, and changed successor that distinguishes this
-successful return from an unexecuted or different one.
+of the source anchor and claim, concrete material, bridge, attempt,
+counter-reading, comparison method, review, receipt, and changed successor
+that distinguishes a reviewed return from an unexecuted or different one.
 
 ## Runtime behavior
 
@@ -30,12 +31,15 @@ successful return from an unexecuted or different one.
   display the contracted projection.
 - `reopened` contains the executed reciprocal local re-reading. Only this
   phase can accept a return.
-- `returned` contains an actual residue record and successor perspective. Only
-  this phase can display the Ω point and seed another relation.
+- `returned` contains a **recorded** residue and successor perspective. It
+  requires concrete material, an attempt, a counter-reading, a stated
+  comparison method, a review, a receipt, and a changed successor. Only this
+  phase can display the Ω point and seed another relation.
 
 The controls execute those transitions; they are not orientation toggles.
 Changing a field that determines translation clears the executed state. A
-return is also invalidated when its attempt, receipt, or successor changes.
+return is also invalidated when its material, attempt, counter-reading,
+comparison, review, receipt, or successor changes.
 This prevents completed-looking records from being silently reused after their
 meaning has changed.
 
@@ -62,7 +66,8 @@ residue.
 The TypeScript runtime mirrors this state discipline and is exercised by
 `npm run test:closure`, but it is not extracted from Lean and no theorem
 currently proves their implementation equality. The runtime records a
-learner’s declared bridge, attempt, and receipt; it does not determine whether
-they are true, sufficient, natural, independently verified, or educationally
-effective. Those questions require a future evidence protocol, potentially
-using the repository’s separate interactive-proof gate.
+learner’s declared source, bridge, attempt, counter-reading, comparison, and
+review; it does not determine whether they are true, sufficient, natural,
+independently verified, or educationally effective. Those questions require
+an evidence protocol. The packet and its source questions are specified in
+[`SLEARN_CLOSURE_RESEARCH_LEDGER.md`](SLEARN_CLOSURE_RESEARCH_LEDGER.md).

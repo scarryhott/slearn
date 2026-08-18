@@ -87,7 +87,7 @@ It proves cross-language equality is exactly closure in that witness language.
 | Source | It is attached to the selected WHY relation. |
 | Lesson | It is attached to the selected direction. |
 | Project | An attempt exists. |
-| Returned perspective | Bridge, attempt, receipt, and successor perspective all exist. |
+| Returned perspective | Source anchor/claim, bridge, material examined, attempt, counter-reading, comparison method, review, receipt, and successor perspective all exist. |
 
 The presence conditions are not operation completion. The runtime additionally
 persists this execution discipline:
@@ -96,7 +96,7 @@ persists this execution discipline:
 | --- | --- | --- |
 | `contracted` | Open bridged trace | Forward perspective → goal record |
 | `reopened` | Contracted trace | Reciprocal goal → local re-reading record |
-| `returned` | Reopened trace plus attempt, receipt, successor | Retained Ω residue and successor record |
+| `returned` | Reopened trace plus concrete material, attempt, counter-reading, comparison method, review, receipt, successor | Retained Ω residue and successor record |
 | next `open` | Returned trace | A new proposal seeded by successor and inherited residue |
 
 The browser geometry is a deterministic triangular projection of these roles:
@@ -115,7 +115,10 @@ The next closure is admissible only when the user supplies a re-reading,
 preservation claim, attempt, receipt, and successor perspective **and executes
 the ordered pass**; otherwise it stays `OPEN`, `DUAL`, or `OBSTRUCTION`.
 
-Continuous closure is consequently a sequence of explicit, reviewable
+Continuous closure is consequently a sequence of explicit, source-grounded,
+reviewable
 episodes, not an autonomous overnight process and not a hidden recommendation
 loop. External source retrieval, evidence review, collaborative maps, and
 interactive-proof checking remain separate capabilities to design and verify.
+The packet fields and source questions that must be preserved are organized in
+[`SLEARN_CLOSURE_RESEARCH_LEDGER.md`](SLEARN_CLOSURE_RESEARCH_LEDGER.md).

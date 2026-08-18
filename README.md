@@ -81,7 +81,7 @@ frame → active opening → translation path → comparison language
       → return witness or obstruction → residue comparison → inherited opening → receipt
 ```
 
-Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A valid receipt records the frame, active view, target, translation, return witness, obstruction evidence, and status. A local success is never silently promoted to universal-relative completion.
+Thus a zoom from perspective to belief, WHY to goal, lesson to project, or project to world is a recentering of the same opening—not a move between disconnected tables. A recorded return requires a source anchor and claim, material examined, attempt, counter-reading, comparison method, review, receipt, and changed successor. It is a reviewable evidence record, not an automatic truth verdict. A local success is never silently promoted to universal-relative completion.
 
 Every admitted recentering executes the common operation:
 
@@ -111,6 +111,7 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 ## Further design documents
 
 - [`docs/SLEARN_SOURCE_PROVENANCE.md`](docs/SLEARN_SOURCE_PROVENANCE.md): privacy-preserving historical record of the original/raw Slearn notes, later synthesis boundary, and the WHY-first → returned-experience design continuity.
+- [`docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md): the source-grounded packet protocol that keeps questions, counter-readings, comparison records, runtime traces, formal claims, and open remainders distinct.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.

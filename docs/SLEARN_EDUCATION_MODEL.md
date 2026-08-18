@@ -36,7 +36,8 @@ The runtime presents one spatial learning field. A learner can:
 
 - state a current perspective, WHY relation, and chosen direction;
 - add a source, observation, conversation, lesson, or project to that path;
-- record an attempt, the return evidence, and a successor perspective;
+- record a source claim, material examined, attempt, counter-reading,
+  comparison method, review, return evidence, and successor perspective;
 - contract a bridged path to its shared direction, reopen it, or return it as a
   successor perspective;
 - record a natural, dual, or obstructed relative position rather than forcing a
@@ -46,7 +47,9 @@ The visible learning field is derived from those records. Sources attach to a
 WHY relation; values/beliefs appear only when the selected relation carries
 them; lessons are traversable readings of a direction; projects are visible
 only when an attempt is present; and a world/universe continuation requires a
-preserved bridge. Successor perspectives require complete return evidence. The
+preserved bridge. Successor perspectives require a complete **recorded
+comparison**: a source anchor and claim, material examined, attempt,
+counter-reading, method, review, receipt, and changed successor. The
 runtime intentionally has no topic folders, independent navigation tree, or
 recommendation score.
 
@@ -58,7 +61,9 @@ and philosophical inspirations, not machine-checked claims about physics,
 consciousness, or the nature of the universe.
 
 The present implementation does not yet retrieve external sources, infer a
-learner's beliefs, validate return evidence, or connect people’s maps. Those
-are future product questions. A person supplies and revises their own
+learner's beliefs, validate a return, or connect people’s maps. It records the
+source anchor, counter-reading, comparison method, and review that a future
+evidence workflow must inspect. A person supplies and revises their own
 relations; any AI assistance would need to remain transparent about its sources
-and suggestions.
+and suggestions. See the
+[`Slearn Closure Research Ledger`](SLEARN_CLOSURE_RESEARCH_LEDGER.md).
