@@ -21,6 +21,8 @@
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
         "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "Slearn/DerivedPerspectivalClosureHull.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
         "framework/closure-ledger.json",
         "scripts/closure-packet-kernel.mjs",
         "scripts/project-closure-hull.mjs"
@@ -72,6 +74,8 @@
         "Slearn/InteractiveTranslationalOpenFoundation.lean",
         "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
         "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -83,7 +87,9 @@
         "Slearn/ClosedTopologicalTranslation.lean",
         "Slearn/NRRF655ExecutablePerspectivalClosureEpisode.lean",
         "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
-        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md"
+        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean"
       ]
     },
     {
@@ -105,6 +111,8 @@
         "scripts/project-closure-hull.mjs",
         "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
         "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]

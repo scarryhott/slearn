@@ -63,6 +63,7 @@ Slearn/NRRF654…lean                     → frame integration adapter
 Slearn/NRRF655…lean                     → RETURN predecessor-typed continuation
 Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-derived closure hull
 Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded changing-frame protocol
+Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN derived version succession
 
 ui/                                    → optional PROJECTION only
 ```

@@ -10,3 +10,4 @@ import Slearn.NRRF655ExecutablePerspectivalClosureEpisode
 import Slearn.PerspectivalCurvatureClosurePrimitives
 import Slearn.DerivedPerspectivalClosureHull
 import Slearn.AuditableChangingAxiometryProtocol
+import Slearn.DerivedSlearnClosureVersion
