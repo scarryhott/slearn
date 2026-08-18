@@ -66,6 +66,7 @@ Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-deriv
 Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded changing-frame protocol
 Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN derived version succession
 Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN replayable lawful succession
+Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limited-frame answer equality
 
 ui/                                    → optional PROJECTION only
 ```

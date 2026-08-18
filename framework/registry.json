@@ -52,7 +52,9 @@
         "Slearn/UniversalRelativeTranslationalCompletion.lean",
         "Slearn/NaturalRhythmClosure.lean",
         "docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md",
-        "docs/NATURAL_RHYTHM_CLOSURE.md"
+        "docs/NATURAL_RHYTHM_CLOSURE.md",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean"
       ]
     },
     {
@@ -81,6 +83,8 @@
         "Slearn/DerivedSlearnClosureVersion.lean",
         "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
         "Slearn/ReplayableSlearnClosureAudit.lean",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -122,6 +126,8 @@
         "Slearn/DerivedSlearnClosureVersion.lean",
         "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
         "Slearn/ReplayableSlearnClosureAudit.lean",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
