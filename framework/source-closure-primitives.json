@@ -1,0 +1,44 @@
+{
+  "id": "SRC-2026-CURVATURE-FOUNDATION",
+  "expectedStatus": "PATH",
+  "source": {
+    "anchor": "SRC-2026-CURVATURE",
+    "claim": "Slearn is organized by perspectival curvature under translational limits, not by a finished answer or a free navigation scheme."
+  },
+  "observation": "A relation may be read from a local perspective and a goal/global orientation without privileging an origin language.",
+  "perspective": "A current local reading whose available paths can change.",
+  "beliefLimit": "A value or belief constrains what is relevant, possible, or obstructed.",
+  "goalLimit": "A direction constrains and pulls possible paths without validating its own path.",
+  "why": "A reason joining the current perspective, its limits, and a possible direction.",
+  "explanations": {
+    "semantic": "A semantic explanation is one presentation of the reason.",
+    "operative": "An operative explanation exposes the same reason through definition, lesson, test, or project."
+  },
+  "definition": "Language and definition may exchange roles while the declared relation is preserved.",
+  "paths": {
+    "forward": "Perspective → WHY → goal is a declared forward path.",
+    "counter": "A dual, limiting, or obstructed path remains part of the same comparison rather than an unrelated operator."
+  },
+  "translation": {
+    "forwardBridge": "The WHY relation translates the local presentation toward the goal/global reading.",
+    "inverseBridge": "The same declared relation re-reads the goal/global presentation as a local perspective.",
+    "witnessLanguage": "The declared comparison relation is the witness language for relative closure."
+  },
+  "execution": {
+    "contracted": false,
+    "reopened": false
+  },
+  "verification": {
+    "material": "",
+    "attempt": "",
+    "counterReading": "",
+    "comparisonMethod": "",
+    "review": ""
+  },
+  "admission": {
+    "condition": "A relative presentation may continue only after its counter-reading and declared comparison are carried into a further relation.",
+    "receipt": "",
+    "successor": "",
+    "nextRelation": ""
+  }
+}

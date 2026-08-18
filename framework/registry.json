@@ -26,9 +26,13 @@
       "purpose": "The source-defined fold among observation, belief/value, goal, WHY, explanation, definition, and alternative path; no numerical or physical metric is assumed.",
       "resources": [
         "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
+        "docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
         "docs/NATURAL_RHYTHM_CLOSURE.md",
-        "Slearn/NaturalRhythmClosure.lean"
+        "Slearn/NaturalRhythmClosure.lean",
+        "Slearn/PerspectivalCurvatureClosurePrimitives.lean",
+        "framework/source-closure-primitives.json",
+        "scripts/run-source-closure.mjs"
       ]
     },
     {
@@ -78,9 +82,13 @@
       "purpose": "Relation-relative truth admission: a continued translation rather than a terminal preserved proposition.",
       "resources": [
         "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
+        "docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
         "Slearn/UniversalRelativeTranslationalCompletion.lean",
-        "Slearn/InteractiveTranslationalOpenFoundation.lean"
+        "Slearn/InteractiveTranslationalOpenFoundation.lean",
+        "Slearn/PerspectivalCurvatureClosurePrimitives.lean",
+        "framework/source-closure-primitives.json",
+        "scripts/run-source-closure.mjs"
       ]
     },
     {

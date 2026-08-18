@@ -96,6 +96,7 @@ used to change the runtime or documentation.
 | Ledger need | Current repository support | Deliberate boundary |
 | --- | --- | --- |
 | Local/global are inverse orientations of one admitted translation | `NaturalRhythmClosure.lean`, `NRRF654IntegratedFrameworkClosure.lean` | The application-specific witness still has to be supplied |
+| Source-defined curvature and nonterminal admission | `PerspectivalCurvatureClosurePrimitives.lean`, `framework/source-closure-primitives.json`, `scripts/run-source-closure.mjs` | The primitive source packet reaches `PATH`; no source text is treated as a reviewed attempt, return, or truth admission |
 | Relation-relative return with residue and a next opening | `ClosedTopologicalTranslation.lean`, `NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean`, `NRRF655ExecutablePerspectivalClosureEpisode.lean` | The theorem does not decide whether a human receipt is adequate |
 | Source-derived Slearn roles and trace-gated map | `NRRF651SlearnUIHairOfClosureGeneratedMap.lean` | It proves a modeled bounded generator, not the historic notes or browser equality |
 | Continuous completion versus a finite interaction | `InteractiveTranslationalOpenFoundation.lean` | A finite browser session cannot certify a global completion |

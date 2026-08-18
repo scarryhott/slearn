@@ -111,6 +111,7 @@ a decorative display transition.
 
 - [`Slearn/UniversalRelativeTranslationalCompletion.lean`](Slearn/UniversalRelativeTranslationalCompletion.lean) proves completion laws, the universal-relative uniqueness theorem, and cofinal relevance preservation.
 - [`Slearn/NaturalRhythmClosure.lean`](Slearn/NaturalRhythmClosure.lean) defines an admitted two-orientation translation, relative natural/dual/obstructed positions, and the minimal cone/opening relation.
+- [`Slearn/PerspectivalCurvatureClosurePrimitives.lean`](Slearn/PerspectivalCurvatureClosurePrimitives.lean) makes the source-defined perspective, belief/goal limits, WHY, paired explanation/definition, counter-path, reviewed interaction, and nonterminal admission conditions explicit before a return can be recorded.
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
 - [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
@@ -125,6 +126,7 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`framework/registry.json`](framework/registry.json): machine-readable map of every registered repository resource and its closure frame; `node scripts/validate-framework.mjs` validates it.
 - [`docs/SLEARN_SOURCE_PROVENANCE.md`](docs/SLEARN_SOURCE_PROVENANCE.md): privacy-preserving historical record of the original/raw Slearn notes, later synthesis boundary, and the WHY-first → returned-experience design continuity.
 - [`docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md): the source-grounded packet protocol that keeps questions, counter-readings, comparison records, runtime traces, formal claims, and open remainders distinct.
+- [`docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md`](docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md): the primitive source contract and its deterministic `PATH` run; `node scripts/run-source-closure.mjs` checks that the direct source is not promoted to an unearned return.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.
