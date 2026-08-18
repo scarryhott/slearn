@@ -68,6 +68,7 @@ Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN
 Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN replayable lawful succession
 Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limited-frame answer equality
 Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION truth-answer completion without marker identity
+Slearn/RecalculationAgainstTranslatedTruthAnswers.lean → TRANSLATION / ADMISSION successor question-language recalculation
 
 ui/                                    → optional PROJECTION only
 ```
