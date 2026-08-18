@@ -67,6 +67,7 @@ Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded 
 Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN derived version succession
 Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN replayable lawful succession
 Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limited-frame answer equality
+Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION truth-answer completion without marker identity
 
 ui/                                    → optional PROJECTION only
 ```
