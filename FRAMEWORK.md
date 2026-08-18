@@ -69,6 +69,7 @@ Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN r
 Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limited-frame answer equality
 Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION truth-answer completion without marker identity
 Slearn/RecalculationAgainstTranslatedTruthAnswers.lean → TRANSLATION / ADMISSION successor question-language recalculation
+Slearn/PartitionAggregateClosure.lean         → TRANSLATION / ADMISSION finite scalar closure and retained successor distinction
 
 ui/                                    → optional PROJECTION only
 ```

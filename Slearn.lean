@@ -15,3 +15,4 @@ import Slearn.ReplayableSlearnClosureAudit
 import Slearn.TransactionalCompletionEvaluation
 import Slearn.CompletionInTranslationalTruthEquality
 import Slearn.RecalculationAgainstTranslatedTruthAnswers
+import Slearn.PartitionAggregateClosure

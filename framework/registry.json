@@ -58,7 +58,9 @@
         "docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md",
         "Slearn/CompletionInTranslationalTruthEquality.lean",
         "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
-        "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean"
+        "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean"
       ]
     },
     {
@@ -93,6 +95,8 @@
         "Slearn/CompletionInTranslationalTruthEquality.lean",
         "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
         "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -140,6 +144,8 @@
         "Slearn/CompletionInTranslationalTruthEquality.lean",
         "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
         "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
