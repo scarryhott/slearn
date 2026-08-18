@@ -51,6 +51,7 @@ not the Slearn framework and it is not the center of the repository.
 ```text
 docs/SLEARN_SOURCE_PROVENANCE.md       → OPEN provenance boundary
 docs/SLEARN_ORIGINAL_VISION.md         → OPEN / PERSPECTIVE source grammar
+docs/RESEARCH_FRAMEWORK.md              → canonical-source interpretation and claim-level boundary
 docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md → packet, verification, and OPEN remainder
 docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md
                                          → source-defined curvature, truth-admission, goal, and path mechanism
@@ -117,3 +118,23 @@ The central open problem is not “make more screens” or “assert one theory.
 is to organize real source-grounded episodes whose translations, counter-
 readings, evidence, and continuations can be inspected without collapsing the
 open remainder.
+
+## Claim-level rule
+
+`docs/SLEARN_ORIGINAL_VISION.md` remains the canonical source; its statements
+do not acquire formal or empirical status by being placed beside Lean, a UI, or
+a runtime. The required levels and the translation of each manifesto section
+are in [`docs/RESEARCH_FRAMEWORK.md`](docs/RESEARCH_FRAMEWORK.md): product
+design, phenomenology, metaphor, metaphysical hypothesis, mathematical
+definition, proved theorem, empirical/runtime result, and open question.
+
+The repository-wide closure relation is:
+
+```text
+Perspective → Why → Goal → Learning → Insight → Action → Experience
+            → Return → Perspective′.
+```
+
+The prime marks a changed successor relation. It never silently means literal
+endpoint equality, ordinary equality of `0` and `∞`, or a completed account of
+spacetime, consciousness, nature, or spirit.

@@ -12,6 +12,15 @@ frames—`OPEN`, `PERSPECTIVE`, `CURVATURE`, `TRANSLATION`, `INTERACTION`,
 rules. The optional `ui/` directory is in the final projection frame; it has
 no authority to create sources, verify returns, or define Slearn.
 
+[`docs/SLEARN_ORIGINAL_VISION.md`](docs/SLEARN_ORIGINAL_VISION.md) is the
+canonical, verbatim Speed Learn manifesto. Its companion
+[`docs/RESEARCH_FRAMEWORK.md`](docs/RESEARCH_FRAMEWORK.md) classifies the
+surrounding work as product design, phenomenology, metaphor, metaphysical
+hypothesis, mathematical definition, proved theorem, empirical/runtime result,
+or open question. In particular, Speed Learn means reducing unnecessary
+translation cost between perspectives and generative insight—not compressing
+information or claiming a literal one-hour intelligence upload.
+
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
 Any visible map is a projection, not the framework. It must be generated from

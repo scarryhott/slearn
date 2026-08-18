@@ -9,6 +9,7 @@
       "resources": [
         "docs/SLEARN_SOURCE_PROVENANCE.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
       ]
     },
@@ -18,6 +19,7 @@
       "resources": [
         "docs/SLEARN_EDUCATION_MODEL.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
         "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "Slearn/DerivedPerspectivalClosureHull.lean",
@@ -35,6 +37,7 @@
         "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
         "docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/NATURAL_RHYTHM_CLOSURE.md",
         "Slearn/NaturalRhythmClosure.lean",
         "Slearn/PerspectivalCurvatureClosurePrimitives.lean",
