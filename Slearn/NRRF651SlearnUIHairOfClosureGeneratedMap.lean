@@ -136,11 +136,52 @@ inductive ClosureSeed
   | reReading
   | preservedBridge
   | relativePosition
+  | source
   | lesson
   | attempt
   | receipt
   | successor
   deriving DecidableEq, Repr
+
+/-- Learning material is attached to an admitted trace, never a free sidebar. -/
+inductive LearningRole
+  | source
+  | lesson
+  | project
+  deriving DecidableEq, Repr
+
+/-- A source, lesson, or project in the generated learning field. -/
+structure LearningOccurrence (F : InteractionField Presentation Trace Receipt)
+    (Material : Type x) where
+  role : LearningRole
+  trace : Trace
+  admissible : F.Admitted trace
+  material : Material
+
+namespace LearningOccurrence
+
+variable {F : InteractionField Presentation Trace Receipt} {Material : Type x}
+
+/-- Projects require a recorded attempt; sources and lessons require the trace. -/
+def visible (L : LearningOccurrence F Material) : Prop :=
+  match L.role with
+  | .source | .lesson => True
+  | .project => F.attempted L.trace
+
+/-- Every visible learning material retains an admitted closure trace. -/
+theorem visible_has_admitted_trace (L : LearningOccurrence F Material)
+    (_h : L.visible) : F.Admitted L.trace :=
+  L.admissible
+
+/-- A visible project cannot be manufactured without an attempt. -/
+theorem visible_project_requires_attempt (L : LearningOccurrence F Material)
+    (hrole : L.role = .project) (hvisible : L.visible) : F.attempted L.trace := by
+  cases L with
+  | mk role trace admissible material =>
+      cases role <;> simp at hrole
+      simpa [visible] using hvisible
+
+end LearningOccurrence
 
 /--
 The complete formal scene contract.  A renderer may choose a physical medium,
@@ -151,6 +192,7 @@ structure ClosureMachineScene (F : InteractionField Presentation Trace Receipt)
     (lens : Lens) where
   point : SpatialOccurrence F → Prop
   connection : SpatialOccurrence F → SpatialOccurrence F → Prop
+  learning : ∀ {Material : Type x}, LearningOccurrence F Material → Prop
   operation : Trace → Lens → Lens → Prop
   seed : ClosureSeed → Prop
 
@@ -159,6 +201,7 @@ def generatedScene (F : InteractionField Presentation Trace Receipt)
     (lens : Lens) : ClosureMachineScene F lens where
   point := F.SpatialClosure lens
   connection := fun left right => F.SpatialClosure lens left ∧ F.SpatialClosure lens right
+  learning := fun learning => learning.visible
   operation := LensTransition F
   seed := fun _ => True
 
@@ -178,6 +221,12 @@ theorem connection_requires_closure
     (h : (F.generatedScene lens).connection left right) :
     F.SpatialClosure lens left ∧ F.SpatialClosure lens right :=
   h
+
+/-- A visible source, lesson, or project is also closure-derived. -/
+theorem learning_requires_admitted_trace
+    {Material : Type x} {learning : LearningOccurrence F Material}
+    (h : (F.generatedScene lens).learning learning) : F.Admitted learning.trace :=
+  learning.visible_has_admitted_trace h
 
 /-- A rendered operation is a closure transition, not a camera action. -/
 theorem operation_is_lens_transition
@@ -388,6 +437,7 @@ end Slearn
 #print axioms Slearn.UIHairOfClosure.InteractionField.successor_requires_return
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.point_iff_spatialClosure
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.connection_requires_closure
+#print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.learning_requires_admitted_trace
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.operation_is_lens_transition
 #print axioms Slearn.UIHairOfClosure.InteractionField.transition_to_contracted_requires_bridge
 #print axioms Slearn.UIHairOfClosure.InteractionField.transition_to_returned_requires_return
