@@ -16,9 +16,11 @@ connections visible and revisable over time.
 
 ```text
 current perspective
+  → values / beliefs in context
   → WHY relation
   → chosen direction
-  → source / lesson / project
+  → world / universe continuation
+  ↘ source / lesson / project
   → attempted return
   → revised perspective
 ```
@@ -41,10 +43,12 @@ The runtime presents one spatial learning field. A learner can:
   path to appear successful.
 
 The visible learning field is derived from those records. Sources attach to a
-WHY relation; lessons are traversable readings of a direction; projects are
-visible only when an attempt is present; successor perspectives require the
-complete return evidence. The runtime intentionally has no topic folders,
-independent navigation tree, or recommendation score.
+WHY relation; values/beliefs appear only when the selected relation carries
+them; lessons are traversable readings of a direction; projects are visible
+only when an attempt is present; and a world/universe continuation requires a
+preserved bridge. Successor perspectives require complete return evidence. The
+runtime intentionally has no topic folders, independent navigation tree, or
+recommendation score.
 
 ## Theory and scope
 

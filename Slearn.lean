@@ -5,3 +5,4 @@ import Slearn.NRRF651SlearnUIHairOfClosureGeneratedMap
 import Slearn.ChaitinKakeyaTokenResuperposition
 import Slearn.NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition
 import Slearn.InteractiveTranslationalOpenFoundation
+import Slearn.NRRF654IntegratedFrameworkClosure

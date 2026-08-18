@@ -23,19 +23,24 @@ learning outcome.
 
 ## 1. The Slearn UI is a projection of an interaction field
 
-There is no canonical sequence of UI nodes in the formal model. In particular,
-there is no predeclared
+There is no independently drawable sequence of UI nodes in the formal model.
+The historical Slearn grammar is instead a closure projection: a role appears
+only when the selected trace supplies the relation that carries it. The
+source-derived order is
 
 ```text
-core → brain → value → belief → WHY → goal → lesson → project → world
+current perspective → value / belief → WHY → goal → world / universe
+                                      ↘ source / lesson → project → return
 ```
 
-that gets merely gated by evidence. Instead the source is one interaction
-field:
+This is not a predeclared diagram that gets merely gated by evidence. It is
+one interaction field:
 
 ```text
 source presentation
+context / value / belief presentation
 target presentation
+world / universe continuation
 translated trace
 relative re-reading
 preserved relation (bridge)
@@ -59,20 +64,25 @@ exhausted by `ClosureSeed`, the declared axes of an open trace. The theorems
 `point_iff_spatialClosure`, `connection_requires_closure`, and
 `operation_is_lens_transition` state these three boundaries.
 
-The generated field has four possible visible roles:
+The generated field has six core spatial roles. Learning material and the
+returned successor remain separately typed occurrences of the same trace:
 
 | Role | What it means | Admission condition |
 | --- | --- | --- |
 | Presentation | A local reading of an interaction | The interaction is translated |
+| Context | A value/belief carried by the local relation | The trace supplies that context |
 | Translation | The WHY relation that connects readings | The interaction is translated |
 | Closure | The target reading where traces recombine | Expanded: translated; contracted: bridged |
+| World | A world/universe continuation of a goal | Bridged trace plus supplied global continuation |
 | Successor | A perspective after a recorded return | Bridged, attempted, and receipted |
 
 `SpatialClosure` is a predicate over these occurrences, not an object holding
 screen coordinates. `SpatialOccurrence` retains the source trace for every
-role. The runtime's deterministic force projection gives those occurrences
-coordinates only after the closure scene is formed. This is the checked
-boundary that prevents a rendered node from becoming an unrelated UI object.
+role. The runtime assigns coordinates only after the closure scene is formed:
+the outward local/context/WHY/goal/world fold and the inward
+source/lesson/project/successor fold are a deterministic triangle field of
+the trace role and trace order. This is the checked boundary that prevents a
+rendered node from becoming an unrelated UI object.
 
 ## 2. Zoom, topic selection, and definition changes
 
@@ -114,6 +124,15 @@ when its closure evidence is absent; it is not replaced with an inert visual
 mode. This distinguishes a translation that moves and continues a relation
 from a frozen re-labeling. The formal `Frozen` and `Translating` predicates
 also prove that a frozen round step cannot be translating.
+
+`NRRF654IntegratedFrameworkClosure.lean` records the further adapter used for
+the repository-wide framework pass. Its `IntegratedFramework` requires the
+common operation's contraction and reopening to equal the admitted
+local/global translation, and requires runtime zoom to use that operation.
+`round_closes`, `operation_recovers`, and `runtime_zoom_is_translation_return`
+then prove the common return in the stated witness relation. This is a typed
+adapter under its listed hypotheses, not a claim that browser text values have
+automatically satisfied those hypotheses.
 
 ## 3. Natural, dual, obstructed, and OPEN positions
 
@@ -176,6 +195,8 @@ formal representation choices, not a physical theory of time.
 Machine-checked here:
 
 - only traces admitted by an `InteractionField` can generate spatial roles;
+- a context/value and world/universe continuation require their stated trace
+  evidence, and the latter also requires a bridge;
 - contracting and reopening require a bridge;
 - successor views require bridge, attempt, and a receipt;
 - a changed successor is not literal repetition of its source;
@@ -187,5 +208,6 @@ Educational or metaphysical interpretation only:
 
 - that a supplied return receipt is independent or true;
 - that a user’s bridge is adequate or natural;
-- that the layout is a physical closure, curvature, or learning mechanism;
+- that the browser layout is a physical closure, curvature, or learning
+  mechanism;
 - any physical, cosmological, or quantum reading of the token layer.
