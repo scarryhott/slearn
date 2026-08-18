@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "Slearn",
-  "unit": "source-grounded closure packet",
+  "unit": "source-grounded perspectival-curvature closure packet",
   "frames": [
     {
       "id": "OPEN",
@@ -19,6 +19,16 @@
         "docs/SLEARN_EDUCATION_MODEL.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+      ]
+    },
+    {
+      "id": "CURVATURE",
+      "purpose": "The source-defined fold among observation, belief/value, goal, WHY, explanation, definition, and alternative path; no numerical or physical metric is assumed.",
+      "resources": [
+        "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
+        "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/NATURAL_RHYTHM_CLOSURE.md",
+        "Slearn/NaturalRhythmClosure.lean"
       ]
     },
     {
@@ -64,6 +74,16 @@
       ]
     },
     {
+      "id": "ADMISSION",
+      "purpose": "Relation-relative truth admission: a continued translation rather than a terminal preserved proposition.",
+      "resources": [
+        "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
+        "Slearn/UniversalRelativeTranslationalCompletion.lean",
+        "Slearn/InteractiveTranslationalOpenFoundation.lean"
+      ]
+    },
+    {
       "id": "PROJECTION",
       "purpose": "Integrated formal adapters, documentation, runtime, and optional interface projections.",
       "resources": [
@@ -82,21 +102,27 @@
   ],
   "routes": [
     ["OPEN", "PERSPECTIVE"],
-    ["PERSPECTIVE", "TRANSLATION"],
+    ["PERSPECTIVE", "CURVATURE"],
+    ["CURVATURE", "TRANSLATION"],
     ["TRANSLATION", "INTERACTION"],
     ["INTERACTION", "VERIFICATION"],
-    ["VERIFICATION", "RETURN"],
+    ["VERIFICATION", "ADMISSION"],
+    ["ADMISSION", "RETURN"],
     ["RETURN", "OPEN"],
     ["OPEN", "PROJECTION"],
     ["PERSPECTIVE", "PROJECTION"],
+    ["CURVATURE", "PROJECTION"],
     ["TRANSLATION", "PROJECTION"],
     ["INTERACTION", "PROJECTION"],
     ["VERIFICATION", "PROJECTION"],
+    ["ADMISSION", "PROJECTION"],
     ["RETURN", "PROJECTION"]
   ],
   "rules": {
     "source_is_not_proof": true,
     "projection_is_not_authority": true,
+    "curvature_requires_perspective_and_limit": true,
+    "truth_admission_continues_translation": true,
     "return_requires_counter_reading": true,
     "finite_interaction_is_not_global_completion": true,
     "unresolved_remainder_is_preserved": true

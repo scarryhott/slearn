@@ -8,13 +8,15 @@ const frameIds = new Set(registry.frames.map((frame) => frame.id));
 const requiredRules = [
   "source_is_not_proof",
   "projection_is_not_authority",
+  "curvature_requires_perspective_and_limit",
+  "truth_admission_continues_translation",
   "return_requires_counter_reading",
   "finite_interaction_is_not_global_completion",
   "unresolved_remainder_is_preserved"
 ];
 
-if (registry.unit !== "source-grounded closure packet") {
-  throw new Error("Framework registry must name the source-grounded closure packet as its unit.");
+if (registry.unit !== "source-grounded perspectival-curvature closure packet") {
+  throw new Error("Framework registry must name the source-grounded perspectival-curvature closure packet as its unit.");
 }
 
 for (const rule of requiredRules) {
@@ -36,7 +38,7 @@ for (const route of registry.routes) {
   }
 }
 
-const requiredCycle = ["OPEN", "PERSPECTIVE", "TRANSLATION", "INTERACTION", "VERIFICATION", "RETURN", "OPEN"];
+const requiredCycle = ["OPEN", "PERSPECTIVE", "CURVATURE", "TRANSLATION", "INTERACTION", "VERIFICATION", "ADMISSION", "RETURN", "OPEN"];
 for (let index = 0; index < requiredCycle.length - 1; index += 1) {
   const edge = [requiredCycle[index], requiredCycle[index + 1]];
   if (!registry.routes.some(([from, to]) => from === edge[0] && to === edge[1])) {

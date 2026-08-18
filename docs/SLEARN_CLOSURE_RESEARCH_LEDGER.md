@@ -41,12 +41,14 @@ not silently filled by AI, layout, or a formal analogy.
 ```text
 source anchor + source claim / observation
   → current perspective + value/belief context
+  → curvature: belief/goal limits, WHY paths, explanations, definitions, and counter-path
   → WHY relation
   → goal / global reading
   → re-reading + preserved bridge
   → concrete material examined + attempt
   → counter-reading, duality, or obstruction
   → stated comparison method + review
+  → admission: a continued relation rather than a terminal truth badge
   → return receipt + changed successor
   → Ω: retained source, comparison, and open remainder
   → next question / next opening
@@ -65,6 +67,12 @@ scores:
 `DUAL` and `OBSTRUCTION` are not failures to hide. They are positions of the
 same packet that prevent an unwarranted return.
 
+`ADMISSION` is not a fifth global truth score. It is the explicit condition
+between verification and return: the relation may be admitted only as a
+continued translation into a further relation. The source-defined curvature and
+truth-admission mechanism is specified in
+[`SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md`](SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md).
+
 ## Source anchors and questions to preserve
 
 | Anchor | Direct contribution to retain | Closure question it opens | Required interaction before any returned claim |
@@ -75,6 +83,7 @@ same packet that prevent an unwarranted return.
 | `SRC-2025-TRIANGLE` | Downward decomposition, upward return, revised goal/depth, multiple WHY paths | Which retained difference makes an upward return a continuation rather than a replay? | Compare at least two possible paths or state why the alternative remains OPEN |
 | `SRC-2026-WHY-TREE` | Insights beneath perspective maps have inspectable WHY branches | Does each insight have a reviewable reason branch rather than a free-floating label? | Attach source/observation, branch relation, and a testable lesson/project route |
 | `SRC-2026-MAZE` | Perspectival maze-map; ball/hair and translation vocabulary | What line, fold, or bridge is preserved by the two readings? | Name the witness language and an obstruction or alternative traversal |
+| `SRC-2026-CURVATURE` | Perspective curvature under belief/goal limits; language/definition/explanation flips; truth admission must continue into further relation | How does a change in belief or goal bend the available WHY paths, and what next relation makes an admission nonterminal? | State the limits, two explanations/definitions, counter-path, comparison, and successor relation; do not substitute a score or UI operation |
 | `CHAT-EDUCATION-MAP` | An open spatial interface: drawn relations, paths to sources/lessons, reframing, shared maps | Can the interface make the change in perspective legible without reducing it to engagement, folders, or a chatbot answer? | Record a human-drawn or supplied relation, its opposing reading, and the evidence used to revise it |
 | `OBSERVED-INTERACTION` / `EXTERNAL-SOURCE` | A concrete new observation or supplied reference | What has actually been observed or cited in this episode? | Identify the material and method; no inherited prose is treated as evidence |
 

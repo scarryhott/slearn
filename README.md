@@ -1,15 +1,16 @@
 # Slearn
 
-Slearn is a **framed repository for perspectival closure**. It is not centered
-on a website or on one finite model. Perspectives, beliefs, WHY relations,
-goals, lessons, projects, world views, formal modules, and runtime projections
-are all located within one source-grounded closure packet.
+Slearn is a **framed repository for perspectival curvature and closure**. It
+is not centered on a website or on one finite model. Perspectives, beliefs,
+WHY relations, goals, lessons, projects, world views, formal modules, and
+runtime projections are all located within one source-grounded
+perspectival-curvature closure packet.
 
-Start with [`FRAMEWORK.md`](FRAMEWORK.md). It defines the repository’s seven
-frames—`OPEN`, `PERSPECTIVE`, `TRANSLATION`, `INTERACTION`, `VERIFICATION`,
-`RETURN`, and `PROJECTION`—and their admission rules. The optional `ui/`
-directory is in the final projection frame; it has no authority to create
-sources, verify returns, or define Slearn.
+Start with [`FRAMEWORK.md`](FRAMEWORK.md). It defines the repository’s nine
+frames—`OPEN`, `PERSPECTIVE`, `CURVATURE`, `TRANSLATION`, `INTERACTION`,
+`VERIFICATION`, `ADMISSION`, `RETURN`, and `PROJECTION`—and their admission
+rules. The optional `ui/` directory is in the final projection frame; it has
+no authority to create sources, verify returns, or define Slearn.
 
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
