@@ -8,7 +8,10 @@ treating a designed diagram as a theorem.
 1. [`NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](../Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean)
    formalizes a relation-generated spatial field and bridge-required closure
    transitions.
-2. [`ChaitinKakeyaTokenResuperposition.lean`](../Slearn/ChaitinKakeyaTokenResuperposition.lean)
+2. [`NRRF655ExecutablePerspectivalClosureEpisode.lean`](../Slearn/NRRF655ExecutablePerspectivalClosureEpisode.lean)
+   formalizes the predecessor-typed `open → contracted → reopened → returned`
+   episode and retained continuation.
+3. [`ChaitinKakeyaTokenResuperposition.lean`](../Slearn/ChaitinKakeyaTokenResuperposition.lean)
    formalizes the separate directional-token and assumption-grain reading.
 
 The reported `NRRF653LeanClosureFrozenAxiometryVersusTranslation.lean` source
@@ -74,7 +77,8 @@ returned successor remain separately typed occurrences of the same trace:
 | Translation | The WHY relation that connects readings | The interaction is translated |
 | Closure | The target reading where traces recombine | Expanded: translated; contracted: bridged |
 | World | A world/universe continuation of a goal | Bridged trace plus supplied global continuation |
-| Successor | A perspective after a recorded return | Bridged, attempted, and receipted |
+| Residue | The retained difference from an executed return | Returned trace only |
+| Successor | A perspective after a recorded return | Returned trace only |
 
 `SpatialClosure` is a predicate over these occurrences, not an object holding
 screen coordinates. `SpatialOccurrence` retains the source trace for every
@@ -124,6 +128,40 @@ when its closure evidence is absent; it is not replaced with an inert visual
 mode. This distinguishes a translation that moves and continues a relation
 from a frozen re-labeling. The formal `Frozen` and `Translating` predicates
 also prove that a frozen round step cannot be translating.
+
+## 2a. An interactive operation is not a lens switch
+
+The runtime now persists an episode machine for every admitted trace:
+
+```text
+OPEN
+  -- contract --> CONTRACTED (the forward perspective → goal record exists)
+  -- reopen --> REOPENED (the reciprocal goal → local re-reading exists)
+  -- return --> RETURNED (a residue Ω and successor record exist)
+  -- continue --> next OPEN (the successor becomes the next local seed)
+```
+
+Typing a bridge, an attempt, a receipt, or a successor name does **not** by
+itself move the trace to the next phase. `contract`, `reopen`, and `return`
+are separate runtime events. Editing a translated field invalidates the
+executed state; editing return evidence after return removes the committed
+residue and restores the re-opened state. The displayed contracted and
+returned projections are therefore consequences of operation state, not
+camera choices.
+
+The residue is generated from the executed bridge, attempt, receipt, and
+changed successor. It is rendered as a point between project and successor;
+`continue` carries that exact residue into the next open proposal. The runtime
+test `npm run test:closure` executes this entire sequence and checks that the
+residue and successor do not appear until the return event, then persist into
+the next episode.
+
+`NRRF655ExecutablePerspectivalClosureEpisode.lean` proves the corresponding
+typed timeline: a return input can only be applied to a reopened perspective,
+the residue changes its origin, the successor closes with the contracted goal,
+and `nextOpening` retains the exact residue. It does not prove TypeScript is
+generated from Lean or validate the learner-supplied strings; that remains an
+explicit implementation boundary.
 
 `NRRF654IntegratedFrameworkClosure.lean` records the further adapter used for
 the repository-wide framework pass. Its `IntegratedFramework` requires the

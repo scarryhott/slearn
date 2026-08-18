@@ -80,10 +80,12 @@ function GenericSeed({ input, dispatch }: { input: InputSeed; dispatch: (event: 
 }
 
 function GenericOperation({ operation, dispatch }: { operation: ClosureOperation; dispatch: (event: ClosureEvent) => void }) {
-  const event: ClosureEvent = operation.type === "LENS"
-    ? { type: "LENS", lens: operation.lens! }
-    : operation.type === "ADMIT_PROPOSAL" ? { type: "ADMIT_PROPOSAL" }
-      : { type: "CLEAR" };
+  const event: ClosureEvent = operation.type === "CONTRACT" ? { type: "CONTRACT" }
+    : operation.type === "REOPEN" ? { type: "REOPEN" }
+      : operation.type === "RETURN" ? { type: "RETURN" }
+        : operation.type === "CONTINUE" ? { type: "CONTINUE" }
+          : operation.type === "ADMIT_PROPOSAL" ? { type: "ADMIT_PROPOSAL" }
+            : { type: "CLEAR" };
   return <button className="machine-operation" data-pattern={operation.appearance.pattern} data-glow={operation.appearance.glow} style={appearanceStyle(operation.appearance)} type="button" disabled={!operation.enabled} title={operation.detail} onClick={() => dispatch(event)}>{operation.label}</button>;
 }
 

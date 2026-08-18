@@ -6,3 +6,4 @@ import Slearn.ChaitinKakeyaTokenResuperposition
 import Slearn.NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition
 import Slearn.InteractiveTranslationalOpenFoundation
 import Slearn.NRRF654IntegratedFrameworkClosure
+import Slearn.NRRF655ExecutablePerspectivalClosureEpisode

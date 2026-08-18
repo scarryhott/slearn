@@ -41,6 +41,7 @@ inductive SpatialRole
   | translation
   | closure
   | world
+  | residue
   | successor
   deriving DecidableEq, Repr
 
@@ -72,6 +73,7 @@ structure InteractionField (Presentation : Type u) (Trace : Type v)
   preserved : Trace → Prop
   attempted : Trace → Prop
   returnReceipt : Trace → Receipt → Prop
+  residue : Receipt → Presentation
   successor : Receipt → Presentation
   position : Trace → RelativePosition
 
@@ -108,6 +110,7 @@ structure SpatialOccurrence (F : InteractionField Presentation Trace Receipt) wh
     | .translation => visible = F.target trace
     | .closure => visible = F.target trace
     | .world => visible = F.world trace
+    | .residue => ∃ r, F.returnReceipt trace r ∧ visible = F.residue r
     | .successor => ∃ r, F.returnReceipt trace r ∧ visible = F.successor r
 
 /-- The spatial field is a predicate, not a stored list of nodes or coordinates. -/
@@ -126,6 +129,7 @@ def SpatialClosure (F : InteractionField Presentation Trace Receipt)
       | .returned, .translation => True
       | .returned, .closure => True
       | .returned, .world => F.Bridge occurrence.trace ∧ F.hasWorld occurrence.trace
+      | .returned, .residue => F.Returned occurrence.trace
       | .returned, .successor => F.Returned occurrence.trace
       | _, _ => False
 
@@ -319,6 +323,17 @@ theorem successor_requires_return
       cases role <;> simp at hrole
       simpa [SpatialClosure] using h
 
+/-- A retained residue is shown only after an explicit attempted return. -/
+theorem residue_requires_return
+    (F : InteractionField Presentation Trace Receipt)
+    {o : SpatialOccurrence F}
+    (h : F.SpatialClosure .returned o)
+    (hrole : o.role = .residue) : F.Returned o.trace := by
+  cases o with
+  | mk role trace admissible visible presents =>
+      cases role <;> simp at hrole
+      simpa [SpatialClosure] using h
+
 /-- A return is a continuation, not literal identity of source and successor. -/
 structure ReturnContinuation (F : InteractionField Presentation Trace Receipt)
     (t : Trace) where
@@ -473,6 +488,7 @@ end Slearn
 #print axioms Slearn.UIHairOfClosure.InteractionField.context_requires_context
 #print axioms Slearn.UIHairOfClosure.InteractionField.world_requires_bridge_and_global_relation
 #print axioms Slearn.UIHairOfClosure.InteractionField.successor_requires_return
+#print axioms Slearn.UIHairOfClosure.InteractionField.residue_requires_return
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.point_iff_spatialClosure
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.connection_requires_closure
 #print axioms Slearn.UIHairOfClosure.InteractionField.ClosureMachineScene.learning_requires_admitted_trace

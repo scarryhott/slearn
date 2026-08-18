@@ -71,6 +71,7 @@ It proves cross-language equality is exactly closure in that witness language.
 | `ChaitinKakeyaTokenResuperposition.lean` | Token, assumption-grain, and ordered-record projection | It is an optional readout of a receipt, not a numerical Chaitin or physical claim. |
 | `NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean` | Shared contract/reopen/residue operation and semantic zoom | Relation-relative recovery must be stated; it does not follow from a contraction alone. |
 | `NRRF651SlearnUIHairOfClosureGeneratedMap.lean` | Generated Slearn occurrences, learning materials, bridge-gated zoom | Points, learning occurrences, and actions retain an admitted trace. |
+| `NRRF655ExecutablePerspectivalClosureEpisode.lean` | Executed closure-episode timeline | Contract, reopen, return, and next opening have typed predecessor states; return creates a changed successor and preserved residue. |
 | `SLEARN_SOURCE_PROVENANCE.md` | Historical design evidence | It is a privacy-preserving source audit, not a theorem or a substitute for the original private notes. |
 | `SLEARN_ORIGINAL_VISION.md` | Product grammar | Perspective, belief/value, WHY, goal, lesson/project, world/universe, and returned experience are interpreted as trace roles—not independent dashboard areas. |
 | `ui/app/closureRuntime.ts` | Executable projection | Emits the spatial scene from trace data; it does not validate truth of prose, bridges, or receipts. |
@@ -88,6 +89,16 @@ It proves cross-language equality is exactly closure in that witness language.
 | Project | An attempt exists. |
 | Returned perspective | Bridge, attempt, receipt, and successor perspective all exist. |
 
+The presence conditions are not operation completion. The runtime additionally
+persists this execution discipline:
+
+| Executed state | Required predecessor | State created |
+| --- | --- | --- |
+| `contracted` | Open bridged trace | Forward perspective → goal record |
+| `reopened` | Contracted trace | Reciprocal goal → local re-reading record |
+| `returned` | Reopened trace plus attempt, receipt, successor | Retained Ω residue and successor record |
+| next `open` | Returned trace | A new proposal seeded by successor and inherited residue |
+
 The browser geometry is a deterministic triangular projection of these roles:
 the outward perspective/context/WHY/goal/world path and the inward
 source/lesson/project/successor path. It is therefore a physical interaction
@@ -101,8 +112,8 @@ verified learning event.
 This pass establishes the prerequisite for future iterative closure: every
 new level must provide the bridge that connects it to the previous relation.
 The next closure is admissible only when the user supplies a re-reading,
-preservation claim, attempt, receipt, and successor perspective; otherwise it
-stays `OPEN`, `DUAL`, or `OBSTRUCTION`.
+preservation claim, attempt, receipt, and successor perspective **and executes
+the ordered pass**; otherwise it stays `OPEN`, `DUAL`, or `OBSTRUCTION`.
 
 Continuous closure is consequently a sequence of explicit, reviewable
 episodes, not an autonomous overnight process and not a hidden recommendation
