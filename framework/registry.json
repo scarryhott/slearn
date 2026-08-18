@@ -79,6 +79,8 @@
         "Slearn/AuditableChangingAxiometryProtocol.lean",
         "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
         "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -92,7 +94,9 @@
         "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
         "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md",
         "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
-        "Slearn/DerivedSlearnClosureVersion.lean"
+        "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean"
       ]
     },
     {
@@ -116,6 +120,8 @@
         "Slearn/AuditableChangingAxiometryProtocol.lean",
         "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
         "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]

@@ -65,6 +65,7 @@ Slearn/NRRF655…lean                     → RETURN predecessor-typed continuat
 Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-derived closure hull
 Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded changing-frame protocol
 Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN derived version succession
+Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN replayable lawful succession
 
 ui/                                    → optional PROJECTION only
 ```
