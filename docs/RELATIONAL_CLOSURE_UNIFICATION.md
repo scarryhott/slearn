@@ -134,7 +134,7 @@ The repository gives each name one exact role.
 | Turing / Topos | Operational and contextual presentations | `encode` and `evaluate` return through a common witness relation | That arbitrary topoi and Turing machines are equivalent or definitionally identical |
 | Kakeya grain | Resolution family | A positive finite grain can identify distinct directions; all stated grains can determine a direction | A mathematical Kakeya-set result |
 | Chaitin | Token/residue vocabulary and an explicit boundary | Ordered aggregate may fail to determine route residue | A theorem about Chaitin’s halting probability or a numerical intelligence measure |
-| Gödel / Tarski | Boundary vocabulary for fixed formal languages and their meta-level readings | No repository theorem currently formalizes either metatheorem | That closure refutes, supersedes, or evades their scope |
+| Gödel / Tarski | Boundary vocabulary for fixed formal languages and their meta-level readings | A bounded diagonal/stage/liar model distinguishes local incompleteness, selected closure, and internal-truth obstruction | A formalization of either metatheorem, or that closure refutes, supersedes, or evades their scope |
 
 The Turing/Topos adapter proves relational return:
 
@@ -223,7 +223,8 @@ literal identity claims and should not become independent UI mechanics.
   chosen correlation family exactly separates its physical or educational
   orbits.
 - A formal account of Gödel’s and Tarski’s metatheorems and a proof relating
-  their exact hypotheses to this framework.
+  their exact hypotheses—not merely the bounded diagonal/stage/liar model—to
+  this framework.
 - Any conclusion that a particular physical wave, a person’s perspective,
   natural value, or educational path is warranted by the formal structures.
 - Independent source-grounded learning episodes that satisfy the repository’s

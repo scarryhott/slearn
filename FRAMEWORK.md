@@ -92,6 +92,7 @@ Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION t
 Slearn/RecalculationAgainstTranslatedTruthAnswers.lean → TRANSLATION / ADMISSION successor question-language recalculation
 Slearn/PartitionAggregateClosure.lean         → TRANSLATION / ADMISSION finite scalar closure and retained successor distinction
 Slearn/RelationalClosureUnification.lean       → TRANSLATION / VERIFICATION / ADMISSION common closure relation and depth adapter
+Slearn/GodelTarskiRelativeClosureBoundary.lean → VERIFICATION / ADMISSION bounded diagonal and local/global truth boundary
 
 ui/                                    → optional PROJECTION only
 ```

@@ -101,6 +101,8 @@
         "Slearn/PartitionAggregateClosure.lean",
         "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
         "Slearn/RelationalClosureUnification.lean",
+        "docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md",
+        "Slearn/GodelTarskiRelativeClosureBoundary.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -152,6 +154,8 @@
         "Slearn/PartitionAggregateClosure.lean",
         "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
         "Slearn/RelationalClosureUnification.lean",
+        "docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md",
+        "Slearn/GodelTarskiRelativeClosureBoundary.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
