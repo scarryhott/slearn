@@ -15,20 +15,24 @@ connections visible and revisable over time.
 ## Learning cycle
 
 ```text
-current perspective
-  → values / beliefs in context
-  → WHY relation
-  → chosen direction
-  → world / universe continuation
-  ↘ source / lesson / project
-  → attempted return
-  → revised perspective
+Perspective → Why → Goal → Learning → Insight → Action → Experience
+            → Return → Perspective′
 ```
 
-The return is not a claim that the learner has reached a final answer. It
-records a concrete change in how the learner reads the relation after an
-attempt. A relative re-reading and preserved bridge are required before a
-topic can contract to a shared direction or reopen as a new local path.
+Values/beliefs and sources condition the path; lessons/projects are concrete
+learning and action sites; world/universe is an optional wider perspective
+reading, not an asserted cosmology. The return is not a claim that the learner
+has reached a final answer. It records a concrete change in how the learner
+reads the relation after an attempt. `Perspective′` is a successor relation,
+not literal replay of the initial endpoint. A relative re-reading and
+preserved bridge are required before a topic can contract to a shared direction
+or reopen as a new local path.
+
+Speed in this model is reduction of avoidable translation cost between a
+learner's current perspective and an insight's generative structure. It is not
+information compression, a completion score, or a claim of one-hour
+intelligence upload. See the canonical source and its claim levels in
+[`RESEARCH_FRAMEWORK.md`](RESEARCH_FRAMEWORK.md).
 
 ## Current interactive runtime
 

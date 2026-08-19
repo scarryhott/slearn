@@ -12,6 +12,15 @@ frames—`OPEN`, `PERSPECTIVE`, `CURVATURE`, `TRANSLATION`, `INTERACTION`,
 rules. The optional `ui/` directory is in the final projection frame; it has
 no authority to create sources, verify returns, or define Slearn.
 
+[`docs/SLEARN_ORIGINAL_VISION.md`](docs/SLEARN_ORIGINAL_VISION.md) is the
+canonical, verbatim Speed Learn manifesto. Its companion
+[`docs/RESEARCH_FRAMEWORK.md`](docs/RESEARCH_FRAMEWORK.md) classifies the
+surrounding work as product design, phenomenology, metaphor, metaphysical
+hypothesis, mathematical definition, proved theorem, empirical/runtime result,
+or open question. In particular, Speed Learn means reducing unnecessary
+translation cost between perspectives and generative insight—not compressing
+information or claiming a literal one-hour intelligence upload.
+
 > The project explores how a learner can cross languages, definitions, disciplines, and lived perspectives while retaining a checkable route back to the relation from which they began. It does not claim that literal one-hour intelligence upload exists.
 
 Any visible map is a projection, not the framework. It must be generated from
@@ -33,6 +42,22 @@ They are not independently primary levels joined by arbitrary operators. The ret
 \[
 L' \sim_{\mathcal C} L.
 \]
+
+The repository’s common completion contract is answer-preserving translation:
+
+\[
+x =_{\mathcal C} y
+\iff
+\forall q\in Q_{\mathcal C},\;A(q,x)=A(Tq,y).
+\]
+
+An individual question-language, scalar aggregate, finite verifier, or
+resolution grain is a bounded reading, not the whole relation. Where a
+declared family of relational questions separates the admitted translation
+orbits, closure relation, true translation, and natural choice coincide
+**within that frame**. See
+[`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md)
+for the full depth map and its limits.
 
 At the episode level, a returned relation is not literal replay. Two reciprocal
 paths can interact and return to the same selected base relation while retaining
@@ -114,6 +139,14 @@ a decorative display transition.
 - [`Slearn/PerspectivalCurvatureClosurePrimitives.lean`](Slearn/PerspectivalCurvatureClosurePrimitives.lean) makes the source-defined perspective, belief/goal limits, WHY, paired explanation/definition, counter-path, reviewed interaction, and nonterminal admission conditions explicit before a return can be recorded.
 - [`Slearn/DerivedPerspectivalClosureHull.lean`](Slearn/DerivedPerspectivalClosureHull.lean) derives prospective branches, reciprocal zoom readings, OPEN regions, experience fibres, returned-basis merges, and successor updates from closure packets rather than from an authored map.
 - [`Slearn/AuditableChangingAxiometryProtocol.lean`](Slearn/AuditableChangingAxiometryProtocol.lean) defines a bounded auditable changing-axiometry run: relative axiom–geometry closure truth, residue-derived next axiometry and verifier, held-out capability separation, and a prediction-before-outcome record.
+- [`Slearn/DerivedSlearnClosureVersion.lean`](Slearn/DerivedSlearnClosureVersion.lean) joins the source-derived Slearn return to that bounded audit: each closure version derives its map projection, changed verifier/frame, and held-out next relation from one admitted packet.
+- [`Slearn/ReplayableSlearnClosureAudit.lean`](Slearn/ReplayableSlearnClosureAudit.lean) proves, in the bounded model, that truth agreement alone cannot certify a closure succession: a publisher's returned perspective, derived verifier/frame, and re-entered relation must reconstruct the successor and be replayed by a distinct modeled identity.
+- [`Slearn/TransactionalCompletionEvaluation.lean`](Slearn/TransactionalCompletionEvaluation.lean) evaluates frozen language/definition frames only through a declared relevant question-language; it identifies completion with answer-preserving admitted translation and proves endpoint/trajectory markers neither necessary nor sufficient in an explicit finite model.
+- [`Slearn/CompletionInTranslationalTruthEquality.lean`](Slearn/CompletionInTranslationalTruthEquality.lean) separates a presentation's truth answers from its local/global, trajectory, and endpoint markers; it proves marker-blind completion, propositional answer transport, and a direct bridge into the transactional-admitted-translation adapter.
+- [`Slearn/RecalculationAgainstTranslatedTruthAnswers.lean`](Slearn/RecalculationAgainstTranslatedTruthAnswers.lean) derives translated truth equality for frozen question-languages, its exact extension law, and the conditional reopening of an equal relation by a supplied discriminator.
+- [`Slearn/PartitionAggregateClosure.lean`](Slearn/PartitionAggregateClosure.lean) gives a finite four-form calculation in which equal scalar aggregates close transactionally while retained phase placement opens a successor question; it proves that the next phase reading cannot be recovered from that aggregate alone.
+- [`Slearn/RelationalClosureUnification.lean`](Slearn/RelationalClosureUnification.lean) unifies answer-preserving translation, relational-orbit closure, finite/all-depth distinction, partition reopening, Topos/Turing witness return, and Kakeya-style resolution as separate but connected closure depths.
+- [`Slearn/GodelTarskiRelativeClosureBoundary.lean`](Slearn/GodelTarskiRelativeClosureBoundary.lean) provides bounded diagonal, level-tower, liar, and basis-capacity models that distinguish local incompleteness, selected limit closure, internal-truth obstruction, and relative certification depth without claiming a formalization or refutation of Gödel, Tarski, or Chaitin.
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
 - [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
@@ -126,11 +159,20 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 
 - [`FRAMEWORK.md`](FRAMEWORK.md): canonical repository frames, admission rules, and the separation of sources, relations, verification, return, and projections.
 - [`framework/registry.json`](framework/registry.json): machine-readable map of every registered repository resource and its closure frame; `node scripts/validate-framework.mjs` validates it.
+- [`docs/NOTOLOGY_FRAMEWORK.md`](docs/NOTOLOGY_FRAMEWORK.md): the cross-frame admission discipline for named claims; it records claim kind, relation, depth, verification, closure state, scope boundary, and next opening without asserting a fixed ontology. [`framework/notology.json`](framework/notology.json) and `node scripts/validate-notology.mjs` keep its registered addresses checkable.
 - [`docs/SLEARN_SOURCE_PROVENANCE.md`](docs/SLEARN_SOURCE_PROVENANCE.md): privacy-preserving historical record of the original/raw Slearn notes, later synthesis boundary, and the WHY-first → returned-experience design continuity.
 - [`docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md`](docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md): the source-grounded packet protocol that keeps questions, counter-readings, comparison records, runtime traces, formal claims, and open remainders distinct.
 - [`docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md`](docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md): the primitive source contract and its deterministic `PATH` run; `node scripts/run-source-closure.mjs` checks that the direct source is not promoted to an unearned return.
 - [`docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md`](docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md): the source-packet ledger to dynamic-map projection; `node scripts/project-closure-hull.mjs --summary` runs the current closure hull without invoking the optional UI.
 - [`docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md`](docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md): the bounded grant experiment and its falsifiable stage requirements; `node scripts/run-changing-axiometry-protocol.mjs` confirms that the current protocol is only design-ready.
+- [`docs/DERIVED_SLEARN_CLOSURE_VERSION.md`](docs/DERIVED_SLEARN_CLOSURE_VERSION.md): the Slearn-specific version/succession derivation that prevents map, verifier, frame, and next opening from becoming separate systems.
+- [`docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md`](docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md): the bounded replay record that distinguishes relation-level truth agreement from an independently replayable succession.
+- [`docs/TRANSACTIONAL_COMPLETION_EVALUATION.md`](docs/TRANSACTIONAL_COMPLETION_EVALUATION.md): the limited language/definition transaction adapter and its marker-separation boundary.
+- [`docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md`](docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md): the bounded truth-answer/isolated-marker separation and its direct transactional bridge.
+- [`docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md`](docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md): translated question-language recalculation, finite ball/hair and polar readings, and its discriminator-generation boundary.
+- [`docs/PARTITION_AGGREGATE_CLOSURE.md`](docs/PARTITION_AGGREGATE_CLOSURE.md): finite four-form aggregate closure, retained partition distinction, and the boundary between a discrete turn and a continuous/physical interpretation.
+- [`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md): the canonical unification of closure relation, true translation, natural choice, relative completion depth, and the Slearn/Topos–Turing/Kakeya readings.
+- [`docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md`](docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md): the bounded local-stage, selected-closure, internal-truth, and relative-depth distinctions, including the boundary with the unavailable NRRF667 report.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.

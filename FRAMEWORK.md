@@ -23,11 +23,49 @@ WHY, explanation, definition, and counter-reading. A return supplies a new
 perspective and a retained difference; it does not erase the source,
 counter-reading, or question.
 
+## Canonical relational closure
+
+The whole framework uses one restricted meaning of completion:
+
+\[
+x =_{\mathcal C} y
+\iff
+\forall q\in Q_{\mathcal C},\;A(q,x)=A(Tq,y).
+\]
+
+`Q_C` is a declared question-family, not an implicit global language. A
+finite depth, aggregate, prefix, UI state, or local/global marker gives only
+one reading. Closure becomes the maintained answer-preserving relation across
+the admitted translation family; it does not make any one encoding absolute.
+
+When the family’s relational answers separate its admitted translation orbits,
+the framework calls that relation `NaturalChoice`: not an optimizer’s pick,
+but the relation-preserving return available in the stated frame. The precise
+adapter, its finite/all-depth distinction, and its scope limits are in
+[`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md).
+
 The machine-readable repository map is
 [`framework/registry.json`](framework/registry.json). Run
 `node scripts/validate-framework.mjs` to verify that the registered resources,
 their frame assignments, and their dependencies still exist. That command
 checks organization only; it does not prove a source claim or a human return.
+
+## Notology: relative names, not a fixed ontology
+
+Every newly admitted infrastructure term now needs a **relative closure
+address** rather than an implicit ontological status. The address records its
+claim kind, frame, depth, declared translation, verification surface, packet
+state, scope boundary, and next opening. Thus a source note, a Lean theorem, a
+deterministic runtime record, and an interpretive reading can refer to related
+material without silently becoming the same kind of claim.
+
+The repository's notology does not decide what fundamentally exists. It is a
+discipline for what can be named and admitted here. In particular, a finite
+aggregate, zoom, local/global marker, language/definition flip, or interface
+projection is a reading at its stated depth; it is never automatically the
+whole relation. See [`docs/NOTOLOGY_FRAMEWORK.md`](docs/NOTOLOGY_FRAMEWORK.md)
+and its checked map [`framework/notology.json`](framework/notology.json).
+Run `node scripts/validate-notology.mjs` after adding a registered claim.
 
 ## The frames
 
@@ -51,6 +89,7 @@ not the Slearn framework and it is not the center of the repository.
 ```text
 docs/SLEARN_SOURCE_PROVENANCE.md       → OPEN provenance boundary
 docs/SLEARN_ORIGINAL_VISION.md         → OPEN / PERSPECTIVE source grammar
+docs/RESEARCH_FRAMEWORK.md              → canonical-source interpretation and claim-level boundary
 docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md → packet, verification, and OPEN remainder
 docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md
                                          → source-defined curvature, truth-admission, goal, and path mechanism
@@ -63,6 +102,14 @@ Slearn/NRRF654…lean                     → frame integration adapter
 Slearn/NRRF655…lean                     → RETURN predecessor-typed continuation
 Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-derived closure hull
 Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded changing-frame protocol
+Slearn/DerivedSlearnClosureVersion.lean  → PERSPECTIVE / VERIFICATION / RETURN derived version succession
+Slearn/ReplayableSlearnClosureAudit.lean → VERIFICATION / ADMISSION / RETURN replayable lawful succession
+Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limited-frame answer equality
+Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION truth-answer completion without marker identity
+Slearn/RecalculationAgainstTranslatedTruthAnswers.lean → TRANSLATION / ADMISSION successor question-language recalculation
+Slearn/PartitionAggregateClosure.lean         → TRANSLATION / ADMISSION finite scalar closure and retained successor distinction
+Slearn/RelationalClosureUnification.lean       → TRANSLATION / VERIFICATION / ADMISSION common closure relation and depth adapter
+Slearn/GodelTarskiRelativeClosureBoundary.lean → VERIFICATION / ADMISSION bounded diagonal and local/global truth boundary
 
 ui/                                    → optional PROJECTION only
 ```
@@ -116,3 +163,23 @@ The central open problem is not “make more screens” or “assert one theory.
 is to organize real source-grounded episodes whose translations, counter-
 readings, evidence, and continuations can be inspected without collapsing the
 open remainder.
+
+## Claim-level rule
+
+`docs/SLEARN_ORIGINAL_VISION.md` remains the canonical source; its statements
+do not acquire formal or empirical status by being placed beside Lean, a UI, or
+a runtime. The required levels and the translation of each manifesto section
+are in [`docs/RESEARCH_FRAMEWORK.md`](docs/RESEARCH_FRAMEWORK.md): product
+design, phenomenology, metaphor, metaphysical hypothesis, mathematical
+definition, proved theorem, empirical/runtime result, and open question.
+
+The repository-wide closure relation is:
+
+```text
+Perspective → Why → Goal → Learning → Insight → Action → Experience
+            → Return → Perspective′.
+```
+
+The prime marks a changed successor relation. It never silently means literal
+endpoint equality, ordinary equality of `0` and `∞`, or a completed account of
+spacetime, consciousness, nature, or spirit.

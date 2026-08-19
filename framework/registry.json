@@ -9,6 +9,7 @@
       "resources": [
         "docs/SLEARN_SOURCE_PROVENANCE.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
       ]
     },
@@ -18,9 +19,12 @@
       "resources": [
         "docs/SLEARN_EDUCATION_MODEL.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
         "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "Slearn/DerivedPerspectivalClosureHull.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
         "framework/closure-ledger.json",
         "scripts/closure-packet-kernel.mjs",
         "scripts/project-closure-hull.mjs"
@@ -33,6 +37,7 @@
         "docs/SLEARN_PERSPECTIVAL_CURVATURE_SPECIFICATION.md",
         "docs/PERSPECTIVAL_CURVATURE_CLOSURE_PRIMITIVES.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
+        "docs/RESEARCH_FRAMEWORK.md",
         "docs/NATURAL_RHYTHM_CLOSURE.md",
         "Slearn/NaturalRhythmClosure.lean",
         "Slearn/PerspectivalCurvatureClosurePrimitives.lean",
@@ -47,7 +52,17 @@
         "Slearn/UniversalRelativeTranslationalCompletion.lean",
         "Slearn/NaturalRhythmClosure.lean",
         "docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md",
-        "docs/NATURAL_RHYTHM_CLOSURE.md"
+        "docs/NATURAL_RHYTHM_CLOSURE.md",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean",
+        "docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md",
+        "Slearn/CompletionInTranslationalTruthEquality.lean",
+        "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
+        "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean"
       ]
     },
     {
@@ -72,6 +87,22 @@
         "Slearn/InteractiveTranslationalOpenFoundation.lean",
         "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
         "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean",
+        "docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md",
+        "Slearn/CompletionInTranslationalTruthEquality.lean",
+        "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
+        "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean",
+        "docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md",
+        "Slearn/GodelTarskiRelativeClosureBoundary.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -83,7 +114,11 @@
         "Slearn/ClosedTopologicalTranslation.lean",
         "Slearn/NRRF655ExecutablePerspectivalClosureEpisode.lean",
         "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
-        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md"
+        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean"
       ]
     },
     {
@@ -105,6 +140,22 @@
         "scripts/project-closure-hull.mjs",
         "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
         "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "docs/DERIVED_SLEARN_CLOSURE_VERSION.md",
+        "Slearn/DerivedSlearnClosureVersion.lean",
+        "docs/REPLAYABLE_SLEARN_CLOSURE_AUDIT.md",
+        "Slearn/ReplayableSlearnClosureAudit.lean",
+        "docs/TRANSACTIONAL_COMPLETION_EVALUATION.md",
+        "Slearn/TransactionalCompletionEvaluation.lean",
+        "docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md",
+        "Slearn/CompletionInTranslationalTruthEquality.lean",
+        "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
+        "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
+        "docs/PARTITION_AGGREGATE_CLOSURE.md",
+        "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean",
+        "docs/GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md",
+        "Slearn/GodelTarskiRelativeClosureBoundary.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -127,6 +178,17 @@
         "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "framework/closure-ledger.json",
         "scripts/project-closure-hull.mjs"
+      ]
+    },
+    {
+      "id": "NOTOLOGY",
+      "purpose": "Cross-frame admission addresses: every registered name carries a claim kind, relation, depth, verification, closure state, boundary, and next opening; this does not assert a fixed ontology.",
+      "resources": [
+        "docs/NOTOLOGY_FRAMEWORK.md",
+        "framework/notology.json",
+        "scripts/validate-notology.mjs",
+        "docs/RESEARCH_FRAMEWORK.md",
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
       ]
     }
   ],
@@ -155,6 +217,7 @@
     "truth_admission_continues_translation": true,
     "return_requires_counter_reading": true,
     "finite_interaction_is_not_global_completion": true,
-    "unresolved_remainder_is_preserved": true
+    "unresolved_remainder_is_preserved": true,
+    "notology_requires_relative_address": true
   }
 }

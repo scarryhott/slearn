@@ -4,7 +4,10 @@
 > the canonical repository frame. Start with
 > [`../FRAMEWORK.md`](../FRAMEWORK.md) for the frame contract and
 > [`../framework/registry.json`](../framework/registry.json) for the resource
-> map. It is not a substitute for the raw private source materials.
+> map. [`NOTOLOGY_FRAMEWORK.md`](NOTOLOGY_FRAMEWORK.md) gives each registered
+> claim its relative address and prevents a source, model, runtime record, or
+> interpretation from silently changing claim type. This ledger is not a
+> substitute for the raw private source materials.
 
 ## Why this exists
 
@@ -100,6 +103,14 @@ used to change the runtime or documentation.
 | Source-defined curvature and nonterminal admission | `PerspectivalCurvatureClosurePrimitives.lean`, `framework/source-closure-primitives.json`, `scripts/run-source-closure.mjs` | The primitive source packet reaches `PATH`; no source text is treated as a reviewed attempt, return, or truth admission |
 | Ledger-derived Slearn maze | `DerivedPerspectivalClosureHull.lean`, `framework/closure-ledger.json`, `scripts/project-closure-hull.mjs` | A PATH contributes only a prospective branch and OPEN remainder; experience fibres, successor updates, and returned-basis merges require a continued admission |
 | Bounded changing-axiometry audit | `AuditableChangingAxiometryProtocol.lean`, `framework/changing-axiometry-experiment.json`, `scripts/run-changing-axiometry-protocol.mjs` | The protocol is `DESIGN_READY`; it has no generated frame, independent return, held-out result, or external consequence yet |
+| Derived Slearn closure version | `DerivedSlearnClosureVersion.lean`, `DERIVED_SLEARN_CLOSURE_VERSION.md` | A version joins the source curvature packet to the bounded audit; it proves only supplied structural links, not that any learning episode has independently occurred |
+| Replayable Slearn closure audit | `ReplayableSlearnClosureAudit.lean`, `REPLAYABLE_SLEARN_CLOSURE_AUDIT.md` | `auditor ≠ publisher` is only modeled identity separation; it does not establish an independent human, data source, or experiment |
+| Transactional completion evaluation | `TransactionalCompletionEvaluation.lean`, `TRANSACTIONAL_COMPLETION_EVALUATION.md` | The relevant question-language and translation are supplied; this does not select a warranted contact relation or independently generate a frame |
+| Completion in translational truth equality | `CompletionInTranslationalTruthEquality.lean`, `COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md` | The truth answers, their shared language, and the finite marker model are supplied; the theorem does not make a real contact relation or a universal semantics warranted |
+| Recalculation against translated truth answers | `RecalculationAgainstTranslatedTruthAnswers.lean`, `RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md` | The next discriminator is explicitly supplied; raw presentation inequality does not by itself discover a warranted new question or independent return |
+| Partition aggregate closure | `PartitionAggregateClosure.lean`, `PARTITION_AGGREGATE_CLOSURE.md` | A finite four-form aggregate can close while a supplied retained-phase question reopens; it is neither a continuous wave model nor evidence that the successor question is warranted for a learner |
+| Relational closure unification | `RelationalClosureUnification.lean`, `RELATIONAL_CLOSURE_UNIFICATION.md` | Closure/true translation/natural choice coincide only under supplied orbit-separating relational questions; continuous, physical, Gödel/Tarski, and learner-warrant interpretations remain OPEN |
+| Gödel/Tarski relative-closure boundary | `GodelTarskiRelativeClosureBoundary.lean`, `GODEL_TARSKI_RELATIVE_CLOSURE_BOUNDARY.md` | The module uses toy diagonal, stage, liar, and capacity structures; it neither formalizes nor bypasses Gödel, Tarski, Chaitin, arbitrary computation, or a final global truth language |
 | Relation-relative return with residue and a next opening | `ClosedTopologicalTranslation.lean`, `NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean`, `NRRF655ExecutablePerspectivalClosureEpisode.lean` | The theorem does not decide whether a human receipt is adequate |
 | Source-derived Slearn roles and trace-gated map | `NRRF651SlearnUIHairOfClosureGeneratedMap.lean` | It proves a modeled bounded generator, not the historic notes or browser equality |
 | Continuous completion versus a finite interaction | `InteractiveTranslationalOpenFoundation.lean` | A finite browser session cannot certify a global completion |
