@@ -26,6 +26,12 @@ Every new research sentence must carry one of these levels in its surrounding
 heading, table row, or ledger entry. A claim may have more than one level only
 when the parts are explicitly separated.
 
+[`NOTOLOGY_FRAMEWORK.md`](NOTOLOGY_FRAMEWORK.md) is the repository-wide
+admission layer for these levels. It adds the relation, depth, verification,
+closure state, scope boundary, and next opening required when a claim travels
+between source, formal, runtime, and interpretive surfaces. It is not a new
+ontology or a promotion mechanism.
+
 | Level | Meaning in this repository |
 | --- | --- |
 | **Product design** | Intended learner experience, interface, workflow, or safety requirement. |

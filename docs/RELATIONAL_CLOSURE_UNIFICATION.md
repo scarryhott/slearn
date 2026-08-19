@@ -5,6 +5,11 @@ formal layers. It does not replace the source ledger, and it does not turn the
 models into a theorem about education, consciousness, physics, Gödel,
 Tarski, Chaitin, Topos theory, or Turing machines in general.
 
+The repository's [`NOTOLOGY_FRAMEWORK.md`](NOTOLOGY_FRAMEWORK.md) records the
+claim kind, depth, verification surface, and boundary of this formal layer.
+That address prevents the formal relation below from being silently promoted
+to a source, runtime, physical, or metaphysical conclusion.
+
 Its governing distinction is:
 
 \[

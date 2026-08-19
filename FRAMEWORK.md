@@ -50,6 +50,23 @@ The machine-readable repository map is
 their frame assignments, and their dependencies still exist. That command
 checks organization only; it does not prove a source claim or a human return.
 
+## Notology: relative names, not a fixed ontology
+
+Every newly admitted infrastructure term now needs a **relative closure
+address** rather than an implicit ontological status. The address records its
+claim kind, frame, depth, declared translation, verification surface, packet
+state, scope boundary, and next opening. Thus a source note, a Lean theorem, a
+deterministic runtime record, and an interpretive reading can refer to related
+material without silently becoming the same kind of claim.
+
+The repository's notology does not decide what fundamentally exists. It is a
+discipline for what can be named and admitted here. In particular, a finite
+aggregate, zoom, local/global marker, language/definition flip, or interface
+projection is a reading at its stated depth; it is never automatically the
+whole relation. See [`docs/NOTOLOGY_FRAMEWORK.md`](docs/NOTOLOGY_FRAMEWORK.md)
+and its checked map [`framework/notology.json`](framework/notology.json).
+Run `node scripts/validate-notology.mjs` after adding a registered claim.
+
 ## The frames
 
 | Frame | It holds | It may admit | It must not silently become |

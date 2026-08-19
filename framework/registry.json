@@ -179,6 +179,17 @@
         "framework/closure-ledger.json",
         "scripts/project-closure-hull.mjs"
       ]
+    },
+    {
+      "id": "NOTOLOGY",
+      "purpose": "Cross-frame admission addresses: every registered name carries a claim kind, relation, depth, verification, closure state, boundary, and next opening; this does not assert a fixed ontology.",
+      "resources": [
+        "docs/NOTOLOGY_FRAMEWORK.md",
+        "framework/notology.json",
+        "scripts/validate-notology.mjs",
+        "docs/RESEARCH_FRAMEWORK.md",
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+      ]
     }
   ],
   "routes": [
@@ -206,6 +217,7 @@
     "truth_admission_continues_translation": true,
     "return_requires_counter_reading": true,
     "finite_interaction_is_not_global_completion": true,
-    "unresolved_remainder_is_preserved": true
+    "unresolved_remainder_is_preserved": true,
+    "notology_requires_relative_address": true
   }
 }

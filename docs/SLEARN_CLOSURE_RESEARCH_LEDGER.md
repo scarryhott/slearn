@@ -4,7 +4,10 @@
 > the canonical repository frame. Start with
 > [`../FRAMEWORK.md`](../FRAMEWORK.md) for the frame contract and
 > [`../framework/registry.json`](../framework/registry.json) for the resource
-> map. It is not a substitute for the raw private source materials.
+> map. [`NOTOLOGY_FRAMEWORK.md`](NOTOLOGY_FRAMEWORK.md) gives each registered
+> claim its relative address and prevents a source, model, runtime record, or
+> interpretation from silently changing claim type. This ledger is not a
+> substitute for the raw private source materials.
 
 ## Why this exists
 

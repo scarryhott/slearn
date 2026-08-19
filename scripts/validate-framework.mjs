@@ -12,7 +12,8 @@ const requiredRules = [
   "truth_admission_continues_translation",
   "return_requires_counter_reading",
   "finite_interaction_is_not_global_completion",
-  "unresolved_remainder_is_preserved"
+  "unresolved_remainder_is_preserved",
+  "notology_requires_relative_address"
 ];
 
 if (registry.unit !== "source-grounded perspectival-curvature closure packet") {

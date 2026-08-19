@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "repository": "Slearn",
+  "unit": "relative closure address",
+  "purpose": "A notology is an admission discipline for names and claims: it records the frame, translation, depth, verification, closure state, boundary, and next opening of a repository resource. It does not assert a fixed ontology.",
+  "addressFields": [
+    "id",
+    "name",
+    "resource",
+    "frame",
+    "claimKind",
+    "depth",
+    "verification",
+    "closureState",
+    "translation",
+    "boundary",
+    "nextOpening"
+  ],
+  "claimKinds": [
+    {
+      "id": "DIRECT_SOURCE",
+      "mayState": "A supplied source, observation, or historical design intention.",
+      "mustNotState": "The source proposal is true, formally proved, or a recorded learner return."
+    },
+    {
+      "id": "PRODUCT_DESIGN",
+      "mayState": "An intended learner interaction, workflow, or safety requirement.",
+      "mustNotState": "The product works, causes the intended effect, or verifies a source claim."
+    },
+    {
+      "id": "MATHEMATICAL_DEFINITION",
+      "mayState": "A carrier, relation, translation, question family, or predicate with declared assumptions.",
+      "mustNotState": "The carrier or assumptions describe reality without a separate argument."
+    },
+    {
+      "id": "PROVED_THEOREM",
+      "mayState": "What the named Lean source proves under its stated structures and axioms.",
+      "mustNotState": "An educational, physical, metaphysical, or empirical conclusion beyond that scope."
+    },
+    {
+      "id": "RUNTIME_RECORD",
+      "mayState": "A deterministic bounded run or recorded closure-packet state.",
+      "mustNotState": "Independent review, general-world evidence, or a theorem."
+    },
+    {
+      "id": "INTERPRETIVE_READING",
+      "mayState": "A disciplined way to read a source or formal structure.",
+      "mustNotState": "A literal causal, physical, psychological, or metaphysical result."
+    },
+    {
+      "id": "METAPHYSICAL_HYPOTHESIS",
+      "mayState": "A contestable thesis about truth, mind, nature, value, or existence.",
+      "mustNotState": "A conclusion promoted by source authority, interface behavior, or a bounded formal model."
+    },
+    {
+      "id": "RESEARCH_BOUNDARY",
+      "mayState": "An explicit limitation, missing bridge, or open obligation.",
+      "mustNotState": "A closed answer merely because the limitation has been named."
+    }
+  ],
+  "depths": [
+    {
+      "id": "QUESTION",
+      "meaning": "Answers in one declared question-language."
+    },
+    {
+      "id": "TRANSLATION",
+      "meaning": "A declared bridge between relative presentations or orientations."
+    },
+    {
+      "id": "RESOLUTION",
+      "meaning": "A finite grain, aggregate, zoom, partition, or other selected readout."
+    },
+    {
+      "id": "ALL_STATED_DEPTHS",
+      "meaning": "Every member of a declared refinement family; not an unstated universal semantics."
+    },
+    {
+      "id": "EVIDENCE",
+      "meaning": "Source, attempt, counter-reading, comparison, review, receipt, and successor obligations."
+    }
+  ],
+  "verificationKinds": [
+    "SOURCE_GROUNDED",
+    "MACHINE_CHECKED",
+    "DETERMINISTIC_RUNTIME",
+    "EDITORIAL_GOVERNANCE",
+    "INTERPRETIVE_ONLY"
+  ],
+  "closureStates": [
+    {
+      "id": "OPEN",
+      "meaning": "A question, claim, or relation is named but has no complete executable packet."
+    },
+    {
+      "id": "PATH",
+      "meaning": "A source-grounded relation and reciprocal bridge are declared; no reviewed return is implied."
+    },
+    {
+      "id": "REOPENED",
+      "meaning": "An executed reciprocal path awaits comparison; no return is yet recorded."
+    },
+    {
+      "id": "RETURNED_RECORDED",
+      "meaning": "A reviewed receipt and changed successor are recorded; its remaining difference starts a next opening."
+    },
+    {
+      "id": "NOT_APPLICABLE",
+      "meaning": "The resource is a formal, editorial, or interpretive claim rather than a learner-packet state."
+    }
+  ],
+  "rules": {
+    "each_notology_address_is_relative": true,
+    "source_is_not_proof": true,
+    "translation_is_not_literal_identity": true,
+    "finite_resolution_is_not_all_stated_depths": true,
+    "machine_checked_is_not_empirical": true,
+    "projection_is_not_authority": true,
+    "return_requires_reviewed_receipt": true,
+    "each_return_retains_a_next_opening": true,
+    "metaphysical_hypothesis_remains_open": true
+  },
+  "addresses": [
+    {
+      "id": "ORIGINAL_SLEARN_VISION",
+      "name": "Speed Learn / Universe-Perspective Path source",
+      "resource": "docs/SLEARN_ORIGINAL_VISION.md",
+      "frame": "OPEN",
+      "claimKind": "DIRECT_SOURCE",
+      "depth": "EVIDENCE",
+      "verification": "SOURCE_GROUNDED",
+      "closureState": "OPEN",
+      "translation": "The source's perspective → WHY → goal → learning → return grammar enters the packet protocol without becoming a theorem.",
+      "boundary": "A direct design source does not prove its educational, physical, or metaphysical proposals.",
+      "nextOpening": "Supply a source-grounded learner episode with an attempt, counter-reading, comparison, review, receipt, and successor."
+    },
+    {
+      "id": "CURVATURE_SOURCE_PACKET",
+      "name": "Perspectival-curvature source packet",
+      "resource": "framework/source-closure-primitives.json",
+      "frame": "CURVATURE",
+      "claimKind": "RUNTIME_RECORD",
+      "depth": "EVIDENCE",
+      "verification": "DETERMINISTIC_RUNTIME",
+      "closureState": "PATH",
+      "translation": "Perspective → WHY → goal and its reciprocal re-reading are declared in the packet witness language.",
+      "boundary": "The packet has no material, attempt, counter-reading, comparison method, review, receipt, or successor.",
+      "nextOpening": "Execute and review a concrete closure episode rather than promoting the PATH state."
+    },
+    {
+      "id": "SLEARN_MAP_PRODUCT",
+      "name": "Perspective / belief-value / WHY / goal / lesson-project-world map",
+      "resource": "docs/SLEARN_EDUCATION_MODEL.md",
+      "frame": "PERSPECTIVE",
+      "claimKind": "PRODUCT_DESIGN",
+      "depth": "TRANSLATION",
+      "verification": "SOURCE_GROUNDED",
+      "closureState": "OPEN",
+      "translation": "Zoom and recentering expose opposite orientations of one learner relation, not independent navigation mechanics.",
+      "boundary": "The design is not an efficacy result and does not constitute a runtime closure by itself.",
+      "nextOpening": "Connect a real learner packet to a recorded, reviewable map projection."
+    },
+    {
+      "id": "RELATIONAL_CLOSURE_UNIFICATION",
+      "name": "Answer-preserving translation, orbit closure, and natural-choice adapter",
+      "resource": "Slearn/RelationalClosureUnification.lean",
+      "frame": "TRANSLATION",
+      "claimKind": "PROVED_THEOREM",
+      "depth": "ALL_STATED_DEPTHS",
+      "verification": "MACHINE_CHECKED",
+      "closureState": "NOT_APPLICABLE",
+      "translation": "For a supplied orbit-separating answer family, closure relation, true translation, and natural choice coincide in the formal frame.",
+      "boundary": "It does not select the questions, prove their real-world exhaustiveness, or elevate natural choice into a moral or physical fact.",
+      "nextOpening": "Provide and independently assess a warranted question family for a particular source-grounded episode."
+    },
+    {
+      "id": "TRANSACTIONAL_TRUTH_EQUALITY",
+      "name": "Completion in translational truth equality",
+      "resource": "Slearn/CompletionInTranslationalTruthEquality.lean",
+      "frame": "TRANSLATION",
+      "claimKind": "PROVED_THEOREM",
+      "depth": "QUESTION",
+      "verification": "MACHINE_CHECKED",
+      "closureState": "NOT_APPLICABLE",
+      "translation": "Within its supplied answer language, completability depends on translated truth answers rather than local/global basis, trajectory sign, or endpoint markers.",
+      "boundary": "The finite question language, translations, and answer functions are supplied; no real contact relation or universal semantics is selected.",
+      "nextOpening": "State and test a warranted question language before applying the marker-blind completion relation beyond the model."
+    },
+    {
+      "id": "PARTITION_AGGREGATE",
+      "name": "Finite partition aggregate and successor distinction",
+      "resource": "Slearn/PartitionAggregateClosure.lean",
+      "frame": "TRANSLATION",
+      "claimKind": "PROVED_THEOREM",
+      "depth": "RESOLUTION",
+      "verification": "MACHINE_CHECKED",
+      "closureState": "NOT_APPLICABLE",
+      "translation": "Two four-form presentations agree at a scalar language, while a supplied retained-phase question separates them at a successor language.",
+      "boundary": "It is a finite integer-coordinate model, not a continuous wave, cosmological, or learner-validity result.",
+      "nextOpening": "Specify a warranted successor discriminator or a separately stated continuous model."
+    },
+    {
+      "id": "GODEL_TARSKI_BOUNDARY",
+      "name": "Local-stage and internal-truth boundary models",
+      "resource": "Slearn/GodelTarskiRelativeClosureBoundary.lean",
+      "frame": "VERIFICATION",
+      "claimKind": "PROVED_THEOREM",
+      "depth": "QUESTION",
+      "verification": "MACHINE_CHECKED",
+      "closureState": "NOT_APPLICABLE",
+      "translation": "Toy diagonal, stage-tower, liar, and capacity structures distinguish a local level from a selected limit theory and an internal-truth obstruction.",
+      "boundary": "The model does not formalize, refute, or bypass Gödel, Tarski, Chaitin, arbitrary computation, or a final global truth language.",
+      "nextOpening": "State an independently motivated formal language and relation before making a metamathematical application."
+    },
+    {
+      "id": "CLOSURE_HULL_RUNTIME",
+      "name": "Ledger-derived perspectival closure hull",
+      "resource": "scripts/project-closure-hull.mjs",
+      "frame": "PERSPECTIVE",
+      "claimKind": "RUNTIME_RECORD",
+      "depth": "EVIDENCE",
+      "verification": "DETERMINISTIC_RUNTIME",
+      "closureState": "PATH",
+      "translation": "The projector maps a declared packet to a prospective branch and OPEN remainder without inventing an experience fibre or returned basis.",
+      "boundary": "A deterministic projection cannot perform external review or establish a human learning transformation.",
+      "nextOpening": "Add only a receipt-complete packet before projecting a returned experience or successor state."
+    },
+    {
+      "id": "NATURAL_RHYTHM_READING",
+      "name": "Natural-rhythm triangle as a perspective/goal closure reading",
+      "resource": "docs/NATURAL_RHYTHM_CLOSURE.md",
+      "frame": "CURVATURE",
+      "claimKind": "INTERPRETIVE_READING",
+      "depth": "TRANSLATION",
+      "verification": "INTERPRETIVE_ONLY",
+      "closureState": "OPEN",
+      "translation": "The downward and upward passes read prospective and returned orientations of a maintained relation.",
+      "boundary": "It does not establish a physical light cone, universal harmony, natural law, or a privileged learner trajectory.",
+      "nextOpening": "Connect the reading to an explicit packet and separately justify any mathematical or empirical extension."
+    },
+    {
+      "id": "RESEARCH_CLAIM_BOUNDARY",
+      "name": "Source, formal, runtime, and interpretation separation",
+      "resource": "docs/RESEARCH_FRAMEWORK.md",
+      "frame": "NOTOLOGY",
+      "claimKind": "RESEARCH_BOUNDARY",
+      "depth": "EVIDENCE",
+      "verification": "EDITORIAL_GOVERNANCE",
+      "closureState": "NOT_APPLICABLE",
+      "translation": "A claim may change presentation across source, formal, runtime, and interpretive surfaces only with its claim kind and boundary preserved.",
+      "boundary": "Classification itself does not establish the truth, adequacy, or social value of a claim.",
+      "nextOpening": "Attach each new repository resource to a checked relative closure address."
+    }
+  ]
+}
