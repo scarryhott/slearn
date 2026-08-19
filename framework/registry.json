@@ -60,7 +60,9 @@
         "docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md",
         "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
         "docs/PARTITION_AGGREGATE_CLOSURE.md",
-        "Slearn/PartitionAggregateClosure.lean"
+        "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean"
       ]
     },
     {
@@ -97,6 +99,8 @@
         "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
         "docs/PARTITION_AGGREGATE_CLOSURE.md",
         "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -146,6 +150,8 @@
         "Slearn/RecalculationAgainstTranslatedTruthAnswers.lean",
         "docs/PARTITION_AGGREGATE_CLOSURE.md",
         "Slearn/PartitionAggregateClosure.lean",
+        "docs/RELATIONAL_CLOSURE_UNIFICATION.md",
+        "Slearn/RelationalClosureUnification.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]

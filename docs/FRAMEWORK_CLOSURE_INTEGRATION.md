@@ -72,6 +72,7 @@ It proves cross-language equality is exactly closure in that witness language.
 | Resource | Role in the integrated framework | Required bridge / boundary |
 | --- | --- | --- |
 | `UniversalRelativeTranslationalCompletion.lean` | Unique fixed-point completion | Only after a `RelativeFrame` and universal-relative admissibility are supplied. |
+| `RelationalClosureUnification.lean` | Common true-translation/natural-choice relation and relative-depth adapter | The relational question family and orbit-separation property are supplied; it does not itself prove continuity, physical geometry, or a warranted natural value. |
 | `NaturalRhythmClosure.lean` | Two orientations and local/global view discipline | Witness equality is not literal local/global identity; named degeneracies remain caller-supplied boundaries. |
 | `ClosedTopologicalTranslation.lean` | Open interaction, inversion, returned relation, residue, new opening | A return witness does not erase continuation or residue. |
 | `InteractiveTranslationalOpenFoundation.lean` | Finite verification versus continuous completion; Topos/Turing adapter | No finite prefix decides global soundness. A browser receipt is not continuously checked unless the optional gate is supplied. |

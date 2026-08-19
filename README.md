@@ -43,6 +43,22 @@ They are not independently primary levels joined by arbitrary operators. The ret
 L' \sim_{\mathcal C} L.
 \]
 
+The repository’s common completion contract is answer-preserving translation:
+
+\[
+x =_{\mathcal C} y
+\iff
+\forall q\in Q_{\mathcal C},\;A(q,x)=A(Tq,y).
+\]
+
+An individual question-language, scalar aggregate, finite verifier, or
+resolution grain is a bounded reading, not the whole relation. Where a
+declared family of relational questions separates the admitted translation
+orbits, closure relation, true translation, and natural choice coincide
+**within that frame**. See
+[`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md)
+for the full depth map and its limits.
+
 At the episode level, a returned relation is not literal replay. Two reciprocal
 paths can interact and return to the same selected base relation while retaining
 a residue that distinguishes this successful realization from another. The
@@ -129,6 +145,7 @@ a decorative display transition.
 - [`Slearn/CompletionInTranslationalTruthEquality.lean`](Slearn/CompletionInTranslationalTruthEquality.lean) separates a presentation's truth answers from its local/global, trajectory, and endpoint markers; it proves marker-blind completion, propositional answer transport, and a direct bridge into the transactional-admitted-translation adapter.
 - [`Slearn/RecalculationAgainstTranslatedTruthAnswers.lean`](Slearn/RecalculationAgainstTranslatedTruthAnswers.lean) derives translated truth equality for frozen question-languages, its exact extension law, and the conditional reopening of an equal relation by a supplied discriminator.
 - [`Slearn/PartitionAggregateClosure.lean`](Slearn/PartitionAggregateClosure.lean) gives a finite four-form calculation in which equal scalar aggregates close transactionally while retained phase placement opens a successor question; it proves that the next phase reading cannot be recovered from that aggregate alone.
+- [`Slearn/RelationalClosureUnification.lean`](Slearn/RelationalClosureUnification.lean) unifies answer-preserving translation, relational-orbit closure, finite/all-depth distinction, partition reopening, Topos/Turing witness return, and Kakeya-style resolution as separate but connected closure depths.
 - [`Slearn/ClosedTopologicalTranslation.lean`](Slearn/ClosedTopologicalTranslation.lean) formalizes reciprocal interaction episodes, orientation inversion, returned-base witnesses, comparator-defined residues, and inherited openings.
 - [`Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean`](Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean) formally gates the source-derived map/hair interface by WHY witnesses, attempts, receipts, and bounded occurrence depth.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
@@ -152,6 +169,7 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md`](docs/COMPLETION_TRANSLATIONAL_TRUTH_EQUALITY.md): the bounded truth-answer/isolated-marker separation and its direct transactional bridge.
 - [`docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md`](docs/RECALCULATION_TRANSLATED_TRUTH_ANSWERS.md): translated question-language recalculation, finite ball/hair and polar readings, and its discriminator-generation boundary.
 - [`docs/PARTITION_AGGREGATE_CLOSURE.md`](docs/PARTITION_AGGREGATE_CLOSURE.md): finite four-form aggregate closure, retained partition distinction, and the boundary between a discrete turn and a continuous/physical interpretation.
+- [`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md): the canonical unification of closure relation, true translation, natural choice, relative completion depth, and the Slearn/Topos–Turing/Kakeya readings.
 - [`docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md`](docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md): completion contract, uniqueness, relevance, and receipt requirements.
 - [`docs/NATURAL_RHYTHM_CLOSURE.md`](docs/NATURAL_RHYTHM_CLOSURE.md): consolidated terminology, triangle geometry, runtime projections, and scope boundaries.
 - [`docs/CLOSED_TOPOLOGICAL_TRANSLATION.md`](docs/CLOSED_TOPOLOGICAL_TRANSLATION.md): the episode-level return, residue, and inherited-opening contract.

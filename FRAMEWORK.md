@@ -23,6 +23,27 @@ WHY, explanation, definition, and counter-reading. A return supplies a new
 perspective and a retained difference; it does not erase the source,
 counter-reading, or question.
 
+## Canonical relational closure
+
+The whole framework uses one restricted meaning of completion:
+
+\[
+x =_{\mathcal C} y
+\iff
+\forall q\in Q_{\mathcal C},\;A(q,x)=A(Tq,y).
+\]
+
+`Q_C` is a declared question-family, not an implicit global language. A
+finite depth, aggregate, prefix, UI state, or local/global marker gives only
+one reading. Closure becomes the maintained answer-preserving relation across
+the admitted translation family; it does not make any one encoding absolute.
+
+When the family’s relational answers separate its admitted translation orbits,
+the framework calls that relation `NaturalChoice`: not an optimizer’s pick,
+but the relation-preserving return available in the stated frame. The precise
+adapter, its finite/all-depth distinction, and its scope limits are in
+[`docs/RELATIONAL_CLOSURE_UNIFICATION.md`](docs/RELATIONAL_CLOSURE_UNIFICATION.md).
+
 The machine-readable repository map is
 [`framework/registry.json`](framework/registry.json). Run
 `node scripts/validate-framework.mjs` to verify that the registered resources,
@@ -70,6 +91,7 @@ Slearn/TransactionalCompletionEvaluation.lean → TRANSLATION / ADMISSION limite
 Slearn/CompletionInTranslationalTruthEquality.lean → TRANSLATION / ADMISSION truth-answer completion without marker identity
 Slearn/RecalculationAgainstTranslatedTruthAnswers.lean → TRANSLATION / ADMISSION successor question-language recalculation
 Slearn/PartitionAggregateClosure.lean         → TRANSLATION / ADMISSION finite scalar closure and retained successor distinction
+Slearn/RelationalClosureUnification.lean       → TRANSLATION / VERIFICATION / ADMISSION common closure relation and depth adapter
 
 ui/                                    → optional PROJECTION only
 ```
