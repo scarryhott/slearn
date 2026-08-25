@@ -46,8 +46,10 @@
       "resources": [
         "Slearn/UniversalRelativeTranslationalCompletion.lean",
         "Slearn/NaturalRhythmClosure.lean",
+        "Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean",
         "docs/UNIVERSAL_RELATIVE_TRANSLATIONAL_COMPLETION.md",
-        "docs/NATURAL_RHYTHM_CLOSURE.md"
+        "docs/NATURAL_RHYTHM_CLOSURE.md",
+        "docs/TRADING_NETWORK_INTERFACE_PROOF_CLOSURE_NRRF656.md"
       ]
     },
     {
@@ -58,6 +60,7 @@
         "Slearn/InteractiveTranslationalOpenFoundation.lean",
         "Slearn/ChaitinKakeyaTokenResuperposition.lean",
         "Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean",
+        "Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean",
         "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
         "docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md",
         "docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md"
@@ -72,6 +75,7 @@
         "Slearn/InteractiveTranslationalOpenFoundation.lean",
         "docs/AUDITABLE_CHANGING_AXIOMETRY_EXPERIMENT.md",
         "Slearn/AuditableChangingAxiometryProtocol.lean",
+        "Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean",
         "framework/changing-axiometry-experiment.json",
         "scripts/run-changing-axiometry-protocol.mjs"
       ]
@@ -82,8 +86,10 @@
       "resources": [
         "Slearn/ClosedTopologicalTranslation.lean",
         "Slearn/NRRF655ExecutablePerspectivalClosureEpisode.lean",
+        "Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean",
         "docs/CLOSED_TOPOLOGICAL_TRANSLATION.md",
-        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md"
+        "docs/EXECUTABLE_PERSPECTIVAL_CLOSURE.md",
+        "docs/TRADING_NETWORK_INTERFACE_PROOF_CLOSURE_NRRF656.md"
       ]
     },
     {
@@ -115,6 +121,7 @@
       "resources": [
         "Slearn/NRRF651SlearnUIHairOfClosureGeneratedMap.lean",
         "Slearn/NRRF654IntegratedFrameworkClosure.lean",
+        "Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean",
         "Slearn/DerivedPerspectivalClosureHull.lean",
         "Slearn.lean",
         "docs/FRAMEWORK_CLOSURE_INTEGRATION.md",
@@ -124,6 +131,7 @@
         "ui/app/closureRuntime.ts",
         "ui/app/page.tsx",
         "ui/tests/closureRuntime.test.ts",
+        "docs/TRADING_NETWORK_INTERFACE_PROOF_CLOSURE_NRRF656.md",
         "docs/DERIVED_PERSPECTIVAL_CLOSURE_HULL.md",
         "framework/closure-ledger.json",
         "scripts/project-closure-hull.mjs"

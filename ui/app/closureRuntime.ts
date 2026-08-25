@@ -16,6 +16,25 @@ export type SurfaceTone = "open" | "path" | "returned" | "dual" | "obstructed" |
 export type PointRole = "presentation" | "context" | "translation" | "closure" | "world" | "source" | "lesson" | "project" | "residue" | "successor";
 export type ClosureAppearance = { signal: string; pattern: "solid" | "dashed"; glow: boolean };
 
+export type ClosureSurfaceId = "trading" | "network" | "interface" | "proof";
+export type ClosureSurfaceStatus = "WAITING" | "ACTIVE" | "TRANSLATED" | "CLOSED";
+
+export type ClosureSurface = {
+  id: ClosureSurfaceId;
+  label: string;
+  status: ClosureSurfaceStatus;
+  detail: string;
+  appearance: ClosureAppearance;
+};
+
+export type TranslationCircuit = {
+  route: readonly ClosureSurfaceId[];
+  current: ClosureSurfaceId;
+  closed: boolean;
+  witness: string;
+  surfaces: ClosureSurface[];
+};
+
 /** The material state of one translation episode, rather than a display mode. */
 export type ClosurePhase = "open" | "contracted" | "reopened" | "returned";
 
@@ -135,6 +154,7 @@ export type ClosureScene = {
   links: SceneLink[];
   inputs: InputSeed[];
   operations: ClosureOperation[];
+  circuit: TranslationCircuit;
 };
 
 const seedRelation: Interaction = {
@@ -223,7 +243,7 @@ export function hasReviewedReturn(interaction: OpenInteraction | Interaction) {
 }
 
 /** A world/universe view is a bridged global continuation, not decoration. */
-function hasWorldContinuation(interaction: OpenInteraction | Interaction) {
+function hasWorldContinuation(interaction: Interaction) {
   return hasContracted(interaction) && present(interaction.world);
 }
 
@@ -237,6 +257,67 @@ function hasReopened(interaction: Interaction) {
 
 function hasExecutedReturn(interaction: Interaction) {
   return interaction.machine.phase === "returned" && interaction.machine.residue !== null;
+}
+
+const closureRoute = ["trading", "network", "interface", "proof"] as const;
+
+/**
+ * Trading, network, interface, and proof are successive presentations of the
+ * same selected closure episode. The browser reports the evidence supplied to
+ * each surface; it does not convert a recorded proof receipt into external
+ * market truth.
+ */
+export function translationCircuit(field: ClosureField): TranslationCircuit {
+  const selected = field.interactions.find((interaction) => interaction.id === field.selected) ?? null;
+  const closed = Boolean(selected && hasExecutedReturn(selected));
+  const current: ClosureSurfaceId = !selected || selected.machine.phase === "open" ? "trading"
+    : selected.machine.phase === "contracted" ? "network"
+      : selected.machine.phase === "reopened" && !hasReviewedReturn(selected) ? "interface"
+        : "proof";
+  const currentIndex = closureRoute.indexOf(current);
+  const statusAt = (index: number): ClosureSurfaceStatus => closed ? "CLOSED"
+    : index < currentIndex ? "TRANSLATED"
+      : index === currentIndex ? "ACTIVE" : "WAITING";
+  const toneAt = (id: ClosureSurfaceId): SurfaceTone => id === "trading" ? "project"
+    : id === "network" ? "translation"
+      : id === "interface" ? "presentation" : "returned";
+  const details: Record<ClosureSurfaceId, string> = {
+    trading: selected
+      ? selected.attempt || `Local transaction opening: ${clean(selected.perspective)}`
+      : field.continuation
+        ? `Returned receipt ${clean(field.continuation.receipt)} opens the next transaction.`
+        : "Awaiting a source-grounded transaction opening.",
+    network: selected?.bridge
+      ? `Shared relation: ${clean(selected.bridge)}`
+      : "Awaiting an admitted relation that can be shared without erasing its source.",
+    interface: selected?.machine.reopened
+      ? `Reciprocal projection: ${clean(selected.machine.reopened.redefinition)}`
+      : selected
+        ? `Projection of ${selected.id}; reciprocal reopening has not completed.`
+        : "Awaiting a network relation to project.",
+    proof: selected?.machine.residue
+      ? `Receipt ${clean(selected.machine.residue.receipt)} satisfies the runtime return gate.`
+      : selected && hasReviewedReturn(selected)
+        ? "Return evidence is complete and ready for the proof-contract boundary."
+        : "NRRF656 supplies the witness-closure contract; episode evidence remains open.",
+  };
+  const witness = closed && selected?.machine.residue
+    ? `ρ ${clean(selected.machine.residue.receipt)} returns Proof → Trading′ in the recorded witness class; external truth remains reviewable.`
+    : `${current.toUpperCase()} is the active presentation; the unresolved surfaces remain explicit.`;
+
+  return {
+    route: closureRoute,
+    current,
+    closed,
+    witness,
+    surfaces: closureRoute.map((id, index) => ({
+      id,
+      label: id.toUpperCase(),
+      status: statusAt(index),
+      detail: details[id],
+      appearance: appearanceFor(toneAt(id)),
+    })),
+  };
 }
 
 function traceStatus(interaction: Interaction): ClosureStatus {
@@ -437,7 +518,7 @@ function operations(field: ClosureField, selected: Interaction | null): ClosureO
 }
 
 export function closureScene(field: ClosureField): ClosureScene {
-  const selected = field.interactions.find((interaction) => interaction.id === field.selected) ?? field.interactions[0] ?? null;
+  const selected = field.interactions.find((interaction) => interaction.id === field.selected) ?? null;
   const selectedStatus = selected ? traceStatus(selected) : "OPEN";
   const topology = projectedTopology(field);
   const points = arrange(topology.rawPoints, selected?.id ?? null);
@@ -457,7 +538,7 @@ export function closureScene(field: ClosureField): ClosureScene {
   const focusText = selected
     ? `${selected.machine.phase.toUpperCase()} — ${selected.why} — ${hasBridge(selected) ? selected.bridge : "bridge absent"}${hasWorldContinuation(selected) ? ` — ${selected.world}` : ""}${selected.machine.residue ? ` — Ω ${selected.machine.residue.receipt}` : ""}`
     : "Build an interaction trace; the map has no independent topic or navigation state.";
-  return { status: selectedStatus, statusAppearance: appearanceFor(toneFor(selectedStatus)), lens: field.lens, statusText, focusText, points, links: topology.links, inputs, operations: operations(field, selected) };
+  return { status: selectedStatus, statusAppearance: appearanceFor(toneFor(selectedStatus)), lens: field.lens, statusText, focusText, points, links: topology.links, inputs, operations: operations(field, selected), circuit: translationCircuit(field) };
 }
 
 export type ClosureEvent =

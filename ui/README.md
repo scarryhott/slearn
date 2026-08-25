@@ -32,6 +32,15 @@ than mirroring it as an endpoint identity. The browser exposes `natural`,
 `dual`, and `obstructed` as the relative positions in the same admitted
 translation.
 
+The circuit above the field is derived from that same episode state:
+
+`TRADING → NETWORK → INTERFACE → PROOF → TRADING′`.
+
+It mirrors `open → contracted → reopened → returned`; it is not independent
+navigation. A completed circuit means the runtime receipt gate closed and the
+abstract NRRF656 maps preserve one witness. It does not mean an external trade,
+network, source, or market claim was automatically proven.
+
 ## Scope
 
 The UI is an executable, spatial educational projection of the checked finite

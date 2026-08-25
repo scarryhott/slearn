@@ -119,6 +119,7 @@ a decorative display transition.
 - [`Slearn/ChaitinKakeyaTokenResuperposition.lean`](Slearn/ChaitinKakeyaTokenResuperposition.lean) models directional token fields, assumption grains, receipt-gated IVI, contraction/reopening roles, and ordered trace history.
 - [`Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean`](Slearn/NRRF652ClosureTranslationCommonOperationKakeyaTokenResuperposition.lean) supplies the shared `Ch → Ka → Ω` operator, four-way verdict classification, finite-resolution/readout contract, ordered route residue, and Slearn semantic-zoom binding.
 - [`Slearn/InteractiveTranslationalOpenFoundation.lean`](Slearn/InteractiveTranslationalOpenFoundation.lean) proves finite-stage incompleteness, continuous completion for prefix views, inverse-limit return, and selected gluing/obstruction examples.
+- [`Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean`](Slearn/NRRF656TradingNetworkInterfaceProofClosure.lean) closes `Trading → Network → Interface → Proof → Trading′` in one shared witness language, retains all four presentations in a receipt, and proves relational rather than literal idempotence.
 
 The repository has no theorem about physical spacetime, consciousness, societal automation, moral value, or a privileged “natural” perspective. Those are educational and metaphysical interpretations, deliberately kept outside the certified theorem surface.
 
@@ -137,5 +138,6 @@ The repository has no theorem about physical spacetime, consciousness, societal 
 - [`docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md`](docs/GENERATED_UI_AND_TOKEN_RESUPERPOSITION.md): source-generated map/hair admission and directional token resuperposition boundaries.
 - [`docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md`](docs/CLOSURE_TRANSLATION_COMMON_OPERATION_NRRF652_NOTES.md): the common `Ch → Ka → Ω` operation, runtime verdicts, and scope limits.
 - [`docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md`](docs/INTERACTIVE_TRANSLATIONAL_OPEN_FOUNDATION.md): finite interaction, inverse limits, and gluing examples.
+- [`docs/TRADING_NETWORK_INTERFACE_PROOF_CLOSURE_NRRF656.md`](docs/TRADING_NETWORK_INTERFACE_PROOF_CLOSURE_NRRF656.md): the shared four-surface Supernet orbit, runtime phase binding, and proof/truth boundary.
 
 Run `lake build` to build the Lean project. CI also rejects `sorry` and `admit` in Lean sources.
