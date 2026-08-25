@@ -1,15 +1,17 @@
 {
   "id": "SLEARN-SOURCE-CLOSURE-LEDGER",
   "packets": [
-    "source-closure-primitives.json"
+    "source-closure-primitives.json",
+    "uniface-supernet-2026-08-25.json"
   ],
   "expected": {
-    "packetCount": 1,
+    "packetCount": 2,
     "statusCounts": {
-      "PATH": 1
+      "PATH": 1,
+      "OPEN": 1
     },
     "prospectiveBranches": 1,
     "experienceFibres": 0,
-    "openRegions": 1
+    "openRegions": 2
   }
 }

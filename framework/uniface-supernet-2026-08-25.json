@@ -1,0 +1,50 @@
+{
+  "id": "UNIFACE-SUPERNET-2026-08-25",
+  "expectedStatus": "OPEN",
+  "source": {
+    "anchor": "OBSERVED-INTERACTION / CHAT-UNIFACE-SUPERNET-2026-08-25",
+    "claim": "Harry asked to deploy the Slearn continuum as the live Super network cycle. The Uniface plan is stored as MODEL_SUGGESTED_RELATION; this packet is the Slearn visit of that cycle, not a theorem and not a UI deploy.",
+    "urls": [
+      "https://github.com/scarryhott/uniface",
+      "https://github.com/scarryhott/uniface/blob/cursor/unification-reading-occurrence-706f/occurrences/2026-08-25-full-closure-loop-plan.md",
+      "https://github.com/scarryhott/uniface/pull/1"
+    ]
+  },
+  "observation": "Uniface occurrence occ-2026-08-25-full-closure-loop-plan exists on uniface PR 1. Slearn has no hosted site. ui/ is projection last.",
+  "perspective": "Super network as the Uniface loop lived: source note ↔ interaction ↔ latent memory ↔ network reconnection ↔ admissible reinterpretation ↔ return ↔ reopening.",
+  "beliefLimit": "",
+  "goalLimit": "",
+  "why": "",
+  "explanations": {
+    "semantic": "",
+    "operative": ""
+  },
+  "definition": "",
+  "paths": {
+    "forward": "",
+    "counter": ""
+  },
+  "translation": {
+    "forwardBridge": "",
+    "inverseBridge": "",
+    "witnessLanguage": ""
+  },
+  "execution": {
+    "contracted": false,
+    "reopened": false
+  },
+  "verification": {
+    "material": "",
+    "attempt": "",
+    "counterReading": "",
+    "comparisonMethod": "",
+    "review": ""
+  },
+  "admission": {
+    "condition": "",
+    "receipt": "",
+    "successor": "",
+    "returnedBasis": "",
+    "nextRelation": ""
+  }
+}

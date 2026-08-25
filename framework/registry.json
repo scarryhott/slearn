@@ -9,7 +9,8 @@
       "resources": [
         "docs/SLEARN_SOURCE_PROVENANCE.md",
         "docs/SLEARN_ORIGINAL_VISION.md",
-        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md"
+        "docs/SLEARN_CLOSURE_RESEARCH_LEDGER.md",
+        "framework/uniface-supernet-2026-08-25.json"
       ]
     },
     {
