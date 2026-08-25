@@ -9,6 +9,7 @@ import {
   type ClosureEvent,
   type ClosureAppearance,
   type ClosureOperation,
+  type TranslationCircuit,
   type InputSeed,
   type SceneLink,
   type ScenePoint,
@@ -23,6 +24,7 @@ export default function Home() {
   const scene = useMemo(() => closureScene(field), [field]);
   return (
     <main className="closure-machine" data-status={scene.status} data-lens={scene.lens}>
+      <ClosureCircuit circuit={scene.circuit} />
       <section className="closure-plane" aria-label={scene.statusText}>
         <div className="machine-verdict" data-pattern={scene.statusAppearance.pattern} data-glow={scene.statusAppearance.glow} style={appearanceStyle(scene.statusAppearance)}>
           <span>{scene.status}</span>
@@ -37,6 +39,27 @@ export default function Home() {
         </nav>
       </section>
     </main>
+  );
+}
+
+function ClosureCircuit({ circuit }: { circuit: TranslationCircuit }) {
+  return (
+    <section className="translation-circuit" data-closed={circuit.closed} aria-label="Trading network interface proof closure">
+      <header>
+        <span>SUPERNET / ONE TRANSLATION ORBIT</span>
+        <strong>{circuit.route.map((surface) => surface.toUpperCase()).join(" → ")} → TRADING′</strong>
+        <small>{circuit.witness}</small>
+      </header>
+      <ol>
+        {circuit.surfaces.map((surface) => (
+          <li key={surface.id} data-status={surface.status} style={appearanceStyle(surface.appearance)} title={surface.detail}>
+            <span>{surface.status}</span>
+            <strong>{surface.label}</strong>
+            <small>{surface.detail}</small>
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }
 

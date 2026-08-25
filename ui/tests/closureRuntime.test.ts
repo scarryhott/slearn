@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { closureScene, initialClosureField, transition, type ClosureField } from "../app/closureRuntime";
+import { closureScene, initialClosureField, transition, translationCircuit, type ClosureField } from "../app/closureRuntime";
 
 const setProposal = (field: ClosureField, key: "why" | "goal" | "redefinition" | "bridge" | "world" | "sourceClaim", value: string) =>
   transition(field, { type: "SET", target: "proposal", key, value });
@@ -10,12 +10,15 @@ const setSelected = (field: ClosureField, key: "source" | "attempt" | "counterRe
 let field = initialClosureField;
 assert.equal(field.interactions[0].machine.phase, "open");
 assert.equal(closureScene(field).status, "PATH");
+assert.equal(translationCircuit(field).current, "trading");
 
 field = transition(field, { type: "SELECT", relationId: "r1" });
 field = transition(field, { type: "CONTRACT" });
 assert.equal(field.interactions[0].machine.phase, "contracted");
+assert.equal(translationCircuit(field).current, "network");
 field = transition(field, { type: "REOPEN" });
 assert.equal(field.interactions[0].machine.phase, "reopened");
+assert.equal(translationCircuit(field).current, "interface");
 
 // A receipt alone cannot manufacture an interactive verification or a return.
 field = setSelected(field, "attempt", "Practice the relation in a project");
@@ -28,14 +31,19 @@ field = setSelected(field, "source", "A cited passage and a record of the practi
 field = setSelected(field, "counterReading", "The same goal may not follow if the relation is an assumed limitation");
 field = setSelected(field, "verificationMethod", "Compare the cited passage, the practical attempt, and the counter-reading");
 field = setSelected(field, "review", "The bridge remains useful, but the counter-reading keeps a further question open");
+assert.equal(translationCircuit(field).current, "proof");
 field = transition(field, { type: "RETURN" });
 assert.equal(field.interactions[0].machine.phase, "returned");
 assert.equal(field.interactions[0].machine.residue?.counterReading, "The same goal may not follow if the relation is an assumed limitation");
 assert.equal(field.interactions[0].machine.residue?.sourceRef, "SRC-2024-MAP");
+assert.equal(translationCircuit(field).closed, true);
+assert.deepEqual(translationCircuit(field).surfaces.map((surface) => surface.status), ["CLOSED", "CLOSED", "CLOSED", "CLOSED"]);
 
 field = transition(field, { type: "CONTINUE" });
 assert.equal(field.continuation?.changedPerspective, "A revised perspective");
 assert.equal(field.proposal.perspective, "A revised perspective");
+assert.equal(translationCircuit(field).current, "trading");
+assert.equal(closureScene(field).focusText, "Build an interaction trace; the map has no independent topic or navigation state.");
 
 field = setProposal(field, "sourceClaim", "A returned relation may be reconsidered as the opening of another question");
 field = setProposal(field, "why", "Why this returned perspective now matters");

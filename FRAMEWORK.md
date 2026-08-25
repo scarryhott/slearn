@@ -63,6 +63,7 @@ Slearn/NRRF654…lean                     → frame integration adapter
 Slearn/NRRF655…lean                     → RETURN predecessor-typed continuation
 Slearn/DerivedPerspectival…lean          → PERSPECTIVE / RETURN ledger-derived closure hull
 Slearn/AuditableChangingAxiometry…lean   → VERIFICATION / ADMISSION bounded changing-frame protocol
+Slearn/NRRF656TradingNetwork…lean        → TRADING / NETWORK / INTERFACE / PROOF shared witness closure
 
 ui/                                    → optional PROJECTION only
 ```
@@ -116,3 +117,14 @@ The central open problem is not “make more screens” or “assert one theory.
 is to organize real source-grounded episodes whose translations, counter-
 readings, evidence, and continuations can be inspected without collapsing the
 open remainder.
+
+## Supernet four-surface closure
+
+Trading, Network, Interface, and Proof are operational roles inside the frame
+cycle, not four additional authorities. `NRRF656` binds them as
+`Trading → Network → Interface → Proof → Trading′` and proves the returned
+trading presentation shares the opening witness. The runtime binds those roles
+to its predecessor-typed `open → contracted → reopened → returned` episode.
+This closes the internal translation circuit while leaving price validity,
+transaction authentication, network consensus, and empirical truth as explicit
+external obligations.
